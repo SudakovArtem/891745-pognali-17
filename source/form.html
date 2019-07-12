@@ -15,13 +15,13 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="#">О сервисе</a>
+              <a class="site-list__link" href="#">О сервисе</a>
             </li>
             <li class="site-list__item">
-              <a href="#">Направления</a>
+              <a class="site-list__link" href="#">Направления</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Попутчики</a>
+              <a class="site-list__link" href="catalog.html">Попутчики</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
@@ -29,8 +29,8 @@
               <a class="user-list__login" href="login.html">Авторизация</a>
             </li>
           </ul>
-          <p class="main-nav__tel">8 800 555-86-28</p>
-          <p class="main-nav__email">mail@htmlacademy.ru</p>
+          <a class="main-nav__tel" href="tel:88005558628">8 800 555-86-28</a>
+          <a class="main-nav__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
       </nav>
     </header>
@@ -88,11 +88,15 @@
               <p class="plan-filter__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
               <label class="plan-filter__label">
                 ищу попутчиков:
-                <input class="plan-filter__quantity visually-hidden" name="quantity" type="number" value="2">
+                <button type="button" class="plan-filter__btn plan-filter__btn--minus">-</button>
+                <input class="plan-filter__quantity" name="quantity" type="text" value="2">
+                <button type="button" class="plan-filter__btn plan-filter__btn--plus">+</button>
               </label>
               <label class="plan-filter__label">
                 длительность:
-                <input class="plan-filter__quantity visually-hidden" name="quantity" type="number" value="2">
+                <button type="button" class="plan-filter__btn plan-filter__btn--minus">-</button>
+                <input class="plan-filter__quantity" name="quantity" type="text" value="2">
+                <button type="button" class="plan-filter__btn plan-filter__btn--plus">+</button>
               </label>
               <label class="plan-filter__label-checkbox">
                 <input class="plan-filter__checkbox visually-hidden" name="options" type="checkbox" checked>
@@ -213,7 +217,7 @@
     </main>
 
     <footer class="footer">
-      <b class="footer__title">Давайте дружить!</b>
+      <h3 class="footer__title">Погнали?</h3>
       <div class="footer__social social">
         <ul class="social__list">
           <li class="social__item">
