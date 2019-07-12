@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог Погнали</title>
+  </head>
+  <body>
+
+    <header class="header">
+      <a class="header__logo">
+        <img class="header__logo-image" src="http://placehold.it/110x19" width="110" height="19" alt="Погнали?">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="#">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Попутчики</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__login" href="login.html">Авторизация</a>
+            </li>
+          </ul>
+          <p class="main-nav__tel">8 800 555-86-28</p>
+          <p class="main-nav__email">mail@htmlacademy.ru</p>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="wrapper">
+        <h1 class="main__title">Попутчики</h1>
+          <h3 class="sidebar__head">Фильтрация по странам</h3>
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <h3 class="filter__head">Подберите идеального попутчика</h3>
+            <fieldset class="filter__item filter__item--hobby">
+              <legend class="filter__legend">Хобби</legend>
+              <button class="filter__turn-btn" type="button">развернуть</button>
+            </fieldset>
+            <fieldset class="filter__item filter__item--music">
+              <legend class="filter__legend">Музыка</legend>
+              <button class="filter__turn-btn" type="button">свернуть</button>
+              <label class="filter__label">
+                <input class="filter__checkbox visually-hidden" name="options" type="checkbox" checked>
+                <span class="filter__checkbox-indicator"></span>
+                Тяжелый рок
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox visually-hidden" name="options" type="checkbox">
+                <span class="filter__checkbox-indicator"></span>
+                Русский рэп
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox visually-hidden" name="options" type="checkbox">
+                <span class="filter__checkbox-indicator"></span>
+                Евроденс
+              </label>
+            </fieldset>
+            <fieldset class="filter__item filter__item--food">
+              <legend class="filter__legend">Еда</legend>
+              <button class="filter__turn-btn" type="button">развернуть</button>
+            </fieldset>
+            <fieldset class="filter__item filter__item--transport">
+              <legend class="filter__legend">Транспорт</legend>
+              <button class="filter__turn-btn" type="button">свернуть</button>
+              <label class="filter__label">
+                <input class="filter__radio visually-hidden" name="transport" type="radio" checked>
+                <span class="filter__radio-indicator"></span>
+              </label>
+              <label class="filter__label">
+                <input class="filter__radio visually-hidden" name="transport" type="radio">
+                <span class="filter__radio-indicator"></span>
+              </label>
+              <label class="filter__label">
+                <input class="filter__radio visually-hidden" name="transport" type="radio">
+                <span class="filter__radio-indicator"></span>
+              </label>
+              <label class="filter__label">
+                <input class="filter__radio visually-hidden" name="transport" type="radio">
+                <span class="filter__radio-indicator"></span>
+              </label>
+            </fieldset>
+            <fieldset class="filter__item range">
+              <legend class="filter__legend filter__legend--range">Левел</legend>
+              <button class="filter__turn-btn" type="button">свернуть</button>
+              <div class="range__scale"></div>
+              <div class="range__bar"></div>
+              <div class="range__toggle range__toggle--min"></div>
+              <div class="range__toggle range__toggle--max"></div>
+              <span class="range__lvl range__lvl--min">30</span>
+              <span class="range__lvl range__lvl--max">100</span>
+            </fieldset>
+            <button class="filter__btn button" type="submit">Показать</button>
+          </form>
+      </div>
+      <div class="catalog-content">
+        <ul class="catalog__list">
+          <li class="catalog__item traveler">
+            <img src="http://placehold.it/70x70" width="70" height="70" alt="foto" class="traveler__image">
+            <a class="traveler__name" href="#">Таня Фирсова</a>
+            <p class="traveler__likes">1,5 M</p>
+            <p class="travelers__hashtag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <p class="travelers__text">хочет посетить:</p>
+            <ul class="travelers__country country">
+              <li class="country__item country__item--srilanka">
+                <img class="country__image" src="http://placehold.it/26x18" width="26" height="18" alt="srilanka">
+                <b class="country__name">Шри ланка</b>
+              </li>
+              <li class="country__item country__item--thailand">
+                <img class="country__image" src="http://placehold.it/26x18" width="26" height="18" alt="thailand">
+                <b class="country__name">Тайланд</b>
+              </li>
+              <li class="country__item country__item--seychelles">
+                <img class="country__image" src="http://placehold.it/26x18" width="26" height="18" alt="seychelles">
+                <b class="country__name">Сейшелы</b>
+              </li>
+            </ul>
+            <p class="travelers__text">транспорт:</p>
+            <ul class="travelers__ways ways">
+              <li class="ways__air ways__air--active">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="aircraft">
+              </li>
+              <li class="ways__bus">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bus">
+              </li>
+              <li class="ways__bicycle">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bicycle">
+              </li>
+              <li class="ways__foot">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="foot">
+              </li>
+            </ul>
+            <p class="travelers__text">левел:</p>
+            <b class="travelers__status">99</b>
+            <button type="button" class="traveler__btn button">Позвать!</button>
+          </li>
+          <li class="catalog__item traveler">
+            <img src="http://placehold.it/70x70" width="70" height="70" alt="foto" class="traveler__image">
+            <a class="traveler__name" href="#">Петя Демин</a>
+            <p class="traveler__likes">150</p>
+            <p class="travelers__hashtag">#бургер #бар #футбол #концерт #крафт</p>
+            <p class="travelers__text">хочет посетить:</p>
+            <ul class="travelers__country country">
+              <li class="country__item country__item--belgium">
+                <img class="country__image" src="http://placehold.it/26x18" width="26" height="18" alt="belgium">
+                <b class="country__name">Бельгия</b>
+              </li>
+              <li class="country__item country__item--сzech">
+                <img class="country__image" src="http://placehold.it/26x18" width="26" height="18" alt="сzech">
+                <b class="country__name">Чехия</b>
+              </li>
+            </ul>
+            <p class="travelers__text">транспорт:</p>
+            <ul class="travelers__ways ways">
+              <li class="ways__air ways__air--active">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="aircraft">
+              </li>
+              <li class="ways__bus ways__bus--active">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bus">
+              </li>
+              <li class="ways__bicycle">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bicycle">
+              </li>
+              <li class="ways__foot ways__foot--active">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="foot">
+              </li>
+            </ul>
+            <p class="travelers__text">левел:</p>
+            <b class="travelers__status">80</b>
+            <button type="button" class="traveler__btn button">Позвать!</button>
+          </li>
+          <li class="catalog__item traveler">
+            <img src="http://placehold.it/70x70" width="70" height="70" alt="foto" class="traveler__image">
+            <a class="traveler__name" href="#">Марк Смолов</a>
+            <p class="traveler__likes">1700</p>
+            <p class="travelers__hashtag">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            <p class="travelers__text">хочет посетить:</p>
+            <ul class="travelers__country country">
+              <li class="country__item country__item--usa">
+                <img class="country__image" src="http://placehold.it/26x18" width="26" height="18" alt="usa">
+                <b class="country__name">США</b>
+              </li>
+              <li class="country__item country__item--australia">
+                <img class="country__image" src="http://placehold.it/26x18" width="26" height="18" alt="australia">
+                <b class="country__name">Австралия</b>
+              </li>
+              <li class="country__item country__item--dominicana">
+                <img class="country__image" src="http://placehold.it/26x18" width="26" height="18" alt="dominicana">
+                <b class="country__name">Доминикана</b>
+              </li>
+            </ul>
+            <p class="travelers__text">транспорт:</p>
+            <ul class="travelers__ways ways">
+              <li class="ways__air ways__air--active">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="aircraft">
+              </li>
+              <li class="ways__bus">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bus">
+              </li>
+              <li class="ways__bicycle ways__bicycle--active">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bicycle">
+              </li>
+              <li class="ways__foot">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="foot">
+              </li>
+            </ul>
+            <p class="travelers__text">левел:</p>
+            <b class="travelers__status">25</b>
+            <button type="button" class="traveler__btn button">Позвать!</button>
+          </li>
+          <li class="catalog__item traveler">
+            <img src="http://placehold.it/70x70" width="70" height="70" alt="foto" class="traveler__image">
+            <a class="traveler__name" href="#">Лариса Роговая</a>
+            <p class="traveler__likes">23</p>
+            <p class="travelers__hashtag">#образование #карьера #учеба #линкедин</p>
+            <p class="travelers__text">хочет посетить:</p>
+            <ul class="travelers__country country">
+              <li class="country__item country__item--greatbritain">
+                <img class="country__image" src="http://placehold.it/26x18" width="26" height="18" alt="greatbritain">
+                <b class="country__name">Великобритания</b>
+              </li>
+              <li class="country__item country__item--germany">
+                <img class="country__image" src="http://placehold.it/26x18" width="26" height="18" alt="germany">
+                <b class="country__name">Германия</b>
+              </li>
+            </ul>
+            <p class="travelers__text">транспорт:</p>
+            <ul class="travelers__ways ways">
+              <li class="ways__air ways__air--active">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="aircraft">
+              </li>
+              <li class="ways__bus ways__bus--active">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bus">
+              </li>
+              <li class="ways__bicycle">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bicycle">
+              </li>
+              <li class="ways__foot">
+                <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="foot">
+              </li>
+            </ul>
+            <p class="travelers__text">левел:</p>
+            <b class="travelers__status">50</b>
+            <button type="button" class="traveler__btn button">Позвать!</button>
+          </li>
+        </ul>
+        <button class="catalog__btn">Показать еще</button>
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a href="#" class="pagination__button pagination__button--forward pagination__button--disabled">назад</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#" class="pagination__button pagination__button--back">вперед</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <b class="footer__title">Давайте дружить!</b>
+      <div class="footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="footer-bottom__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="footer-bottom__copyright-image" src="http://placehold.it/27x34" width="27" height="34" alt="html academy">
+        </a>
+      </div>
+    </footer>
+
+    <section class="filter-popup">
+      <h2 class="filter-popup__title">Бизнес-тарифы</h2>
+      <ul class="filter-popup__list">
+        <li class="filter-popup__item filter-popup__item--active">
+          <a href="#" class="filter-popup__link">Европа</a>
+        </li>
+        <li class="filter-popup__item">
+          <a href="#" class="filter-popup__link">Азия</a>
+        </li>
+        <li class="filter-popup__item">
+          <a href="#" class="filter-popup__link">Америка</a>
+        </li>
+        <li class="filter-popup__item">
+          <a href="#" class="filter-popup__link">острова</a>
+        </li>
+      </ul>
+      <table class="filter-popup__table filter-table">
+        <tr class="filter-table__row">
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">А</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Б</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">В</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Г</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Д</a></td>
+        </tr>
+        <tr class="filter-table__row">
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Е</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Ё</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Ж</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">З</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">И</a></td>
+        </tr>
+        <tr class="filter-table__row">
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Й</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">К</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Л</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">М</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Н</a></td>
+        </tr>
+        <tr class="filter-table__row">
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">О</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">П</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Р</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">С</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Т</a></td>
+        </tr>
+        <tr class="filter-table__row">
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">У</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Ф</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Х</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Ц</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Ч</a></td>
+        </tr>
+        <tr class="filter-table__row">
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Ш</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Щ</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Э</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Ю</a></td>
+          <td class="filter-table__cell"><a class="filter-table__link" href="#">Я</a></td>
+        </tr>
+      </table>
+      <ul class="filter-popup__country-list">
+        <li class="filter-popup__country-item">
+          <p class="filter-popup__country-name">Афганистан</p>
+        </li>
+        <li class="filter-popup__country-item">
+          <p class="filter-popup__country-name">Албания</p>
+        </li>
+        <li class="filter-popup__country-item">
+          <p class="filter-popup__country-name">Алгерия</p>
+        </li>
+        <li class="filter-popup__country-item">
+          <p class="filter-popup__country-name">Андорра</p>
+        </li>
+        <li class="filter-popup__country-item">
+          <p class="filter-popup__country-name">Аргентина</p>
+        </li>
+        <li class="filter-popup__country-item">
+          <p class="filter-popup__country-name">Армения</p>
+        </li>
+        <li class="filter-popup__country-item">
+          <p class="filter-popup__country-name">Австралия</p>
+        </li>
+        <li class="filter-popup__country-item">
+          <p class="filter-popup__country-name">Австрия</p>
+        </li>
+        <li class="filter-popup__country-item">
+          <p class="filter-popup__country-name">Азербайджан</p>
+        </li>
+      </ul>
+      <button type="button" class="filter-popup__close">Свернуть</button>
+    </section>
+
+  </body>
+</html>
