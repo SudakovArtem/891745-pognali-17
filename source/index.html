@@ -3,15 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
-    <header class="header">
-      <a class="header__logo">
-        <img class="header__logo-image" src="http://placehold.it/110x19" width="110" height="19" alt="Погнали?">
-      </a>
+    <header class="header container">
+      <div class="header__wrapper">
+        <a class="header__logo">
+          <img class="header__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Погнали?">
+        </a>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
@@ -26,29 +29,46 @@
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
-              <a class="user-list__login" href="login.html">Авторизация</a>
+              <a class="user-list__login button" href="login.html">Авторизация</a>
             </li>
           </ul>
           <a class="main-nav__tel" href="tel:88005558628">8 800 555-86-28</a>
           <a class="main-nav__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <div class="header__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в
+                  Фейсбуке</span></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Мы в
+                  Инстаграме</span></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
 
     <main class="main">
 
-      <section class="intro">
+      <section class="intro container">
         <h1 class="intro__title">В путешествие с крутыми попутчиками!</h1>
-        <a class="intro__button intro__button--tel" href="tel:88005558628">Телефон</a>
-        <a class="intro__button intro__button--email" href="mailto:mail@htmlacademy.ru">Почта</a>
-        <a class="intro__button intro__button--login">Авторизация</a>
+        <div class="intro__wrapper">
+          <a class="intro__button intro__button--tel" href="tel:88005558628"><span class="visually-hidden">Телефон</span></a>
+          <a class="intro__button intro__button--email" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">Почта</span></a>
+          <a class="intro__login-button button intro__button--login">Авторизация</a>
+        </div>
         <blockquote class="intro__blockquote review">
           <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
           <cite class="review__author-name">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
         </blockquote>
       </section>
 
-      <section class="options">
+      <section class="options container">
         <ol class="options__list">
           <li class="options__item options__item--1">Выберите направление</li>
           <li class="options__item options__item--2">Изучите идеи путешественников</li>
@@ -57,101 +77,111 @@
         </ol>
       </section>
 
-      <section class="about-us">
+      <section class="about-us container">
         <h3 class="about-us__title">О сервисе</h3>
         <p class="about-us__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
         <p class="about-us__bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
       </section>
 
-      <section class="directions">
-        <div class="directions__wrapper">
+      <section class="directions container">
           <h3 class="directions__title">Направления</h3>
           <p class="directions__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
           <ul class="directions__list">
             <li class="directions__item">
-              <img class="directions__image" src="http://placehold.it/270x110" width="270" height="110" alt="thailand">
+              <img class="directions__image" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="thailand">
               <div class="directions__wrapper">
-                <b class="directions__name">Тайланд</b>
+                <b class="directions__name">Тайланд</b><span class="directions__people">18321</span>
                 <p class="directions__tagline">Джугли зовут!</p>
-                <p class="directions__people">18321</p>
               </div>
             </li>
             <li class="directions__item">
-              <img class="directions__image" src="http://placehold.it/270x110" width="270" height="110" alt="france">
+              <img class="directions__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="france">
               <div class="directions__wrapper">
-                <b class="directions__name">Франция</b>
+                <b class="directions__name">Франция</b><span class="directions__people">12518</span>
                 <p class="directions__tagline">Трэ бьен, манифик!</p>
-                <p class="directions__people">12518</p>
               </div>
             </li>
             <li class="directions__item">
-              <img class="directions__image" src="http://placehold.it/270x110" width="270" height="110" alt="czech">
+              <img class="directions__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="czech">
               <div class="directions__wrapper">
-                <b class="directions__name">Чехия</b>
+                <b class="directions__name">Чехия</b><span class="directions__people">5326</span>
                 <p class="directions__tagline">Закоулки старой Европы</p>
-                <p class="directions__people">5326</p>
               </div>
             </li>
           </ul>
           <a class="directions__to-all button" href="form.html">Показать все</a>
-        </div>
       </section>
 
-      <section class="travelers">
-        <div class="travelers__wrapper">
+      <section class="travelers container">
           <h3 class="travelers__title">Попутчики</h3>
           <p class="travelers__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
           <p class="travelers__bold">Теперь можно легко найти единомышленников!</p>
           <ul class="travelers__list">
             <li class="travelers__item">
-              <img class="travelers__image" src="http://placehold.it/270x270" width="270" height="270" alt="thailand">
+              <img class="travelers__image" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="thailand">
               <div class="travelers__wrapper">
-                <b class="travelers__name">Таня Фирсова</b>
+                <ul class="travelers__flags flags">
+                  <li class="flags__item flags__item--sri-lanka">
+                    <img class="flags__image" src="http://placehold.it/26x18" width="26" height="18" alt="srilanka">
+                  </li>
+                  <li class="flags__item flags__item--thailand">
+                    <img class="flags__image" src="http://placehold.it/26x18" width="26" height="18" alt="thailand">
+                  </li>
+                  <li class="flags__item flags__item--seychelles">
+                    <img class="flags__image" src="http://placehold.it/26x18" width="26" height="18" alt="seychelles">
+                  </li>
+                </ul>
+                <p class="travelers__name">Таня Фирсова</p>
                 <p class="travelers__hashtag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <ul class="travelers__ways ways">
-                  <li class="ways__air ways__air--active">
-                    <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="aircraft">
+                  <li class="ways__item ways__item--air ways__item--active">
+                    <img class="ways__image" src="img/plane.svg" width="19" height="21" alt="aircraft">
                   </li>
-                  <li class="ways__bus">
-                    <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bus">
+                  <li class="ways__item ways__item--bus">
+                    <img class="ways__image" src="img/bus.svg" width="17" height="21" alt="bus">
                   </li>
-                  <li class="ways__bicycle">
-                    <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bicycle">
+                  <li class="ways__item ways__item--bicycle">
+                    <img class="ways__image" src="img/bike.svg" width="24" height="21" alt="bicycle">
                   </li>
-                  <li class="ways__foot">
-                    <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="foot">
+                  <li class="ways__item ways__item--foot">
+                    <img class="ways__image" src="img/run.svg" width="20" height="21" alt="foot">
                   </li>
                 </ul>
               </div>
             </li>
             <li class="travelers__item">
-              <img class="travelers__image" src="http://placehold.it/270x270" width="270" height="270" alt="thailand">
+              <img class="travelers__image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="thailand">
               <div class="travelers__wrapper">
-                <b class="travelers__name">Петя Демин</b>
+                <ul class="travelers__flags flags">
+                  <li class="flags__item flags__item--belgium">
+                    <img class="flags__image" src="http://placehold.it/26x18" width="26" height="18" alt="belgium">
+                  </li>
+                  <li class="flags__item flags__item--czech">
+                    <img class="flags__image" src="http://placehold.it/26x18" width="26" height="18" alt="сzech"></li>
+                </ul>
+                <p class="travelers__name">Петя Демин</p>
                 <p class="travelers__hashtag">#бургер #бар #футбол #концерт #крафт</p>
                 <ul class="travelers__ways ways">
-                  <li class="ways__air ways__air--active">
-                    <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="aircraft">
+                  <li class="ways__item ways__item--air ways__item--active">
+                    <img class="ways__image" src="img/plane.svg" width="19" height="21" alt="aircraft">
                   </li>
-                  <li class="ways__bus ways__bus--active">
-                    <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bus">
+                  <li class="ways__item ways__item--bus ways__item--active">
+                    <img class="ways__image" src="img/bus.svg" width="17" height="21" alt="bus">
                   </li>
-                  <li class="ways__bicycle">
-                    <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="bicycle">
+                  <li class="ways__item ways__item--bicycle">
+                    <img class="ways__image" src="img/bike.svg" width="24" height="21" alt="bicycle">
                   </li>
-                  <li class="ways__foot ways__foot--active">
-                    <img class="ways__image" src="http://placehold.it/25x25" width="25" height="25" alt="foot">
+                  <li class="ways__item ways__item--foot ways__item--active">
+                    <img class="ways__image" src="img/run.svg" width="20" height="21" alt="foot">
                   </li>
                 </ul>
               </div>
             </li>
           </ul>
           <a class="travelers__to-all button" href="catalog.html">Показать всех</a>
-        </div>
       </section>
 
-      <section class="advantages">
-        <div class="advantages__wrapper">
+      <section class="advantages container">
           <h3 class="advantages__title">Добавтьте свой профиль</h3>
           <ul class="advantages__list">
             <li class="advantages__item">
@@ -165,55 +195,59 @@
             </li>
           </ul>
           <a class="advantages__link" href="tariffs.html">Показать тарифы для бизнеса</a>
-        </div>
       </section>
 
       <section class="contacts">
-        <div class="contacts__subscribe subscribe">
+        <div class="contacts__subscribe subscribe container">
           <div class="subscribe__wrapper">
+            <h3 class="contacts__title">Заинтересовались?</h3>
             <p class="subscribe__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="subscribe__link" href="login.html">авторизуйтесь</a></p>
             <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
               <input type="email" name="email" class="subscribe__email-input" placeholder="E-mail">
-              <button type="submit" class="subscribe__btn">Отправить</button>
+              <button type="submit" class="subscribe__btn"><span class="visually-hidden">Отправить</span></button>
             </form>
             <p class="subscribe__text">Остались вопросы? Мы с радостью на них ответим!</p>
-            <p class="subscribe__tel">8 800 555-86-28</p>
-            <p class="subscribe__email">mail@htmlacademy.ru</p>
+            <a class="subscribe__tel" href="tel:88005558628">8 800 555-86-28</a>
+            <a class="subscribe__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
         </div>
-        <div class="contacts__map map">
-          <a class="map__link" href="#">ул. Большая Конюшенная, 19/8</a>
-          <a class="map__btn button" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.334289%2C59.939497&mode=routes&rtext=55.750074%2C37.541386~59.938631%2C30.323055&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.541%252C55.750%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D0%25A4%25D0%25B8%25D0%25BB%25D1%2591%25D0%25B2%25D1%2581%25D0%25BA%25D0%25B0%25D1%258F%2520%25D0%25BB%25D0%25B8%25D0%25BD%25D0%25B8%25D1%258F%252C%2520%25D0%25BC%25D0%25B5%25D1%2582%25D1%2580%25D0%25BE%2520%25D0%2592%25D1%258B%25D1%2581%25D1%2582%25D0%25B0%25D0%25B2%25D0%25BE%25D1%2587%25D0%25BD%25D0%25B0%25D1%258F~ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323%252C59.939%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8&z=15.01">Проложить маршрут</a>
-          <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323057%252C59.938633%26spn%3D0.001000%252C0.001000%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8%2520&z=17"><img class="map__image" src="http://placehold.it/320x320" width="320" height="320" alt="map"></a>
+        <div class="contacts__map map map-container">
+          <div class="container">
+            <a class="map__link" href="#">ул. Большая Конюшенная, 19/8</a>
+            <a class="map__btn button"
+               href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.334289%2C59.939497&mode=routes&rtext=55.750074%2C37.541386~59.938631%2C30.323055&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.541%252C55.750%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D0%25A4%25D0%25B8%25D0%25BB%25D1%2591%25D0%25B2%25D1%2581%25D0%25BA%25D0%25B0%25D1%258F%2520%25D0%25BB%25D0%25B8%25D0%25BD%25D0%25B8%25D1%258F%252C%2520%25D0%25BC%25D0%25B5%25D1%2582%25D1%2580%25D0%25BE%2520%25D0%2592%25D1%258B%25D1%2581%25D1%2582%25D0%25B0%25D0%25B2%25D0%25BE%25D1%2587%25D0%25BD%25D0%25B0%25D1%258F~ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323%252C59.939%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8&z=15.01">Проложить
+              маршрут</a>
+          </div>
+          <a href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323057%252C59.938633%26spn%3D0.001000%252C0.001000%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8%2520&z=17"><img class="map__image" src="img/map.png" width="320" alt="map"></a>
         </div>
       </section>
 
     </main>
 
-    <footer class="footer">
-      <h3 class="footer__title">Погнали?</h3>
+    <footer class="footer container">
+      <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Погнали?">
       <div class="footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Мы в Инстаграме</span></a>
             </li>
           </ul>
         </div>
         <div class="footer__copyright">
           <b class="footer__copyright-text">Разработано:</b>
           <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="footer__copyright-image" src="http://placehold.it/27x34" width="27" height="34" alt="html academy">
+            <img class="footer__copyright-image" src="img/htmlacademy.svg" width="27" height="34" alt="html academy">
           </a>
         </div>
     </footer>
 
-    <section class="advantages-popup">
+    <section class="advantages-popup container">
       <h2 class="advantages-popup__title">Бизнес-тарифы</h2>
       <ul class="advantages-popup__list">
         <li class="advantages-popup__item">

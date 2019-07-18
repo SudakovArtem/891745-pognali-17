@@ -1,0 +1,85 @@
+@import "fonts";
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: "Bloggersans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 22px;
+  letter-spacing: normal;
+  color: #444444;
+  background-color: #edeff6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #ffd74b;
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 320px;
+  padding: 0 25px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  width: 270px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ffd74b;
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.76;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #161c35;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/options";
+@import "blocks/about-us";
+@import "blocks/directions";
+@import "blocks/travelers";
+@import "blocks/advantages";
+@import "blocks/contacts";
+@import "blocks/footer";
+@import "blocks/advantages-popup";
+@import "blocks/compilation";
+@import "blocks/plan-add";
+@import "blocks/roster";
+@import "blocks/compilation-popup";
+@import "blocks/profile";
+@import "blocks/plans";
+@import "blocks/plan-add-popup";

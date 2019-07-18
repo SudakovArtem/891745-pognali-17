@@ -1,0 +1,73 @@
+.country-filter {
+  background-color: #e2e5f2;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.country-filter-popup {
+  padding: 25px;
+}
+
+.country-filter-popup__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.country-filter-popup__link {
+  font-weight: bold;
+  line-height: 1.38;
+  text-align: left;
+  color: #192144;
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.country-filter-table {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.country-filter-table__cell {
+  width: 45px;
+  height: 42px;
+  border: solid 1px #cbced9;
+  background-color: #ffffff;
+
+  &--active {
+    background-color: #1d2e5b;
+
+    .country-filter-table__link {
+      color: #ffffff;
+    }
+  }
+}
+
+.country-filter-table__link {
+  color: #1d2e5b;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+}
+
+.country-filter-popup__country-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.38;
+  text-align: left;
+  color: #444444;
+}
+
+.country-filter-popup__country-name {
+  margin: 0;
+}
+
+.country-filter-popup__close {
+  width: 100%;
+  background-color: #d6daed;
+}

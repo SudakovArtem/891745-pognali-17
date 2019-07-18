@@ -1,0 +1,75 @@
+.intro {
+  background-color: #161c36;
+  background-image: url("../../img/traveller-illustration-mobile@1x.png"), url("../../img/globe-back-mobile@1x.jpg");
+  background-position: center, top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, contain;
+  padding-top: 50px;
+  padding-bottom: 110px;
+}
+
+.intro__title {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.11;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 240px;
+  margin-top: 60px;
+}
+
+.intro__wrapper {
+  display: flex;
+}
+
+.intro__login-button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 189px;
+}
+
+.intro__button {
+  width: 40px;
+  height: 40px;
+  background: #ff8d30 url("../../img/topmenu-phone.svg") center no-repeat;
+  background-size: 18px;
+  border-radius: 50%;
+
+  &--email {
+    background: #ffbd30 url("../../img/topmenu-mail.svg") center no-repeat;
+    background-size: 18px 14px;
+  }
+}
+
+.intro__blockquote {
+  margin-left: 20px;
+  width: 270px;
+  margin: 0;
+  box-sizing: border-box;
+  background: #161c36;
+box-shadow: 0 -10px 0 25px #161c36;
+  z-index: 2;
+}
+
+.review__text {
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.review__author-name {
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}

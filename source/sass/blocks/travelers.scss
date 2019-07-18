@@ -1,0 +1,131 @@
+.travelers {
+  background-color: #192144;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.travelers__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.travelers__title {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff8d30;
+  padding-left: 25px;
+}
+
+.travelers__text {
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 25px;
+}
+
+.travelers__bold {
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 25px;
+}
+
+.travelers__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ways__item {
+  margin-right: 15px;
+  opacity: 0.15;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.travelers__image {
+  display: block;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.travelers__wrapper {
+  background: #ffffff;
+  padding: 27px 40px 20px 40px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.flags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.flags__item {
+  margin-right: 19px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.travelers__name {
+  font-size: 21px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #1d2e5b;
+}
+
+.travelers__hashtag {
+  text-align: center;
+}
+
+.travelers__ways {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.ways__foot {
+  margin: 0;
+}
+
+.travelers__to-all {
+  border-radius: 10px;
+  text-align: left;
+  padding: 15px 24px;
+  font-size: 18px;
+  margin-top: 25px;
+  background: #ffd74b url("../../img/triangle-arrow-right.svg") 90% center no-repeat;
+  background-size: 10px 14px;
+}

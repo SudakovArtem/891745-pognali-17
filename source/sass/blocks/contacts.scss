@@ -1,0 +1,132 @@
+.contacts__subscribe {
+  background-color: #192144;
+  padding-top: 120px;
+  padding-bottom: 30px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.contacts__title {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ff8d30;
+}
+
+.subscribe__text {
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.subscribe__form {
+  position: relative;
+}
+
+.subscribe__email-input {
+  width: 270px;
+  height: 62px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border: none;
+  padding: 24px;
+}
+
+.subscribe__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 62px;
+  border-radius: 10px;
+  background: #ffd74b url("../../img/triangle-arrow-right.svg") center no-repeat;
+  background-size: 10px 14px;
+  border: none;
+}
+
+.subscribe__tel,
+.subscribe__email {
+  position: relative;
+  display: block;
+  margin-left: 86px;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffd74b;
+}
+
+.subscribe__tel {
+  margin-top: 60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -50px;
+    width: 45px;
+    height: 45px;
+    background: #121936 url("../../img/contacts-phone.svg") center no-repeat;
+    background-size: 18px 18px;
+    border-radius: 50%;
+  }
+}
+
+.subscribe__email {
+  margin-top: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -50px;
+    width: 45px;
+    height: 45px;
+    background: #121936 url("../../img/contacts-mail.svg") center no-repeat;
+    background-size: 18px 18px;
+    border-radius: 50%;
+  }
+}
+
+.map-container {
+  background-color: #ffd74b;
+  width: 320px;
+  padding-top: 100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.map__link {
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #192144;
+}
+
+.map__btn {
+  border-radius: 10px;
+  text-align: left;
+  padding: 12px 21px;
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  border: solid 3px #192144;
+  background: #ffd74b url("../../img/triangle-arrow-right.svg") 90% center no-repeat;
+  background-size: 10px 14px;
+}
+
+.map__image {
+  display: block;
+}
