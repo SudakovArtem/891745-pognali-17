@@ -252,7 +252,7 @@
   box-sizing: border-box;
 
   &::placeholder {
-    font-family: "Bloggersans";
+    font-family: "Bloggersans", "Arial", sans-serif;
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -267,5 +267,3 @@
     color: #444444;
   }
 }
-
-
