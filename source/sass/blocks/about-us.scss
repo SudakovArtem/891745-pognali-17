@@ -1,0 +1,39 @@
+.about-us {
+  background: #192144 url("../../img/about-mobile@1x.png") no-repeat center bottom;
+  background-size: auto;
+  padding-top: 33px;
+  padding-bottom: 84px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.about-us__title {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff8d30;
+  padding-left: 25px;
+}
+
+.about-us__text {
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 25px;
+}
+
+.about-us__bold {
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 25px;
+}

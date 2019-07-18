@@ -1,0 +1,269 @@
+.plan-add {
+  border-radius: 30px;
+  background-color: #d4d9eb;
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+.plan-add__title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  color: #1d2e5b;
+}
+
+.plan-filter__head {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: #1d2e5b;
+}
+
+.plan-filter__item {
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 24px;
+}
+
+.plan-filter__label {
+  position: relative;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  color: #1d2e5b;
+  text-transform: uppercase;
+}
+
+.plan-filter__btn {
+  width: 100%;
+  margin-top: 25px;
+
+  &--back {
+    background: none;
+    margin-top: 0;
+  }
+}
+
+.plan-filter__quantity {
+  width: 100%;
+  height: 43px;
+  border-radius: 4px;
+  border: solid 1px #cbced9;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.plan-filter__quantity-btn {
+  position: absolute;
+  border: none;
+  left: 200px;
+  top: 35px;
+  width: 14px;
+  height: 14px;
+  background: url("../../img/qty-plus-mobile.svg") center no-repeat;
+
+  &--minus {
+    top: 41px;
+    left: 30px;
+    background: url("../../img/qty-minus-mobile.svg");
+    height: 2px;
+  }
+}
+
+.plan-filter__label-checkbox {
+  position: relative;
+  padding-left: 25px;
+}
+
+.plan-filter__label-checkbox input[type="checkbox"] + .plan-filter__checkbox-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border-radius: 20%;
+  border: 3px solid #ffffff;
+  box-sizing: border-box;
+}
+
+.plan-filter__label-checkbox input[type="checkbox"]:checked + .plan-filter__checkbox-indicator {
+  background-image: url("../../img/dropdown-form.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.month-list {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.month-list__name {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: #1d2e5b;
+}
+
+.month-list__btn {
+  width: 9px;
+  height: 17px;
+  background: url("../../img/month-arrow-left.svg") center no-repeat;
+  border: none;
+
+  &--forward {
+    transform: rotate(180deg);
+  }
+}
+
+.plan-table {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.plan-table__day {
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.plan-table__head--weekend .plan-table__day {
+  color: #ff5c23;
+}
+
+.plan-table__cell {
+  width: 30px;
+  height: 30px;
+  border: solid 1px #cbced9;
+
+  &--current {
+    border: solid 2px #ff5c23;
+  }
+
+  &--active {
+    background-color: #1d2e5b;
+
+    .plan-table__link {
+      color: #ffffff;
+    }
+  }
+
+  &--future {
+    .plan-table__link {
+      color: #444444;
+    }
+  }
+}
+
+.plan-table__link {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.plan-filter__item--route {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.plan-filter__select-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.plan-filter__select-label {
+  width: 53px;
+  height: 42px;
+  border-radius: 4px;
+  border: solid 1px #cbced9;
+  order: 2;
+  box-sizing: border-box;
+}
+
+.plan-filter__select {
+  width: 165px;
+  height: 42px;
+  border-radius: 4px;
+  border: solid 1px #cbced9;
+  order: 1;
+  font-family: "Bloggersans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  box-sizing: border-box;
+  padding-left: 12px;
+
+  &--choice {
+    width: 100%;
+  }
+}
+
+.plan-filter__select-btn {
+  width: 100%;
+  padding-left: 12px;
+  border-radius: 4px;
+  background-color: #edeff6;
+  border: none;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  font-family: "Bloggersans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  text-align: left;
+  color: #1d2e5b;
+  text-transform: uppercase;
+  margin-top: 22px;
+}
+
+.plan-filter__comment-label {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+  color: #1d2e5b;
+}
+
+.plan-filter__comment {
+  width: 220px;
+  height: 220px;
+  border-radius: 4px;
+  border: solid 1px #cbced9;
+  background-color: #ffffff;
+  padding: 15px;
+  resize: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    font-family: "Bloggersans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &[readonly]::placeholder {
+    color: #444444;
+  }
+}

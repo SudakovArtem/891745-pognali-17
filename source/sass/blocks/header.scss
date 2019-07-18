@@ -1,0 +1,124 @@
+.header {
+  background-color: #ffffff;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.main-nav__toggle {
+  width: 19px;
+  height: 19px;
+  background: url("../../img/close.svg");
+  border: none;
+  opacity: 0.5;
+}
+
+.site-list {
+  list-style: none;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  margin-top: 70px;
+}
+
+.site-list__link {
+  color: #192144;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+}
+
+.main-nav__tel,
+.main-nav__email {
+  position: relative;
+  display: block;
+  margin-left: 86px;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #192144;
+}
+
+.main-nav__tel {
+  margin-top: 60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -50px;
+    width: 45px;
+    height: 45px;
+    background: #121936 url("../../img/contacts-phone.svg") center no-repeat;
+    background-size: 18px 18px;
+    border-radius: 50%;
+  }
+}
+
+.main-nav__email {
+  margin-top: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -50px;
+    width: 45px;
+    height: 45px;
+    background: #121936 url("../../img/contacts-mail.svg") center no-repeat;
+    background-size: 18px 18px;
+    border-radius: 50%;
+  }
+}
+
+.social {
+  width: 135px;
+  margin: 44px auto;
+}
+
+.social__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.social__link {
+  display: block;
+  padding: 0;
+  width: 45px;
+  height: 45px;
+  background: url("../../img/facebook.svg") center no-repeat;
+  background-size: 11px 21px;
+
+  &--vkontakte {
+    background-image: url("../../img/vk.svg");
+    background-size: 23px 12px;
+  }
+
+  &--instagram {
+    background-image: url("../../img/instagram.svg");
+    background-size: 18px 18px;
+  }
+}
