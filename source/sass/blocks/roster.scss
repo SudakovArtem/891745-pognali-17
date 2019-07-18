@@ -63,6 +63,43 @@
   display: flex;
 }
 
+.roster .ways__item {
+  width: 33px;
+  height: 32px;
+  margin: 0;
+  border-radius: 50%;
+  background-color: #edeff6;
+  display: flex;
+}
+
+.roster .ways__image {
+  margin: auto;
+
+  &--air {
+    width: 14px;
+    height: 16px;
+  }
+
+  &--bus {
+    width: 13px;
+    height: 16px;
+  }
+
+  &--bicycle {
+    width: 19px;
+    height: 17px;
+  }
+
+  &--foot {
+    width: 15px;
+    height: 17px;
+  }
+}
+
+.compilation__wrapper--level {
+  margin-left: auto;
+}
+
 .companion__status {
   width: 45px;
   height: 45px;

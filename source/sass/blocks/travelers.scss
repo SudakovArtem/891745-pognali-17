@@ -53,11 +53,21 @@
 
 .ways__item {
   margin-right: 15px;
-  opacity: 0.15;
+
+  &:last-child {
+    margin: 0;
+  }
 
   &--active {
-    opacity: 1;
+    .ways__image {
+      opacity: 1;
+    }
   }
+}
+
+.ways__image {
+  opacity: 0.15;
+
 
   &:last-child {
     margin: 0;
