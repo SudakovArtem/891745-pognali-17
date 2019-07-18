@@ -63,7 +63,8 @@
 }
 
 .compilation__label input[type="checkbox"]:checked + .compilation__checkbox-indicator {
-  background-image: url("../../img/dropdown-form.svg");
+  background-image: url("../../img/tick.svg");
+  background-size: 9px 9px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
