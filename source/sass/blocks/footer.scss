@@ -1,8 +1,11 @@
 .footer {
+  position: relative;
   padding-top: 15px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   background-color: #ffffff;
+  margin-top: -30px;
+  z-index: 2;
 }
 
 .footer__logo-image {
@@ -14,10 +17,115 @@
   display: flex;
   justify-content: space-between;
   padding: 14px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  color: #444444;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.footer__social .social__link {
-  background-color: #ffd74b;
-  border-radius: 50%;
+.footer__copyright-image {
+  width: 27px;
+  height: 34px;
 }
+
+.footer__social {
+  margin-top: 40px;
+  margin-bottom: 37px;
+}
+
+.footer-social__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
+
+  .footer-social__link {
+    background-color: #ffd74b;
+    border-radius: 50%;
+  }
+
+  .footer-social__link-image--facebook {
+    width: 11px;
+    height: 21px;
+  }
+
+  .footer-social__link-image--vkontakte {
+    width: 23px;
+    height: 12px;
+  }
+
+  .footer-social__link-image--instagram {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.footer-social__link:hover {
+  background-color: #192144;
+
+  & .footer-social__link-image {
+    fill: #ffffff;
+  }
+}
+
+.footer-social__link {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+}
+
+.footer-social__link:active {
+  background-color: #192144;
+
+  & .footer-social__link-image {
+    fill: #5e647c;
+  }
+}
+
+@media (min-width: $tablet) {
+  .footer {
+    padding-top: 48px;
+    padding-bottom: 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -50px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
+  .footer__logo-image {
+    width: 166px;
+    height: 42px;
+    margin: 0;
+  }
+
+  .footer__social {
+    margin: 0;
+  }
+
+  .footer__copyright {
+    width: 152px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__copyright-text {
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+

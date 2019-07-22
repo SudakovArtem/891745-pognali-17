@@ -1,9 +1,12 @@
 .directions {
+  position: relative;
   padding-top: 70px;
   padding-bottom: 30px;
   background-color: #e8eaf2;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  margin-top: -30px;
+  z-index: 5;
 }
 
 .directions__title {
@@ -28,12 +31,32 @@
   border-radius: 10px;
 }
 
-.directions__wrapper {
+.directions__item-wrapper {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   border-radius: 10px;
   background: #ffffff;
   padding: 28px 26px 23px 24px;
+  margin-top: -15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 24px;
+    background-image: url("../../img/thailand50.png");
+    top: -12px;
+  }
+
+  &--france::before {
+    background-image: url("../../img/france50.png");
+  }
+
+  &--czech::before {
+    background-image: url("../../img/czech50.png");
+  }
 }
 
 .directions__name {
@@ -59,6 +82,7 @@
 }
 
 .directions__people {
+  position: relative;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -66,15 +90,153 @@
   letter-spacing: normal;
   text-align: right;
   color: rgba(68, 68, 68, 0.3);
-  flex-grow: 1;
+  padding-left: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 11px;
+    height: 11px;
+    opacity: 0.1;
+    background: url("../../img/user.svg") center no-repeat;
+    background-size: 11px 11px;
+  }
 }
 
 .directions__to-all {
+  position: relative;
   border-radius: 10px;
   text-align: left;
+  text-transform: none;
   padding: 15px 24px;
   font-size: 18px;
   margin-top: 25px;
-  background: #ffd74b url("../../img/triangle-arrow-right.svg") 90% center no-repeat;
-  background-size: 10px 14px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 23px;
+    background: url("../../img/triangle-arrow-right.svg") center no-repeat;
+    width: 10px;
+    height: 14px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .directions {
+    padding-bottom: 80px;
+    background: #e8eaf2 url("../../img/flags-back@1x.png") 98% 20% no-repeat;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin-top: -50px;
+  }
+
+  .directions__title {
+    font-size: 45px;
+    padding-left: 35px;
+  }
+
+  .directions__text {
+    width: 375px;
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: normal;
+    padding-left: 35px;
+  }
+
+  .directions__item {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .directions__image {
+    order: 2;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 186px;
+  }
+
+  .directions__item-wrapper {
+    flex-grow: 1;
+    margin-top: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+
+    &::before {
+      width: 70px;
+      height: 47px;
+      background-image: url("../../img/thailand.png");
+      top: 15px;
+      right: -35px;
+    }
+
+    &--france::before {
+      background-image: url("../../img/france.png");
+    }
+
+    &--czech::before {
+      background-image: url("../../img/czech.png");
+    }
+  }
+
+
+  .directions__name {
+    font-size: 24px;
+  }
+
+  .directions__people {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 32px;
+    order: 3;
+
+    &::before {
+      top: 7px;
+      width: 21px;
+      height: 20px;
+      background-size: 21px 20px;
+    }
+  }
+
+  .directions__tagline {
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  .directions__to-all {
+    width: 100%;
+    font-size: 24px;
+
+    &::before {
+      top: 34px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .directions {
+    position: relative;
+    padding: 250px 130px 139px 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-position: 95% 65%;
+  }
+
+  .directions__text-wrapper {
+    position: relative;
+    order: 2;
+  }
+
+  .directions__to-all {
+    position: absolute;
+    width: 274px;
+    height: 81px;
+    right: 230px;
+    bottom: 150px;
+  }
 }
