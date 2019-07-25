@@ -249,12 +249,13 @@
   }
 
   .country-filter__toggle {
-    width: 175px;
+    width: 180px;
     height: 19px;
     order: 4;
     margin-left: auto;
     padding-right: 45px;
     padding-left: 0;
+    font-family: "BloggerSans", "Arial", sans-serif;
     font-size: 20px;
     font-weight: bold;
     line-height: 1.2;
@@ -274,7 +275,7 @@
 
   .country-filter-popup__list {
     display: flex;
-    width: 420px;
+    width: 380px;
     order: 2;
     margin: 0;
     align-items: center;
@@ -282,6 +283,10 @@
 
   .country-filter-popup__item {
     margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .country-filter-popup__link {
