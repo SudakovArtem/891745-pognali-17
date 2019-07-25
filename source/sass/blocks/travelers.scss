@@ -51,6 +51,7 @@
   text-align: left;
   color: #ffffff;
   padding-left: 25px;
+  margin-bottom: 74px;
 }
 
 .travelers__list {
@@ -289,7 +290,7 @@
 
 @media (min-width: $tablet) {
   .travelers {
-    padding: 80px 75px;
+    padding: 120px 75px 80px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     margin-top: -50px;
@@ -307,10 +308,11 @@
   }
 
   .travelers__bold {
-    width: 255px;
+    width: 280px;
     font-size: 21px;
     font-weight: bold;
     line-height: 1.19;
+    margin-bottom: 60px;
   }
 
   .travelers__list {
@@ -367,6 +369,11 @@
     justify-content: space-between;
     padding-top: 223px;
   }
+
+  .travelers__title {
+    margin-top: 0;
+  }
+
 
   .travelers__text-wrapper {
     padding-left: 71px;
