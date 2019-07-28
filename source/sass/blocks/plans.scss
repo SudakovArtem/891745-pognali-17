@@ -1,8 +1,10 @@
 .plans {
+  position: relative;
   background-color: #dfe3f0;
-  border-radius: 30px;
+  border-radius: 30px 30px 0 0;
   padding-top: 25px;
-  padding-bottom: 50px;
+  padding-bottom: 56px;
+  z-index: 3;
 }
 
 .plans__title {
@@ -57,4 +59,87 @@
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   margin-top: 25px;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: $tablet) {
+  .plans {
+    padding: 75px 75px 105px;
+  }
+
+  .plans__title {
+    font-size: 36px;
+  }
+
+  .plans__item {
+    padding: 37px 37px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .plans__country {
+    width: 100%;
+    font-size: 24px;
+    line-height: 2.08;
+  }
+
+  .plans__quantity,
+  .plans__period {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .plans__btn {
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-align: right;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $desktop) {
+  .plans {
+    padding: 50px 60px 174px 124px;
+  }
+
+  .plans__item {
+    padding: 40px 43px 41px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .plans__country {
+    width: auto;
+    margin: 0;
+  }
+
+  .plans__quantity {
+    margin-left: auto;
+  }
+
+  .plans__period {
+    margin-left: 54px;
+    margin-right: 136px;
+  }
+
+  .plans__btn {
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-align: right;
+    margin-top: 0;
+  }
 }

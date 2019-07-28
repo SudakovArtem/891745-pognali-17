@@ -258,18 +258,27 @@
   margin-left: auto;
 }
 
-.companion__status {
+.companion__progressbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 45px;
   height: 45px;
-  border: solid 3px #ff8d30;
-  border-radius: 50%;
-  display: block;
-  text-align: center;
-  padding-top: 12px;
-  box-sizing: border-box;
+  z-index: 99;
+}
+
+.companion__stroke {
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 45px;
+  height: 45px;
+}
+
+.companion__status-number {
   font-size: 24px;
   font-weight: bold;
-  line-height: 0.75;
+  line-height: 1;
   color: #1d2e5b;
 }
 
@@ -407,6 +416,8 @@
   }
 
   .roster .ways__image {
+    opacity: 0.3;
+
     &--air {
       width: 19px;
       height: 21px;
@@ -499,18 +510,26 @@
     margin-left: 0;
   }
 
-  .companion__status {
+  .companion__progressbar {
+    display: flex;
     width: 60px;
     height: 60px;
-    padding-top: 12px;
+    z-index: 99;
+    border-radius: 50%;
+  }
+
+  .companion__stroke {
+    width: 60px;
+    height: 60px;
   }
 
   .companion__status-lvl {
     display: block;
+    padding: 5px 5px 0 5px;
+    border-top: 1px solid rgba(68, 68, 68, 0.4);
     font-size: 14px;
     font-weight: normal;
     line-height: 1;
-    text-align: center;
     color: rgba(68, 68, 68, 0.4);
   }
 

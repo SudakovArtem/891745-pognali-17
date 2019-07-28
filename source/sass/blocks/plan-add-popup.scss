@@ -1,10 +1,26 @@
 .plan-add-popup {
-  padding: 0 50px;
+  display: none;
+  position: fixed;
+  width: 220px;
+  top: 50%;
+  left: 50%;
+  margin-left: -110px;
+  margin-top: -250px;
+  min-height: 443px;
+  z-index: 10;
+  padding: 0;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+  border-radius: 0 0 10px 10px;
+
+  &--open {
+    display: block;
+  }
 }
 
 .plan-add-popup__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #1d2e5b;
   padding: 15px 13px 16px 13px;
   border-top-right-radius: 4px;
@@ -23,20 +39,44 @@
 }
 
 .plan-add-popup__close {
+  width: 9px;
+  height: 9px;
   background: url("../../img/menu-close.svg") center no-repeat;
+  background-size: 9px 9px;
   border: none;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .filter-table {
-  text-align: center;
-  border-collapse: collapse;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-table__cell {
-  width: 45px;
+  width: 44px;
   height: 42px;
-  border: solid 1px #cbced9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: solid 1px #cbced9;
+  border-bottom: solid 1px #cbced9;
   background-color: #ffffff;
+
+  &:nth-child(5n + 1) {
+    border-left: solid 1px #cbced9;
+  }
+
+  &:nth-child(-n+5) {
+    border-top: solid 1px #cbced9;
+  }
 
   &--active {
     background-color: #edeff6;
@@ -52,14 +92,181 @@
 }
 
 .plan-add-popup__country-list {
+  width: 100%;
   list-style: none;
-  padding: 0;
+  padding: 20px;
   margin: 0;
   line-height: 1.38;
   text-align: left;
   color: #444444;
+  background-color: #ffffff;
+  border: solid 1px #cbced9;
+  border-radius: 0 0 10px 10px;
+  border-top: 0;
 }
 
 .plan-add-popup__country-name {
   margin: 0;
+  color: #444444;
+
+  &:hover {
+    color: #1d2e5b;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+}
+
+@media (min-width: $tablet) {
+  .plan-add-popup {
+    width: 575px;
+    margin-left: -266px;
+    margin-top: -250px;
+    box-shadow: none;
+  }
+
+  .plan-add-popup__wrapper {
+    width: 369px;
+    padding: 27px;
+  }
+
+  .plan-add-popup__table-wrap {
+    width: 575px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 25px;
+    background-color: #ffffff;
+    box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+    border-radius: 0 0 20px 20px;
+  }
+
+  .plan-add-popup__title {
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .plan-add-popup__close {
+    width: 17px;
+    height: 17px;
+    background-size: 17px 17px;
+  }
+
+  .filter-table {
+    width: 318px;
+    margin-top: 34px;
+    margin-right: 25px;
+    margin-bottom: 96px;
+  }
+
+  .filter-table__cell {
+    width: 53px;
+    height: 70px;
+    padding: 0;
+
+    &:nth-child(5n + 1) {
+      border-left: 0;
+    }
+
+    &:nth-child(6n + 1) {
+      border-left: solid 1px #cbced9;
+    }
+
+    &:nth-child(-n+6) {
+      border-top: solid 1px #cbced9;
+    }
+
+    &--active {
+      background-color: #1d2e5b;
+
+      .filter-table__link {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .filter-table__link {
+    font-size: 20px;
+  }
+
+  .plan-add-popup__country-list {
+    width: auto;
+    padding-top: 34px;
+    padding-left: 27px;
+    font-size: 20px;
+    line-height: 1.5;
+    border: 0;
+    border-left: solid 1px #cbced9;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: $desktop) {
+  .plan-add-popup {
+    width: 730px;
+    margin-left: -500px;
+    margin-top: -317px;
+    box-shadow: none;
+  }
+
+  .plan-add-popup__wrapper {
+    width: 100%;
+  }
+
+  .plan-add-popup__table-wrap {
+    width: 100%;
+  }
+
+  .filter-table {
+    width: 450px;
+    margin-right: 12px;
+    margin-bottom: 19px;
+  }
+
+  .filter-table__cell {
+    width: 60px;
+    border-radius: 4px;
+    height: 70px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: solid 1px #cbced9;
+
+    &:nth-child(5n + 1) {
+      border-left: solid 1px #cbced9;
+    }
+
+    &--active {
+      background-color: #1d2e5b;
+
+      .filter-table__link {
+        color: #ffffff;
+      }
+    }
+
+    &:hover {
+      border-color: #959bb2;
+    }
+
+    &:active {
+      background-color: #1d2e5b;
+
+      .filter-table__link {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .filter-table__link {
+    font-size: 20px;
+  }
+
+  .plan-add-popup__country-list {
+    padding-top: 34px;
+    padding-left: 27px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-left: solid 1px #cbced9;
+    border-radius: 0;
+  }
 }
