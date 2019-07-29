@@ -8,12 +8,12 @@
 </head>
 <body>
 
-<header class="header header--scroll container">
+<header class="header container">
   <div class="header__wrapper">
     <a class="header__logo">
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
+        <source class="header__logo-image-desktop" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
+        <source class="header__logo-image-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
         <img class="header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Погнали?">
       </picture>
     </a>
@@ -147,10 +147,13 @@
       <p class="travelers__bold">Теперь можно легко найти единомышленников!</p></div>
     <ul class="travelers__list">
       <li class="travelers__item">
-        <p class="travelers__status">
+        <div class="travelers__progressbar">
+          <svg class="travelers__stroke" width="60" height="60" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="57" fill="none" stroke="#ff8d30" stroke-width="6" stroke-dasharray="480" stroke-dashoffset="135.717"></circle>
+          </svg>
           <span class="travelers__status-number">99</span>
           <span class="travelers__status-lvl">level</span>
-        </p>
+        </div>
         <img class="travelers__image" src="img/firsova-desktop@1x.jpg" width="285" height="285" alt="firsova">
         <div class="travelers__wrapper">
           <ul class="travelers__flags flags">
@@ -187,10 +190,13 @@
         </div>
       </li>
       <li class="travelers__item">
-        <p class="travelers__status">
+        <div class="travelers__progressbar">
+          <svg class="travelers__stroke" width="60" height="60" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="57" fill="none" stroke="#ff8d30" stroke-width="6" stroke-dasharray="420" stroke-dashoffset="135.717"></circle>
+          </svg>
           <span class="travelers__status-number">80</span>
           <span class="travelers__status-lvl">level</span>
-        </p>
+        </div>
         <img class="travelers__image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="demin">
         <div class="travelers__wrapper">
           <ul class="travelers__flags flags">

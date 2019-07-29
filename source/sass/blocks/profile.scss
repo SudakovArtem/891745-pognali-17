@@ -1,28 +1,42 @@
-.profile__info-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.profile__status {
+.profile {
   display: flex;
   flex-wrap: wrap;
+  padding: 25px;
+}
+
+.profile__progressbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 100px;
-  border: solid 3px #ff8d30;
   border-radius: 50%;
-  text-align: center;
-  padding-top: 12px;
-  box-sizing: border-box;
-  margin: 0;
+  z-index: 99;
+  padding: 0 20px;
+}
+
+.profile__stroke {
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 100px;
+  height: 100px;
 }
 
 .profile__status-number {
   font-size: 38px;
   font-weight: bold;
   line-height: 1;
-  color: #161c35;
-  width: 100%;
+  color: #1d2e5b;
+}
+
+.profile__status-lvl {
+  padding: 5px 5px 0 5px;
+  border-top: 1px solid rgba(68, 68, 68, 0.4);
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1;
+  color: rgba(68, 68, 68, 0.4);
 }
 
 .profile__text {
@@ -44,32 +58,301 @@
 }
 
 .profile__hashtag {
-  margin: 0;
-}
-
-.profile__status-lvl {
-  font-size: 18px;
-  line-height: 1.22;
-  text-align: center;
-  color: #444444;
   width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: solid 1px #cbced9;
+  background: none;
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  padding: 25px;
+  margin: 0;
+  resize: none;
+
+  &:hover {
+    border: solid 1px #aeb4cb;
+  }
+
+  &:focus {
+    border: solid 1px #161c35;
+  }
 }
 
 .profile__image {
   width: 99px;
   height: 100px;
   border-radius: 50%;
+  margin-left: auto;
 }
 
 .profile__btn {
   background-color: #d6daed;
+  margin-top: 19px;
   margin-bottom: 30px;
+
+  &:hover {
+    background-color: #d1d7e9;
+  }
+
+  &:active {
+    background-color: #d1d7e9;
+    color: rgba(29, 46, 91, 0.3);
+  }
+}
+
+.profile__btn-desktop {
+  display: none;
 }
 
 .profile__wrapper {
   position: relative;
+  width: 100%;
   border-radius: 10px;
   border: solid 1px #cbced9;
-  padding: 25px;
+  padding: 15px;
   margin-bottom: 25px;
+
+  &--tags {
+    border: none;
+    padding: 0;
+  }
+}
+
+.profile .ways__item {
+  position: relative;
+  width: 33px;
+  height: 32px;
+  margin: 0;
+  border-radius: 50%;
+  background: #edeff6;
+  display: flex;
+}
+
+.profile .ways__image {
+  margin: auto;
+  opacity: 0.3;
+
+  &--air {
+    width: 14px;
+    height: 16px;
+  }
+
+  &--bus {
+    width: 13px;
+    height: 16px;
+  }
+
+  &--bicycle {
+    width: 19px;
+    height: 17px;
+  }
+
+  &--foot {
+    width: 15px;
+    height: 17px;
+  }
+}
+
+.ways__item--active .ways__image {
+  opacity: 1;
+}
+
+@media (min-width: $tablet) {
+  .profile {
+    padding: 60px 75px;
+  }
+
+  .profile__progressbar {
+    order: 1;
+    width: 94px;
+    height: 94px;
+    margin-right: 60px;
+    padding: 0 20px;
+  }
+
+  .profile__stroke {
+    position: absolute;
+    transform: rotate(-90deg);
+    width: 94px;
+    height: 94px;
+  }
+
+  .profile__text {
+    font-size: 20px;
+    left: 259px;
+    top: auto;
+    bottom: -10px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    padding: 0 20px;
+
+    &--transport {
+      left: 77px;
+    }
+  }
+
+  .profile__hashtag {
+    font-size: 20px;
+    height: 100%;
+    padding: 35px 40px;
+    overflow: hidden;
+  }
+
+  .profile__image {
+    order: 3;
+    width: 94px;
+    height: 94px;
+    border-radius: 10px;
+  }
+
+  .profile__btn {
+    order: 4;
+    background-color: #d6daed;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .profile__wrapper {
+    height: 94px;
+
+    &--transport {
+      order: 2;
+      width: 308px;
+    }
+
+    &--tags {
+      order: 5;
+    }
+  }
+
+  .profile .ways__item {
+    position: relative;
+    width: 43px;
+    height: 43px;
+    background: none;
+  }
+
+  .profile .ways__image {
+    &--air {
+      width: 19px;
+      height: 21px;
+    }
+
+    &--bus {
+      width: 17px;
+      height: 21px;
+    }
+
+    &--bicycle {
+      width: 24px;
+      height: 21px;
+    }
+
+    &--foot {
+      width: 20px;
+      height: 21px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .profile {
+    position: relative;
+    padding: 0 60px 65px 124px;
+    margin-top: -190px;
+    z-index: 2;
+  }
+
+  .profile__progressbar {
+    order: 1;
+    margin-left: 896px;
+    margin-right: 45px;
+    margin-top: 43px;
+  }
+
+  .profile__status-number {
+    color: #ffffff;
+  }
+
+  .profile__status-lvl {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+  }
+
+  .profile__text {
+    left: 11px;
+
+    &--transport {
+      left: 115px;
+    }
+  }
+
+  .profile__image {
+    order: 2;
+    width: 190px;
+    height: 190px;
+    border-radius: 10px 10px 0 0;
+    margin-left: 0;
+  }
+
+  .profile__btn {
+    order: 3;
+    margin-top: 0;
+    width: 190px;
+    border-radius: 0 0 10px 10px;
+    margin-left: 1035px;
+  }
+
+  .profile__btn-mobile {
+    display: none;
+  }
+
+  .profile__btn-desktop {
+    display: block;
+  }
+
+  .profile__wrapper--transport {
+    order: 6;
+    width: 384px;
+    margin-left: auto;
+  }
+
+  .profile__wrapper--tags {
+    order: 4;
+    width: 730px;
+  }
+
+  .profile .ways__item {
+    position: relative;
+    width: 43px;
+    height: 43px;
+    background: none;
+  }
+
+  .profile .ways__image {
+    &--air {
+      width: 19px;
+      height: 21px;
+    }
+
+    &--bus {
+      width: 17px;
+      height: 21px;
+    }
+
+    &--bicycle {
+      width: 24px;
+      height: 21px;
+    }
+
+    &--foot {
+      width: 20px;
+      height: 21px;
+    }
+  }
 }

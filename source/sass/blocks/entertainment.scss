@@ -1,0 +1,201 @@
+.plan-filter__comment-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #1d2e5b;
+    top: 8px;
+    left: -12px;
+  }
+}
+
+.plan-filter__comment-wrapper--current {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #1d2e5b;
+    top: 8px;
+    left: -12px;
+  }
+}
+
+.plan-filter__comment-label {
+  position: relative;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: left;
+  color: #1d2e5b;
+  padding-left: 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1d2e5b;
+    top: 5px;
+    left: -2px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 24px;
+    background: url("../../img/bosnia-and-herzegovina.png") no-repeat center;
+    background-size: 35px 24px;
+    top: -5px;
+    right: 0;
+  }
+}
+
+.plan-filter__comment-label--czech {
+  &::after {
+    background-image: url("../../img/czech.png");
+  }
+}
+
+.plan-filter__comment {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 4px;
+  border: solid 1px #cbced9;
+  background-color: #ffffff;
+  padding: 15px;
+  resize: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    font-family: "Bloggersans", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &[readonly]::placeholder {
+    color: #444444;
+  }
+
+  &:hover {
+    border: solid 1px #959bb2;
+  }
+
+  &:focus {
+    border: solid 1px #161c35;
+  }
+}
+
+@media (min-width: $tablet) {
+  .plan-filter__item--plan .plan-filter__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .plan-filter__comment-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .plan-filter__comment-wrapper--current {
+    &::before {
+      display: none;
+    }
+  }
+
+  .plan-filter__comment-label {
+    font-size: 30px;
+    padding-left: 0;
+
+    &::before {
+      width: 15px;
+      height: 15px;
+      top: 10px;
+      left: auto;
+      right: 100px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 47px;
+      background-size: 70px 47px;
+      top: -5px;
+      right: 0;
+    }
+  }
+
+  .plan-filter__comment {
+    width: 527px;
+    height: 142px;
+    padding: 19px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .plan-filter__comment-wrapper {
+    display: flex;
+    width: 100%;
+  }
+
+  .plan-filter__comment-wrapper--current {
+    &::before {
+      display: block;
+      width: 3px;
+      height: 100%;
+      top: 8px;
+      left: auto;
+      right: 224px;
+    }
+  }
+
+  .plan-filter__comment-label {
+    &::before {
+      width: 15px;
+      height: 15px;
+      top: 5px;
+      left: auto;
+      right: 218px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 47px;
+      background-size: 70px 47px;
+      top: -5px;
+      right: 115px;
+    }
+  }
+
+  .plan-filter__comment {
+    width: 730px;
+  }
+}

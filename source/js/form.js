@@ -1,12 +1,12 @@
 const headerNav = document.querySelector(".main-nav");
 const header = document.querySelector(".header");
 const headerButton = document.querySelector(".main-nav__toggle");
-const link = document.querySelector(".advantages__link");
-const advantage = document.querySelector(".advantages-popup");
-const close = advantage.querySelector(".advantages-popup__close");
 const headerLogoMobile = document.querySelector(".header__logo-image");
 const headerLogoTablet = document.querySelector(".header__logo-image-tablet");
 const headerLogoDesktop = document.querySelector(".header__logo-image-desktop");
+const countryButton = document.querySelector(".plan-filter__button--choice");
+const close = document.querySelector(".plan-add-popup__close");
+const countryPopup = document.querySelector(".plan-add-popup");
 
 
 headerButton.addEventListener("click", function (evt) {
@@ -22,25 +22,6 @@ headerButton.addEventListener("click", function (evt) {
   }
 });
 
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  advantage.classList.remove("visually-hidden");
-});
-
-close.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  advantage.classList.add("visually-hidden");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (advantage.classList.contains("visually-hidden") === false) {
-      advantage.classList.add("visually-hidden");
-    }
-  }
-});
-
 window.onscroll = function showHeader() {
   if(window.pageYOffset > 200){
     header.classList.add('header--scroll');
@@ -53,6 +34,23 @@ window.onscroll = function showHeader() {
     headerLogoTablet.srcset='img/logo-tablet-white@1x.png';
     headerLogoDesktop.srcset='img/logo-desktop-white@1x.png';
   }
-}
+};
 
-// 'img/logo-mobile-blue@1x.png'
+countryButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  countryPopup.classList.toggle("plan-add-popup--open");
+});
+
+close.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  countryPopup.classList.remove("plan-add-popup--open");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (countryPopup.classList.contains("plan-add-popup--open") === true) {
+      countryPopup.classList.remove("plan-add-popup--open");
+    }
+  }
+});

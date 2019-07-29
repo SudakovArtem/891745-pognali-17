@@ -1,5 +1,9 @@
 .travelers {
   background-color: #192144;
+  background-image: url("../../img/smolov-back-desktop@1x.png"), url("../../img/rogovaya-back-mobile@1x.png");
+  background-position: 90% 5%, left 25%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, auto;
   position: relative;
   padding-top: 70px;
   padding-bottom: 30px;
@@ -51,6 +55,7 @@
   text-align: left;
   color: #ffffff;
   padding-left: 25px;
+  margin-bottom: 74px;
 }
 
 .travelers__list {
@@ -69,21 +74,26 @@
   display: flex;
 }
 
-.travelers__status {
+.travelers__progressbar {
   position: absolute;
+  display: flex;
   left: 17px;
   top: 16px;
-  display: flex;
-  width: 60px;
-  height: 60px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: solid 3px #ff8d30;
-  border-radius: 50%;
-  box-sizing: border-box;
-  margin: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 60px;
+  height: 60px;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.travelers__stroke {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  transform: rotate(-90deg);
 }
 
 .travelers__status-number {
@@ -289,7 +299,9 @@
 
 @media (min-width: $tablet) {
   .travelers {
-    padding: 80px 75px;
+    background-image: url("../../img/rogovaya-back-desktop@1x.png"), url("../../img/smolov-back-desktop@1x.png");
+    background-position: 85% 10%, 5% 40%;
+    padding: 120px 75px 80px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     margin-top: -50px;
@@ -307,10 +319,11 @@
   }
 
   .travelers__bold {
-    width: 255px;
+    width: 280px;
     font-size: 21px;
     font-weight: bold;
     line-height: 1.19;
+    margin-bottom: 60px;
   }
 
   .travelers__list {
@@ -352,6 +365,7 @@
   .travelers__to-all {
     width: 100%;
     font-size: 24px;
+    margin-top: 80px;
 
     &::before {
       top: 34px;
@@ -361,12 +375,18 @@
 
 @media (min-width: $desktop) {
   .travelers {
+    background-position: 20% 95%, 40% 40%;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 223px;
   }
+
+  .travelers__title {
+    margin-top: 0;
+  }
+
 
   .travelers__text-wrapper {
     padding-left: 71px;
