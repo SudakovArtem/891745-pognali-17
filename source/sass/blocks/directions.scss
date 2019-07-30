@@ -132,6 +132,10 @@
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     margin-top: -50px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/flags-back@2x.png");
+    }
   }
 
   .directions__title {
@@ -152,8 +156,11 @@
     margin-bottom: 10px;
   }
 
-  .directions__image {
+  .directions__picture {
     order: 2;
+  }
+
+  .directions__image {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     width: 186px;
