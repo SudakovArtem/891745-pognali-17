@@ -12,9 +12,9 @@
   <div class="header__wrapper">
     <a class="header__logo">
       <picture>
-        <source class="header__logo-image-desktop" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
-        <source class="header__logo-image-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
-        <img class="header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Погнали?">
+        <source class="header__logo-image-desktop" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+        <source class="header__logo-image-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+        <img class="header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Погнали?">
       </picture>
     </a>
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
@@ -116,21 +116,30 @@
     </div>
     <ul class="directions__list">
       <li class="directions__item">
-        <img class="directions__image" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="thailand">
+        <picture class="directions__picture">
+          <source class="directions__image-tablet" media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+          <img class="directions__image" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg" width="270" height="110" alt="thailand">
+        </picture>
         <div class="directions__item-wrapper directions__item-wrapper--thailand">
           <b class="directions__name">Тайланд</b><span class="directions__people">18321</span>
           <p class="directions__tagline">Джугли зовут!</p>
         </div>
       </li>
       <li class="directions__item">
-        <img class="directions__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="france">
+        <picture class="directions__picture">
+          <source class="directions__image-tablet" media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
+          <img class="directions__image" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" width="270" height="110" alt="france">
+        </picture>
         <div class="directions__item-wrapper directions__item-wrapper--france">
           <b class="directions__name">Франция</b><span class="directions__people">12518</span>
           <p class="directions__tagline">Трэ бьен, манифик!</p>
         </div>
       </li>
       <li class="directions__item">
-        <img class="directions__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="czech">
+        <picture class="directions__picture">
+          <source class="directions__image-tablet" media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
+          <img class="directions__image" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg" width="270" height="110" alt="czech">
+        </picture>
         <div class="directions__item-wrapper directions__item-wrapper--czech">
           <b class="directions__name">Чехия</b><span class="directions__people">5326</span>
           <p class="directions__tagline">Закоулки старой Европы</p>
@@ -154,7 +163,11 @@
           <span class="travelers__status-number">99</span>
           <span class="travelers__status-lvl">level</span>
         </div>
-        <img class="travelers__image" src="img/firsova-desktop@1x.jpg" width="285" height="285" alt="firsova">
+        <picture class="travelers__picture">
+          <source class="travelers__image-desktop" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-destop@2x.jpg 2x">
+          <source class="travelers__image-tablet" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+          <img class="travelers__image" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="285" height="285" alt="firsova">
+        </picture>
         <div class="travelers__wrapper">
           <ul class="travelers__flags flags">
             <li class="flags__item flags__item--sri-lanka">
@@ -197,7 +210,11 @@
           <span class="travelers__status-number">80</span>
           <span class="travelers__status-lvl">level</span>
         </div>
-        <img class="travelers__image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="demin">
+        <picture class="travelers__picture">
+          <source class="travelers__image-desktop" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+          <source class="travelers__image-tablet" media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+          <img class="travelers__image" src="img/demin-desktop@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="285" height="285" alt="demin">
+        </picture>
         <div class="travelers__wrapper">
           <ul class="travelers__flags flags">
             <li class="flags__item flags__item--belgium">
@@ -294,9 +311,9 @@
     <div class="map-container">
         <a class="map__image-link" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323057%252C59.938633%26spn%3D0.001000%252C0.001000%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8%2520&z=17">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/map-desktop.png">
-            <source media="(min-width: 768px)" srcset="img/map-tablet.png">
-            <img class="map__image" src="img/map.png" alt="map">
+            <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="map">
           </picture>
         </a>
       </div>
@@ -306,9 +323,9 @@
 
 <footer class="footer container">
   <picture>
-    <source media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png">
-    <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-    <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Погнали?">
+    <source media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+    <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+    <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали?">
   </picture>
   <div class="footer__social footer-social">
     <ul class="footer-social__list">
