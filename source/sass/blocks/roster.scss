@@ -1,5 +1,5 @@
 .roster {
-  padding: 28px 0;
+  padding: 30px 0 26px;
 }
 
 .roster__list {
@@ -15,8 +15,8 @@
   flex-wrap: wrap;
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 18px;
-  margin-bottom: 10px;
+  padding: 12px 18px 22px;
+  margin-bottom: 11px;
 
   &:last-child {
     margin-bottom: 0;
@@ -30,8 +30,6 @@
 .companion__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-left: 16px;
 }
 
 .companion__item-wrapper {
@@ -41,7 +39,7 @@
 
 .companion__image {
   position: absolute;
-  top: 18px;
+  top: 15px;
   left: 18px;
   width: 70px;
   height: 70px;
@@ -57,17 +55,17 @@
   line-height: 1;
   text-align: left;
   color: #1d2e5b;
-  padding-left: 90px;
+  padding-left: 87px;
 
   &::before {
     content: "";
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background-color: #f97676;
-    top: 6px;
-    right: -70px;
+    top: 10px;
+    right: -66px;
   }
 
   &:hover {
@@ -98,14 +96,15 @@
   line-height: 1.5;
   text-align: left;
   color: #161c35;
-  margin-top: 5px;
-  padding-left: 90px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding-left: 87px;
 }
 
 .companion__likes-box {
   position: absolute;
-  top: -5px;
-  left: 55px;
+  top: -6px;
+  left: 49px;
   background-color: #edeff6;
   display: flex;
   justify-content: center;
@@ -159,9 +158,21 @@
 
 .country {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 0 0 0 7px;
   width: 100%;
+  margin: 12px 0;
+
+  &--demin {
+    margin-bottom: 17px;
+  }
+
+  &--smolov {
+    margin-bottom: 15px;
+  }
+
+  &--rogovaya {
+    margin-bottom: 17px;
+  }
 }
 
 .companion__hashtag {
@@ -173,8 +184,9 @@
   letter-spacing: normal;
   text-align: left;
   padding-right: 50px;
-  margin-top: 26px;
-  margin-bottom: 0;
+  padding-left: 7px;
+  margin-top: 0;
+  margin-bottom: 14px;
 }
 
 .companion__text {
@@ -182,20 +194,28 @@
   font-size: 15px;
   line-height: 1.2;
   text-align: left;
+  padding-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   &--level {
-    margin-bottom: 5px;
+    margin-bottom: 9px;
+    padding-left: 0;
   }
 
   &--transport {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 }
 
 .country__item {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .country__image {
@@ -209,13 +229,13 @@
   line-height: 1.2;
   color: #1d2e5b;
   text-transform: uppercase;
-  margin-left: 15px;
+  margin-left: 14px;
   padding-top: 5px;
 }
 
 .companion__ways {
   list-style: none;
-  padding: 0;
+  padding: 0 0 0 5px;
   margin: 0;
   display: flex;
 }
@@ -232,6 +252,7 @@
 
 .roster .ways__image {
   margin: auto;
+  opacity: 0.3;
 
   &--air {
     width: 14px;
@@ -289,30 +310,53 @@
 .companion__btn {
   width: 230px;
   margin-top: 15px;
+  padding: 5px;
 }
 
 .roster__btn {
+  position: relative;
   width: 100%;
   background: none;
+  margin-top: 9px;
+  padding-left: 33px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 15px;
+    left: 60px;
+    background: url("../../img/show-more-plus.svg") no-repeat center center;
+    background-size: 18px 18px;
+  }
 
   &:hover {
     background: none;
     color: rgba(29, 46, 91, 0.6);
+
+    &::before {
+      opacity: 0.6;
+    }
   }
 
   &:active {
     color: rgba(29, 46, 91, 0.3);
+
+    &::before {
+      opacity: 0.3;
+    }
   }
 }
 
 .roster__pagination {
   display: flex;
-  padding: 15px 63px;
+  padding: 20px 59px;
   list-style: none;
-  margin: 0;
+  margin-top: 10px;
   background-color: #ffffff;
   border-radius: 20px;
-  margin-bottom: 46px;
+  margin-bottom: 48px;
 }
 
 .pagination__list {
@@ -364,7 +408,7 @@
 
   .roster__item {
     flex-direction: row;
-    padding: 35px;
+    padding: 31px 33px 8px 27px;
     margin-bottom: 40px;
   }
 
@@ -378,8 +422,8 @@
 
   .companion__item-wrapper {
     position: absolute;
-    top: 35px;
-    right: 35px;
+    top: 31px;
+    right: 26px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -397,7 +441,7 @@
     width: auto;
     order: 1;
     font-size: 30px;
-    padding-left: 223px;
+    padding-left: 229px;
     padding-right: 30px;
 
     &::before {
@@ -410,8 +454,8 @@
 
   .roster .ways__item {
     position: relative;
-    width: 43px;
-    height: 43px;
+    width: 32px;
+    height: 32px;
     background: none;
   }
 
@@ -454,7 +498,7 @@
     width: 50px;
     height: 50px;
     background-size: 20px 17px;
-    margin-right: 9px;
+    margin-right: 7px;
   }
 
   .companion__likes-image {
@@ -465,6 +509,23 @@
 
   .country {
     display: flex;
+    margin-top: 15px;
+    order: 5;
+
+    &--demin {
+      margin-top: 16px;
+      margin-bottom: 13px;
+    }
+
+    &--smolov {
+      margin-top: 15px;
+      margin-bottom: 13px;
+    }
+
+    &--rogovaya {
+      margin-top: 15px;
+      margin-bottom: 14px;
+    }
   }
 
   .companion__hashtag {
@@ -472,8 +533,8 @@
     font-size: 20px;
     width: 483px;
     padding-right: 0;
-    padding-left: 223px;
-    margin-top: 36px;
+    padding-left: 233px;
+    margin-top: 18px;
     margin-bottom: 48px;
   }
 
@@ -481,19 +542,16 @@
     display: none;
 
     &--country {
-      padding-left: 48px;
+      padding-left: 54px;
       display: block;
       order: 5;
+      margin-top: 20px;
     }
   }
 
   .country__image {
     width: 35px;
     height: 24px;
-  }
-
-  .companion__country {
-    order: 5;
   }
 
   .country__name {
@@ -504,17 +562,19 @@
 
   .companion__ways {
     flex-direction: column;
+    padding: 0;
   }
 
   .companion__wrapper--level {
     margin-left: 0;
+    margin-top: 10px;
   }
 
   .companion__progressbar {
     display: flex;
     width: 60px;
     height: 60px;
-    z-index: 99;
+    z-index: 1;
     border-radius: 50%;
   }
 
@@ -537,45 +597,35 @@
     order: 3;
     width: 148px;
     margin-top: 0;
-    margin-left: 223px;
+    margin-left: 227px;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: normal;
   }
 
   .roster__btn {
-    position: relative;
-    padding-left: 52px;
+    padding-left: 48px;
+    padding-top: 7px;
     font-size: 20px;
+    margin-top: 34px;
 
     &::before {
-      content: "";
-      position: absolute;
       width: 27px;
       height: 27px;
       top: 10px;
       left: 247px;
-      background: url("../../img/show-more-plus.svg") no-repeat center center;
       background-size: 27px 27px;
-    }
-
-    &:hover {
-      &::before {
-        opacity: 0.6;
-      }
-    }
-
-    &:active {
-      &::before {
-        opacity: 0.3;
-      }
     }
   }
 
   .roster__pagination {
     display: flex;
-    padding: 15px 28px;
+    padding: 25px 30px 25px 28px;
     background-color: #ffffff;
     border-radius: 20px;
     justify-content: space-between;
     align-items: center;
+    margin-top: 36px;
   }
 
   .pagination__list {
@@ -605,14 +655,14 @@
   }
 
   .pagination__button-list {
-    width: 53px;
+    width: 63px;
   }
 }
 
 @media (min-width: $desktop) {
   .wrapper {
     display: flex;
-    padding: 77px 60px;
+    padding: 77px 64px 55px 57px;
     justify-content: space-between;
   }
 
@@ -628,17 +678,18 @@
   }
 
   .roster__item {
-    padding: 42px 44px 42px 340px;
+    padding: 44px 44px 42px 342px;
     margin-bottom: 30px;
   }
 
   .companion__wrapper {
     flex-direction: row;
+    margin-top: 0;
   }
 
   .companion__item-wrapper {
     order: 5;
-    width: 235px;
+    width: 239px;
     position: static;
     margin-left: auto;
     flex-direction: row;
@@ -670,17 +721,26 @@
   .country {
     position: absolute;
     width: 246px;
-    right: 44px;
-    top: 46px;
+    right: 38px;
+    top: 30px;
     flex-direction: column;
+  }
+
+  .country__item {
+    margin-bottom: 7px;
+  }
+
+  .country__name {
+    margin-left: 19px;
   }
 
   .companion__hashtag {
     width: 100%;
-    padding-right: 360px;
-    margin-top: 15px;
+    padding-right: 330px;
+    margin-top: 18px;
+    margin-bottom: 43px;
     order: 2;
-    padding-left: 0;
+    padding-left: 3px;
   }
 
   .companion__text {
@@ -692,15 +752,26 @@
   }
 
   .companion__btn {
+    width: 145px;
     height: 50px;
     margin-left: 0;
     align-self: center;
   }
 
+  .companion__status-number {
+    margin-top: 3px;
+  }
+
+  .companion__status-lvl {
+    padding: 3px 3px 0 3px;
+  }
+
   .roster__btn {
     position: relative;
-    padding-left: 52px;
+    padding-left: 0;
     font-size: 20px;
+    padding-right: 23px;
+    margin-top: 53px;
 
     &::before {
       content: "";
@@ -708,9 +779,14 @@
       width: 27px;
       height: 27px;
       top: 10px;
-      left: 40%;
+      left: 344px;
       background: url("../../img/show-more-plus.svg") no-repeat center center;
       background-size: 27px 27px;
     }
+  }
+
+  .roster__pagination {
+    margin-top: 55px;
+    padding-right: 41px;
   }
 }

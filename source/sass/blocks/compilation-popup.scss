@@ -1,5 +1,5 @@
 .country-filter {
-  padding-top: 37px;
+  padding-top: 36px;
   padding-bottom: 27px;
   background-color: #e2e5f2;
   border-bottom-right-radius: 20px;
@@ -9,7 +9,7 @@
 }
 
 .country-filter--closed {
-  padding-bottom: 17px;
+  padding-bottom: 15px;
 
   .country-filter-table {
     display: none;
@@ -46,7 +46,7 @@
 }
 
 .country-filter-popup__head {
-  padding-left: 25px;
+  padding-left: 27px;
   position: relative;
   margin: 0;
   font-size: 16px;
@@ -61,7 +61,7 @@
     width: 15px;
     height: 10px;
     background: url("../../img/filter.svg") no-repeat center center;
-    top: 3px;
+    top: 6px;
     left: 0;
   }
 }
@@ -72,8 +72,8 @@
 
 .country-filter__toggle {
   position: relative;
-  width: 12px;
-  height: 12px;
+  width: 21px;
+  height: 20px;
   border: none;
   opacity: 1;
   background: none;
@@ -199,16 +199,16 @@
 
 @media (min-width: $tablet) {
   .country-filter {
-    padding: 125px 75px 75px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    padding: 115px 75px 75px 73px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -50px;
+    margin-top: -60px;
   }
 
   .country-filter--closed {
-    padding-bottom: 55px;
+    padding-bottom: 52px;
 
     .country-filter-popup__list {
       display: flex;
@@ -258,7 +258,7 @@
     font-family: "BloggerSans", "Arial", sans-serif;
     font-size: 20px;
     font-weight: bold;
-    line-height: 1.2;
+    line-height: 20px;
     color: #192144;
     text-transform: uppercase;
 
@@ -282,7 +282,7 @@
   }
 
   .country-filter-popup__item {
-    margin-right: 25px;
+    margin-right: 27px;
 
     &:last-child {
       margin-right: 0;
@@ -368,11 +368,22 @@
 
 @media (min-width: $desktop) {
   .country-filter {
-    padding: 125px 60px 75px;
+    padding: 116px 63px 74px 57px;
+  }
+
+  .country-filter--closed {
+    padding-bottom: 54px;
+
+    .country-filter__toggle {
+      margin-left: 0;
+      padding-right: 10px;
+      width: 176px;
+      text-align: left;
+    }
   }
 
   .country-filter__wrapper {
-    padding: 0 60px;
+    padding: 0 60px 0 21px;
   }
 
   .country-filter-popup__head {
@@ -384,8 +395,12 @@
       width: 23px;
       height: 15px;
       background-size: 23px 15px;
-      top: 3px;
+      top: 5px;
     }
+  }
+
+  .country-filter-popup__list {
+    margin-right: auto;
   }
 
   .country-filter-popup__tablet-head {
@@ -394,18 +409,19 @@
 
   .country-filter__toggle {
     margin-left: 20px;
+    padding-right: 83px;
   }
 
 
   .country-filter-table {
-    padding-left: 60px;
+    padding-left: 66px;
     width: 100%;
     margin-top: 0;
 
     .country-filter-table__cell {
-      width: 210px;
+      width: 209px;
       height: auto;
-      margin-top: 70px;
+      margin-top: 46px;
 
       &--desktop-none {
         display: none;
@@ -425,10 +441,23 @@
     display: block;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 9px 0 10px;
     font-size: 20px;
-    line-height: 1.38;
+    line-height: 1.5;
     text-align: left;
     color: #444444;
+  }
+
+  .country-filter-popup__close {
+    margin-top: 16px;
+  }
+
+  .country-filter-popup__close-text {
+    padding-left: 35px;
+  }
+
+  .country-filter-popup__close-text::before {
+    left: -6px;
+    top: 7px;
   }
 }

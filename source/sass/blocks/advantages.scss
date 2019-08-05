@@ -1,11 +1,11 @@
 .advantages {
-  background: #edeff6 url("../../img/rates@1x.png") 195px 70px no-repeat;
+  background: #edeff6 url("../../img/rates@1x.png") 195px 40px no-repeat;
   position: relative;
   background-size: 99px auto;
-  padding-top: 60px;
-  padding-bottom: 35px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  padding-top: 27px;
+  padding-bottom: 40px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   margin-top: 0;
   z-index: 5;
 
@@ -38,7 +38,7 @@
 .advantages__item {
   position: relative;
   height: 68px;
-  padding: 10px 20px 10px 0;
+  padding: 11px 20px 10px 0;
   box-sizing: border-box;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 
@@ -48,7 +48,7 @@
 }
 
 .advantages__text {
-  line-height: 1.38;
+  line-height: 1.2;
   margin: 0;
 }
 
@@ -84,8 +84,8 @@
 
 .advantages__link {
   display: block;
-  margin-top: 35px;
-  margin-bottom: 30px;
+  margin-top: 25px;
+  margin-bottom: 0;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -114,18 +114,21 @@
 
 @media (min-width: $tablet) {
   .advantages {
-    padding-bottom: 80px;
-    background-position: 80% 90%;
+    padding-bottom: 90px;
+    padding-top: 75px;
+    background-position: 613px 620px;
     margin-top: -50px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
     z-index: 3;
   }
 
   .advantages__title {
     padding-left: 99px;
+    letter-spacing: normal;
     width: 100%;
     font-size: 45px;
+    margin-bottom: 77px;
   }
 
   .advantages__list {
@@ -134,8 +137,11 @@
   }
 
   .advantages__item {
+    height: 66px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0;
   }
 
   .advantages__text-number {
@@ -152,12 +158,12 @@
     font-size: 20px;
     text-align: left;
     padding-left: 90px;
-    margin-top: 65px;
+    margin-top: 57px;
   }
 
   .advantages__link-icon {
     position: absolute;
-    top: -27px;
+    top: -23px;
     left: 0;
     width: 67px;
     height: 67px;
@@ -178,21 +184,27 @@
 
 @media (min-width: $desktop) {
   .advantages {
-    padding: 100px;
+    padding: 153px 230px 190px 130px;
     background-size: 198px 198px;
-    background-position: 90% 60%;
+    background-position: 1108px 336px;
   }
 
   .advantages__title {
+    margin-top: 0;
+    margin-bottom: 135px;
     width: 100%;
     text-align: center;
   }
 
   .advantages__list {
-    padding-right: 280px;
+    padding-right: 175px;
   }
 
   .advantages__item {
     padding: 20px 0;
+  }
+
+  .advantages__link {
+    margin-top: 60px;
   }
 }

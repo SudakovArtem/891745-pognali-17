@@ -1,7 +1,7 @@
 .profile {
   display: flex;
   flex-wrap: wrap;
-  padding: 25px;
+  padding: 23px 25px;
 }
 
 .profile__progressbar {
@@ -14,6 +14,7 @@
   border-radius: 50%;
   z-index: 99;
   padding: 0 20px;
+  margin-left: 20px;
 }
 
 .profile__stroke {
@@ -41,8 +42,8 @@
 
 .profile__text {
   position: absolute;
-  left: 107px;
-  top: -10px;
+  left: 104px;
+  top: -8px;
   font-weight: bold;
   line-height: 1.13;
   text-align: center;
@@ -70,7 +71,7 @@
   font-stretch: normal;
   line-height: 1.38;
   letter-spacing: normal;
-  padding: 25px;
+  padding: 21px 25px 16px;
   margin: 0;
   resize: none;
 
@@ -84,7 +85,7 @@
 }
 
 .profile__picture {
-  margin-left: auto;
+  margin-left: 33px;
 }
 
 .profile__image {
@@ -95,8 +96,9 @@
 
 .profile__btn {
   background-color: #d6daed;
-  margin-top: 19px;
-  margin-bottom: 30px;
+  margin-top: 12px;
+  margin-bottom: 33px;
+  padding: 6px 0;
 
   &:hover {
     background-color: #d1d7e9;
@@ -118,11 +120,12 @@
   border-radius: 10px;
   border: solid 1px #cbced9;
   padding: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 
   &--tags {
     border: none;
     padding: 0;
+    margin-bottom: 24px;
   }
 }
 
@@ -167,7 +170,7 @@
 
 @media (min-width: $tablet) {
   .profile {
-    padding: 60px 75px;
+    padding: 64px 75px 36px;
   }
 
   .profile__progressbar {
@@ -176,6 +179,7 @@
     height: 94px;
     margin-right: 60px;
     padding: 0 20px;
+    margin-left: 0;
   }
 
   .profile__stroke {
@@ -187,27 +191,28 @@
 
   .profile__text {
     font-size: 20px;
-    left: 259px;
+    left: 263px;
     top: auto;
     bottom: -10px;
     line-height: 0.9;
-    letter-spacing: 2px;
+    letter-spacing: 1.6px;
     padding: 0 20px;
 
     &--transport {
-      left: 77px;
+      left: 75px;
     }
   }
 
   .profile__hashtag {
     font-size: 20px;
     height: 100%;
-    padding: 35px 40px;
+    padding: 31px 39px;
     overflow: hidden;
   }
 
   .profile__picture {
     order: 3;
+    margin-left: auto;
   }
 
   .profile__image {
@@ -221,6 +226,13 @@
     background-color: #d6daed;
     width: 100%;
     border-radius: 10px;
+    margin-top: 42px;
+    margin-bottom: 51px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    padding: 19px 0 23px;
   }
 
   .profile__wrapper {
@@ -229,6 +241,7 @@
     &--transport {
       order: 2;
       width: 308px;
+      padding: 25px;
     }
 
     &--tags {
@@ -241,6 +254,11 @@
     width: 43px;
     height: 43px;
     background: none;
+    margin-right: 9px;
+
+    &:last-child {
+      margin-right: 2px;
+    }
   }
 
   .profile .ways__image {
@@ -269,14 +287,14 @@
 @media (min-width: $desktop) {
   .profile {
     position: relative;
-    padding: 0 60px 65px 124px;
+    padding: 0 60px 41px 124px;
     margin-top: -190px;
     z-index: 2;
   }
 
   .profile__progressbar {
     order: 1;
-    margin-left: 896px;
+    margin-left: 831px;
     margin-right: 45px;
     margin-top: 43px;
   }
@@ -291,10 +309,11 @@
   }
 
   .profile__text {
-    left: 11px;
+    left: 17px;
+    bottom: -9px;
 
     &--transport {
-      left: 115px;
+      left: 114px;
     }
   }
 
@@ -313,9 +332,11 @@
   .profile__btn {
     order: 3;
     margin-top: 0;
+    margin-bottom: 25px;
     width: 190px;
     border-radius: 0 0 10px 10px;
-    margin-left: 1035px;
+    margin-left: 971px;
+    padding: 15px 0;
   }
 
   .profile__btn-mobile {
@@ -342,6 +363,7 @@
     width: 43px;
     height: 43px;
     background: none;
+    margin-right: 0;
   }
 
   .profile .ways__image {

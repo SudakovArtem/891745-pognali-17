@@ -7,10 +7,10 @@
 .contacts__subscribe {
   background-color: #192144;
   position: relative;
-  padding-top: 120px;
-  padding-bottom: 30px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  padding-top: 75px;
+  padding-bottom: 23px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   z-index: 3;
 }
 
@@ -23,6 +23,7 @@
   letter-spacing: normal;
   text-align: center;
   color: #ff8d30;
+  margin-bottom: 20px;
 }
 
 .subscribe__text {
@@ -30,6 +31,12 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
+  padding: 0 28px;
+  margin: 0;
+}
+
+.subscribe__text-desktop {
+  display: none;
 }
 
 .subscribe__link {
@@ -46,6 +53,7 @@
 
 .subscribe__form {
   position: relative;
+  margin: 30px 0;
 }
 
 .subscribe__email-input {
@@ -123,6 +131,10 @@
   display: none;
 }
 
+.subscribe__wrapper {
+  margin-top: 27px;
+}
+
 .subscribe__tel,
 .subscribe__email {
   position: relative;
@@ -135,11 +147,12 @@
   line-height: 1.38;
   letter-spacing: normal;
   text-align: left;
+  text-transform: uppercase;
   color: #ffd74b;
 }
 
 .subscribe__tel {
-  margin-top: 60px;
+  margin-top: 0;
 }
 
 .subscribe__email {
@@ -194,19 +207,20 @@
   background-color: #ffd74b;
   position: relative;
   width: 320px;
-  padding-top: 100px;
-  padding-bottom: 25px;
+  padding: 64px 24px 35px;
   margin-top: -30px;
   box-sizing: border-box;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   z-index: 2;
 }
 
 .map-container {
   position: relative;
+  overflow: hidden;
   width: 320px;
-  margin: -30px auto 0 auto;
+  height: 333px;
+  margin: -35px auto 0 auto;
   box-sizing: border-box;
   z-index: 1;
 }
@@ -245,15 +259,16 @@
   padding: 12px 21px;
   font-size: 18px;
   text-transform: none;
-  margin-top: 25px;
+  margin-top: 33px;
   border: solid 3px #192144;
   background-color: #ffd74b;
+  justify-content: flex-start;
 
   &::before {
     content: "";
     position: absolute;
-    top: 21px;
-    right: 23px;
+    top: 20px;
+    right: 19px;
     background: url("../../img/triangle-arrow-right.svg") center no-repeat;
     width: 10px;
     height: 14px;
@@ -287,18 +302,24 @@
   }
 
   .subscribe {
-    padding: 75px 80px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    padding: 75px 75px 60px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
   }
 
   .contacts__title {
     font-size: 45px;
+    margin-bottom: 58px;
   }
 
   .subscribe__text {
+    padding: 0;
     font-size: 28px;
     line-height: 1.18;
+  }
+
+  .subscribe__form {
+    margin: 66px 0 56px;
   }
 
   .subscribe__email-input {
@@ -306,10 +327,15 @@
     height: 81px;
     font-size: 24px;
     border-radius: 20px;
+    padding-left: 35px;
 
     &::placeholder {
       font-size: 24px;
     }
+  }
+
+  .subscribe__wrapper {
+    margin-top: 59px;
   }
 
   .subscribe__btn {
@@ -334,6 +360,7 @@
     width: 67px;
     height: 67px;
     left: 0;
+    top: -16px;
 
     &::before {
       width: 27px;
@@ -345,6 +372,7 @@
     width: 67px;
     height: 67px;
     left: 0;
+    top: -14px;
 
     &::before {
       width: 27px;
@@ -354,32 +382,28 @@
 
 
   .subscribe__email {
-    margin-top: 30px;
+    margin-top: 28px;
     background-size: 27px 19px;
   }
 
   .map-address {
     width: 768px;
     margin-top: -50px;
-    padding-bottom: 85px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-  }
-
-  .map-container {
-    width: 768px;
+    padding: 112px 75px 85px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
   }
 
   .map-address__link {
     width: 100%;
     font-size: 28px;
-    padding-left: 93px;
+    padding-left: 94px;
 
     &::before {
       width: 67px;
       height: 67px;
       background-size: 21px 31px;
-      top: -18px;
+      top: -15px;
     }
   }
 
@@ -387,22 +411,54 @@
     width: 100%;
     font-size: 24px;
     margin-top: 60px;
+    border-radius: 20px;
+    padding: 20px 34px;
+    height: 81px;
 
     &::before {
-      top: 27px;
+      top: 30px;
+      right: 32px;
     }
+  }
+
+  .map-container {
+    margin: -87px auto 0 auto;
+    width: 768px;
+    height: 570px;
   }
 }
 
 @media (min-width: $desktop) {
   .subscribe {
-    padding: 100px 132px;
+    padding: 152px 134px 115px 134px;
+  }
+
+  .contacts__title {
+    margin-top: 0;
+  }
+
+  .subscribe__text {
+    padding: 0;
+    line-height: 1.18;
+  }
+
+  .subscribe__text-mobile {
+    display: none;
+  }
+
+  .subscribe__text-desktop {
+    display: inline;
+  }
+
+  .subscribe__form {
+    margin: 59px 0 65px;
   }
 
   .subscribe__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
   }
 
   .subscribe__tel,
@@ -459,19 +515,40 @@
 
   .map-address {
     width: 1440px;
+    padding: 109px 133px 60px 284px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  .map-address__link {
+    padding-left: 120px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      background-size: 28px 43px;
+      top: -27px;
+    }
+  }
+
   .map-address__btn {
-    width: 400px;
+    width: 324px;
+    flex-shrink: 0;
+    padding: 18px 32px;
     margin: 0;
     justify-content: flex-start;
+
+    &::before {
+      top: 31px;
+      right: 34px;
+    }
   }
 
   .map-container {
     width: 1440px;
+    height: 620px;
+    margin: -199px auto 0 auto;
   }
 
   .map__image {

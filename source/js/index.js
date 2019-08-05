@@ -7,6 +7,9 @@ const close = advantage.querySelector(".advantages-popup__close");
 const headerLogoMobile = document.querySelector(".header__logo-image");
 const headerLogoTablet = document.querySelector(".header__logo-image-tablet");
 const headerLogoDesktop = document.querySelector(".header__logo-image-desktop");
+const headerLogoMobileWebp = document.querySelector(".header__logo-image-webp");
+const headerLogoTabletWebp = document.querySelector(".header__logo-image-tablet-webp");
+const headerLogoDesktopWebp = document.querySelector(".header__logo-image-desktop-webp");
 
 
 headerButton.addEventListener("click", function (evt) {
@@ -17,10 +20,14 @@ headerButton.addEventListener("click", function (evt) {
     headerLogoMobile.src = 'img/logo-mobile-blue@1x.png';
     headerLogoMobile.srcset = 'img/logo-mobile-blue@2x.png 2x';
     headerLogoTablet.srcset = 'img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x';
+    headerLogoMobileWebp.srcset = 'img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x';
+    headerLogoTabletWebp.srcset = 'img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x';
   } else {
     headerLogoMobile.src = 'img/logo-mobile-white@1x.png';
     headerLogoMobile.srcset = 'img/logo-mobile-white@2x.png 2x';
     headerLogoTablet.srcset = 'img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x';
+    headerLogoMobileWebp.srcset = 'img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x';
+    headerLogoTabletWebp.srcset = 'img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x';
   }
 });
 
@@ -50,11 +57,17 @@ window.onscroll = function showHeader() {
     headerLogoMobile.srcset='img/logo-mobile-blue@2x.png 2x';
     headerLogoTablet.srcset='img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x';
     headerLogoDesktop.srcset='img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x';
+    headerLogoMobileWebp.srcset='img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x';
+    headerLogoTabletWebp.srcset='img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x';
+    headerLogoDesktopWebp.srcset='img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x';
   } else{
     header.classList.remove('header--scroll');
     headerLogoMobile.src='img/logo-mobile-white@1x.png';
     headerLogoMobile.srcset='img/logo-mobile-white@2x.png 2x';
     headerLogoTablet.srcset='img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x';
     headerLogoDesktop.srcset='img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x';
+    headerLogoMobileWebp.srcset='img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x';
+    headerLogoTabletWebp.srcset='img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x';
+    headerLogoDesktopWebp.srcset='img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x';
   }
 };

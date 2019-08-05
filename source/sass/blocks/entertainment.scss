@@ -10,8 +10,8 @@
     height: 2px;
     border-radius: 1px;
     background-color: #1d2e5b;
-    top: 8px;
-    left: -12px;
+    top: 10px;
+    left: -14px;
   }
 }
 
@@ -22,8 +22,8 @@
     width: 2px;
     height: 100%;
     background-color: #1d2e5b;
-    top: 8px;
-    left: -12px;
+    top: 10px;
+    left: -14px;
   }
 }
 
@@ -44,7 +44,7 @@
     height: 6px;
     border-radius: 50%;
     background-color: #1d2e5b;
-    top: 5px;
+    top: 8px;
     left: -2px;
   }
 
@@ -55,7 +55,7 @@
     height: 24px;
     background: url("../../img/bosnia-and-herzegovina.png") no-repeat center;
     background-size: 35px 24px;
-    top: -5px;
+    top: -2px;
     right: 0;
   }
 }
@@ -73,11 +73,15 @@
   border-radius: 4px;
   border: solid 1px #cbced9;
   background-color: #ffffff;
-  padding: 15px;
+  padding: 8px 14px;
   resize: none;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 18px;
+  margin-bottom: 25px;
   box-sizing: border-box;
+
+  &--last {
+    margin-bottom: 0;
+  }
 
   &::placeholder {
     font-family: "Bloggersans", "Arial", sans-serif;
@@ -113,6 +117,7 @@
   .plan-filter__comment-wrapper {
     display: flex;
     flex-direction: column;
+    margin-top: 35px;
 
     &::after {
       display: none;
@@ -120,8 +125,18 @@
   }
 
   .plan-filter__comment-wrapper--current {
+    padding-bottom: 2px;
+    padding-top: 34px;
+    margin: 0;
+
     &::before {
-      display: none;
+      width: 3px;
+      height: 100%;
+      top: 48px;
+      left: auto;
+      right: -29px;
+      padding-bottom: 22px;
+      padding-top: 20px;
     }
   }
 
@@ -134,7 +149,7 @@
       height: 15px;
       top: 10px;
       left: auto;
-      right: 100px;
+      right: -34px;
     }
 
     &::after {
@@ -147,16 +162,20 @@
   }
 
   .plan-filter__comment {
-    width: 527px;
+    width: 499px;
     height: 142px;
-    padding: 19px;
+    padding: 14px 30px 14px 16px;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 13px;
 
     &::placeholder {
       font-size: 20px;
       line-height: 1.2;
     }
+  }
+
+  .plan-filter__item--plan .plan-filter__btn {
+    margin-top: 32px;
   }
 }
 
@@ -167,11 +186,13 @@
   }
 
   .plan-filter__comment-wrapper--current {
+    padding-top: 49px;
+
     &::before {
       display: block;
       width: 3px;
       height: 100%;
-      top: 8px;
+      top: 60px;
       left: auto;
       right: 224px;
     }
@@ -181,7 +202,7 @@
     &::before {
       width: 15px;
       height: 15px;
-      top: 5px;
+      top: 10px;
       left: auto;
       right: 218px;
     }
@@ -197,5 +218,10 @@
 
   .plan-filter__comment {
     width: 730px;
+    padding: 22px 25px;
+  }
+
+  .plan-filter__item--plan .plan-filter__btn {
+    margin-top: 40px;
   }
 }
