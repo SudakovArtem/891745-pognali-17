@@ -263,6 +263,7 @@
   .header {
     position: relative;
     background-color: #182044;
+    padding-top: 45px;
   }
 
   .inner-page {
@@ -279,7 +280,7 @@
   }
 
   .header__wrapper {
-    width: 351px;
+    width: 357px;
     align-items: center;
   }
 
@@ -287,7 +288,7 @@
     display: block;
     position: absolute;
     right: 40px;
-    top: 27px;
+    top: 40px;
     margin-top: 0;
   }
 
@@ -298,6 +299,7 @@
   .user-list__login {
     width: 188px;
     height: 50px;
+    font-size: 20px;
   }
 
   .site-list {
@@ -354,6 +356,7 @@
     position: fixed;
     background-color: #ffffff;
     margin-left: (-768px / 2);
+    padding-bottom: 39px;
   }
 }
 
@@ -363,6 +366,28 @@
     display: flex;
     min-height: 90px;
     align-items: center;
+    padding-top: 48px;
+  }
+
+  .header__wrapper {
+    position: relative;
+    width: 340px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: #ffffff;
+      top: 27px;
+      right: 39px;
+    }
+  }
+
+  .header__logo-image {
+    width: 200px;
+    height: 52px;
   }
 
   .main-nav,
@@ -380,6 +405,8 @@
 
     .user-list {
       display: flex;
+      right: 60px;
+      top: 49px;
     }
 
     .site-list {
@@ -389,7 +416,7 @@
     }
 
     .site-list__item {
-      margin-right: 36px;
+      margin-right: 25px;
 
       &:last-child {
         margin-right: 0;
@@ -444,9 +471,14 @@
   .header--scroll {
     background-color: #ffffff;
     margin-left: (-1440px / 2);
+    padding: 20px 60px 13px;
 
     .site-list__link {
       color: #192144;
+    }
+
+    .user-list {
+      top: 20px;
     }
   }
 }

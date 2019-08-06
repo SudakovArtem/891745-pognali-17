@@ -18,6 +18,7 @@
   background-color: #ffffff;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 9px;
 
   &:hover {
     border: solid 1px #959bb2;
@@ -31,8 +32,8 @@
 .plan-filter__quantity-btn {
   position: absolute;
   border: none;
-  left: 190px;
-  top: 35px;
+  left: 191px;
+  top: 40px;
   width: 14px;
   height: 14px;
   background: url("../../img/qty-plus-mobile.svg") center no-repeat;
@@ -41,7 +42,7 @@
   cursor: pointer;
 
   &--minus {
-    left: 20px;
+    left: 16px;
     background-image: url("../../img/qty-minus-mobile.svg");
   }
 
@@ -68,8 +69,9 @@
 
 .plan-filter__label-checkbox {
   position: relative;
-  padding-left: 40px;
-  margin-bottom: 20px;
+  padding-left: 39px;
+  margin-bottom: 23px;
+  margin-top: 3px;
   display: block;
 }
 
@@ -110,7 +112,7 @@
 
 .month-list {
   list-style: none;
-  padding: 10px 0;
+  padding: 10px 0 9px;
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -150,6 +152,7 @@
 
 .plan-table {
   border-collapse: collapse;
+  margin-top: 19px;
 }
 
 .plan-table__head-desktop,
@@ -166,10 +169,16 @@
   color: #ff5c23;
 }
 
+.plan-table__head {
+  height: 28px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+}
+
 .plan-table__cell {
   padding: 0;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 31px;
   border: solid 1px #cbced9;
 
   &--current {
@@ -228,6 +237,7 @@
   .plan-filter__item--date {
     .plan-filter__head {
       order: 1;
+      margin-bottom: 36px;
     }
 
     .plan-filter__wrapper {
@@ -237,6 +247,8 @@
 
     .plan-filter__text {
       order: 2;
+      line-height: 1.2;
+      margin-bottom: 39px;
     }
 
     .plan-filter__btn {
@@ -246,7 +258,7 @@
 
   .plan-filter__input {
     font-size: 20px;
-    padding-top: 25px;
+    padding-top: 22px;
     border-top: solid 1px #cbced9;
 
     &--quantity {
@@ -267,7 +279,7 @@
 
   .plan-filter__quantity-btn {
     left: 491px;
-    top: 100px;
+    top: 92px;
     width: 20px;
     height: 20px;
     background: url("../../img/qty-plus-mobile.svg") center no-repeat;
@@ -299,8 +311,8 @@
     text-transform: uppercase;
     color: #1d2e5b;
     padding-left: 59px;
-    margin-bottom: 40px;
-    margin-top: 15px;
+    margin-bottom: 35px;
+    margin-top: 9px;
   }
 
   .plan-filter__label-checkbox input[type="checkbox"] + .plan-filter__checkbox-indicator {
@@ -315,8 +327,9 @@
 
   .month-list {
     order: 6;
-    padding: 25px 0;
-    margin-bottom: 40px;
+    padding: 25px 16px 20px;
+    margin-bottom: 11px;
+    margin-top: 34px;
   }
 
   .month-list__name {
@@ -324,9 +337,9 @@
   }
 
   .month-list__btn {
-    width: 15px;
-    height: 28px;
-    background-size: 15px 28px;
+    width: 21px;
+    height: 35px;
+    background-size: 18px 40px;
   }
 
   .plan-table {
@@ -355,7 +368,7 @@
 
   .plan-table__cell {
     width: 77px;
-    height: 70px;
+    height: 69px;
 
     &--current {
       .plan-table__link {
@@ -401,15 +414,18 @@
   }
 
   .plan-filter__wrapper {
+    position: relative;
+
     .plan-filter__text {
       width: 100%;
       border-bottom: solid 1px #cbced9;
       padding-bottom: 56px;
+      padding-right: 420px;
       margin-bottom: 30px;
     }
 
     .plan-filter__input {
-      width: 50%;
+      width: 480px;
       padding-top: 0;
       border: none;
       display: flex;
@@ -444,20 +460,33 @@
   .plan-filter__label-checkbox {
     order: 4;
     margin-bottom: 0;
-    margin-top: 15px;
+    margin-top: 24px;
     margin-left: auto;
   }
 
   .month-list {
     width: 100%;
     order: 6;
-    padding: 25px 0;
-    margin-bottom: 40px;
+    padding: 25px 0 16px;
+    margin-bottom: 0;
     margin-top: 16px;
+  }
+
+  .month-list__btn {
+    width: 18px;
+    height: 40px;
   }
 
   .plan-table {
     order: 7;
+    margin-top: 9px;
+  }
+
+  .plan-table__head {
+    height: 46px;
+    padding-left: 16px;
+    text-align: left;
+    vertical-align: top;
   }
 
   .plan-table__cell-desktop {
@@ -471,7 +500,7 @@
 
   .plan-table__cell {
     width: 143px;
-    height: 72px;
+    height: 71px;
   }
 
   .plan-table__link {
@@ -479,12 +508,13 @@
     justify-content: flex-start;
     align-items: flex-start;
     font-weight: normal;
-    padding-top: 14px;
-    padding-left: 16px;
+    padding-top: 6px;
+    padding-left: 14px;
   }
 
   .plan-table__cell-desktop--period {
     display: block;
     width: 100%;
+    margin-top: -6px;
   }
 }

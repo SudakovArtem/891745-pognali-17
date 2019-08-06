@@ -2,8 +2,7 @@
   position: relative;
   background-color: #dfe3f0;
   border-radius: 30px 30px 0 0;
-  padding-top: 25px;
-  padding-bottom: 56px;
+  padding: 27px 25px 61px 25px;
   z-index: 3;
 }
 
@@ -12,6 +11,8 @@
   font-weight: bold;
   line-height: 1;
   color: #1d2e5b;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .plans__list {
@@ -23,7 +24,7 @@
 .plans__item {
   border-radius: 10px;
   background-color: #ffffff;
-  padding: 25px;
+  padding: 24px 26px 22px;
   margin-bottom: 10px;
 
   &:last-child {
@@ -36,6 +37,9 @@
   line-height: 1;
   text-align: left;
   color: #1d2e5b;
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-left: -2px;
 }
 
 .plans__quantity,
@@ -45,7 +49,8 @@
   line-height: 1;
   letter-spacing: 1.4px;
   color: #1d2e5b;
-  margin: 0;
+  margin-bottom: 0;
+  margin-top: 5px;
   text-transform: uppercase;
 }
 
@@ -58,7 +63,7 @@
   text-align: left;
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
-  margin-top: 25px;
+  margin-top: 21px;
 
   &:hover {
     color: rgba(0, 0, 0, 0.6);
@@ -71,32 +76,45 @@
 
 @media (min-width: $tablet) {
   .plans {
-    padding: 75px 75px 105px;
+    padding: 53px 75px 104px;
   }
 
   .plans__title {
     font-size: 36px;
+    margin-bottom: 51px;
   }
 
   .plans__item {
-    padding: 37px 37px 15px;
+    padding: 26px 33px 18px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .plans__country {
+    position: relative;
     width: 100%;
     font-size: 24px;
     line-height: 2.08;
+    margin-bottom: 41px;
+    margin-top: 0;
+    margin-left: 3px;
+  }
+
+  .plans__country-number {
+    position: absolute;
+    top: 5px;
+    right: -2px;
+    font-size: 20px;
   }
 
   .plans__quantity,
   .plans__period {
+    width: 185px;
     font-size: 20px;
     font-weight: 500;
     line-height: 0.9;
     letter-spacing: 2px;
+    margin-top: 0;
   }
 
   .plans__btn {
@@ -105,34 +123,48 @@
     letter-spacing: 2px;
     text-align: right;
     margin-top: 0;
+    margin-left: auto;
   }
 }
 
 @media (min-width: $desktop) {
   .plans {
-    padding: 50px 60px 174px 124px;
+    padding: 53px 60px 124px 124px;
+    border-radius: 60px 60px 0 0;
+  }
+
+  .plans__title {
+    padding-left: 6px;
   }
 
   .plans__item {
-    padding: 40px 43px 41px;
+    padding: 23px 40px 25px 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
   }
 
   .plans__country {
-    width: auto;
+    width: 587px;
     margin: 0;
   }
 
+  .plans__country-number {
+    position: static;
+    padding-right: 31px;
+  }
+
   .plans__quantity {
-    margin-left: auto;
+    margin-left: 0;
+    width: 177px;
   }
 
   .plans__period {
-    margin-left: 54px;
-    margin-right: 136px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 190px;
   }
 
   .plans__btn {

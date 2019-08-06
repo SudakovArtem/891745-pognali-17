@@ -1,14 +1,14 @@
 .travelers {
   background-color: #192144;
   background-image: url("../../img/smolov-back-desktop@1x.png"), url("../../img/rogovaya-back-mobile@1x.png");
-  background-position: 90% 5%, left 25%;
+  background-position: 152px 68px, -10px 340px;
   background-repeat: no-repeat, no-repeat;
   background-size: auto, auto;
   position: relative;
-  padding-top: 70px;
+  padding-top: 75px;
   padding-bottom: 30px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   margin-top: -30px;
   z-index: 4;
 }
@@ -26,6 +26,12 @@
   }
 }
 
+.travelers__text-wrapper {
+  padding-left: 25px;
+  padding-right: 28px;
+  margin-bottom: 58px;
+}
+
 .travelers__title {
   font-size: 24px;
   font-weight: bold;
@@ -35,7 +41,8 @@
   letter-spacing: normal;
   text-align: left;
   color: #ff8d30;
-  padding-left: 25px;
+  margin-bottom: 22px;
+  padding-right: 60px;
 }
 
 .travelers__text {
@@ -43,7 +50,7 @@
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
-  padding-left: 25px;
+  margin-bottom: 18px;
 }
 
 .travelers__bold {
@@ -54,8 +61,6 @@
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
-  padding-left: 25px;
-  margin-bottom: 74px;
 }
 
 .travelers__list {
@@ -70,7 +75,6 @@
   height: 32px;
   margin: 0;
   border-radius: 50%;
-  background-color: #edeff6;
   display: flex;
 }
 
@@ -101,10 +105,11 @@
   font-weight: bold;
   line-height: 1;
   color: #ffffff;
+  margin-top: 7px;
 }
 
 .travelers__status-lvl {
-  padding: 5px 5px 0 5px;
+  padding: 2px 3px 0 3px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 14px;
   font-weight: normal;
@@ -112,29 +117,112 @@
   color: #ffffff;
 }
 
+.travelers__wrapper {
+  background: #ffffff;
+  padding: 25px 40px 17px 40px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.travelers .ways__image {
+.flags {
+  list-style: none;
+  padding: 0;
+  margin: -35px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.flags__item {
+  margin-right: 19px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.travelers__name {
+  position: relative;
+  font-size: 21px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #1d2e5b;
+  margin: 4px 0 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #f97676;
+    top: 9px;
+    left: -16px;
+  }
+
+  &:hover {
+    color: rgba(29, 46, 91, 0.7);
+
+    &::before {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.travelers__name--online::before {
+  background-color: #81e31e;
+}
+
+.travelers__hashtag {
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-align: center;
+  line-height: 1.13;
+}
+
+.travelers__ways {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.travelers__ways .ways__image {
   margin: auto;
   opacity: 0.3;
 
   &--air {
-    width: 14px;
-    height: 16px;
+    width: 19px;
+    height: 21px;
   }
 
   &--bus {
-    width: 13px;
-    height: 16px;
+    width: 17px;
+    height: 21px;
   }
 
   &--bicycle {
-    width: 19px;
-    height: 17px;
+    width: 24px;
+    height: 21px;
   }
 
   &--foot {
-    width: 15px;
-    height: 17px;
+    width: 20px;
+    height: 21px;
   }
 }
 
@@ -147,7 +235,7 @@
   color: #ffffff;
   text-align: center;
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   top: 150%;
   left: 50%;
   margin-left: -75px;
@@ -155,7 +243,7 @@
   &::before {
     content: "";
     position: absolute;
-    border: 12px solid #ffffff;
+    border: 12px solid transparent;
     border-bottom-color: #101d41;
     transform: translateX(-8px);
     border-top-width: 0;
@@ -190,89 +278,6 @@
   border-top-left-radius: 10px;
 }
 
-.travelers__wrapper {
-  background: #ffffff;
-  padding: 27px 40px 20px 40px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flags {
-  list-style: none;
-  padding: 0;
-  margin: -40px 0 0 0;
-  display: flex;
-  justify-content: center;
-}
-
-.flags__item {
-  margin-right: 19px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-.travelers__name {
-  position: relative;
-  font-size: 21px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  color: #1d2e5b;
-  margin: 10px 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #f97676;
-    top: 6px;
-    left: -16px;
-  }
-
-  &:hover {
-    color: rgba(29, 46, 91, 0.7);
-
-    &::before {
-      opacity: 0.7;
-    }
-  }
-
-  &:active {
-    color: rgba(29, 46, 91, 0.3);
-
-    &::before {
-      opacity: 0.3;
-    }
-  }
-}
-
-.travelers__name--online::before {
-  background-color: #81e31e;
-}
-
-.travelers__hashtag {
-  margin-top: 0;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.travelers__ways {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
 .ways__foot {
   margin: 0;
 }
@@ -284,7 +289,8 @@
   padding: 15px 24px;
   font-size: 18px;
   text-transform: none;
-  margin-top: 25px;
+  margin-top: 21px;
+  justify-content: flex-start;
 
   &::before {
     content: "";
@@ -300,15 +306,26 @@
 @media (min-width: $tablet) {
   .travelers {
     background-image: url("../../img/rogovaya-back-desktop@1x.png"), url("../../img/smolov-back-desktop@1x.png");
-    background-position: 85% 10%, 5% 40%;
-    padding: 120px 75px 80px;
-    border-bottom-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    background-position: 409px 130px, 40px 476px;
+    padding: 142px 75px 88px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
     margin-top: -50px;
+  }
+
+  .travelers__text-wrapper {
+    padding: 0;
+    margin-bottom: 60px;
+  }
+
+  .travelers__progressbar {
+    left: 20px;
+    top: 19px;
   }
 
   .travelers__title {
     font-size: 45px;
+    margin-bottom: 58px;
   }
 
   .travelers__text {
@@ -316,6 +333,7 @@
     font-size: 28px;
     font-weight: 300;
     line-height: 1.18;
+    margin-bottom: 42px;
   }
 
   .travelers__bold {
@@ -323,7 +341,6 @@
     font-size: 21px;
     font-weight: bold;
     line-height: 1.19;
-    margin-bottom: 60px;
   }
 
   .travelers__list {
@@ -344,10 +361,21 @@
   .travelers__image {
     width: 285px;
     height: 285px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .travelers__wrapper {
+    padding: 29px 20px 25px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .flags {
+    margin: -40px 0 5px 0;
   }
 
   .travelers__name {
     font-size: 24px;
+    margin-bottom: 21px;
 
     &::before {
       width: 7px;
@@ -360,43 +388,61 @@
   .travelers__hashtag {
     font-size: 20px;
     line-height: 1.2;
+    margin-bottom: 20px;
   }
 
   .travelers__to-all {
     width: 100%;
     font-size: 24px;
     margin-top: 80px;
+    border-radius: 20px;
+    padding: 20px 34px;
+    height: 81px;
 
     &::before {
       top: 34px;
+      right: 33px;
     }
   }
 }
 
 @media (min-width: $desktop) {
   .travelers {
-    background-position: 20% 95%, 40% 40%;
+    background-position: 191px 435px, 547px 183px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 223px;
+    padding: 175px 58px 133px 132px;
   }
 
   .travelers__title {
     margin-top: 0;
   }
 
+  .travelers__list {
+    width: 630px;
+    padding-top: 8px;
+  }
+
+  .travelers__item {
+    margin-right: 58px;
+  }
+
+  .travelers__progressbar {
+    left: 23px;
+    top: 21px;
+  }
 
   .travelers__text-wrapper {
-    padding-left: 71px;
+    padding: 0;
   }
 
   .travelers__to-all {
     position: absolute;
     width: 280px;
     height: 81px;
-    left: 170px;
-    bottom: 90px;
+    left: 130px;
+    bottom: 134px;
   }
 }

@@ -23,12 +23,14 @@
 }
 
 .options__item {
+  position: relative;
   height: 160px;
   background-color: #ff8d30;
   margin-top: -80px;
   border-radius: 10px;
-  padding-top: 23px;
+  padding-top: 21px;
   padding-left: 25px;
+  padding-right: 85px;
   box-sizing: border-box;
 
   &--2 {
@@ -43,6 +45,13 @@
     background-color: #ffd74b;
     height: 80px;
   }
+}
+
+.options__item-number {
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  color: #ffffff;
 }
 
 @media (min-width: $tablet) {
@@ -60,7 +69,8 @@
     width: 688px;
     height: 140px;
     margin-top: 0;
-    padding-right: 344px;
+    padding: 29px 344px 20px 33px;
+    border-radius: 20px;
 
     &--2,
     &--4 {
@@ -81,29 +91,36 @@
       border-top-right-radius: 0;
     }
   }
+
+  .options__item-number {
+    top: 87px;
+    right: auto;
+    font-size: 30px;
+  }
 }
 
 @media (min-width: $desktop) {
   .options {
-    margin-bottom: 180px;
+    margin-bottom: 25px;
   }
 
   .options__list {
-    margin-top: -290px;
+    margin-top: -230px;
   }
 
   .options__item {
-    box-sizing: border-box;
     border-radius: 20px;
     height: 107px;
+    padding-top: 27px;
+    padding-left: 32px;
 
     &--1 {
       width: 1320px;
     }
 
     &--2 {
-      width: 990px;
-      margin-left: -990px;
+      width: 1005px;
+      margin-left: -1005px;
     }
 
     &--3 {
@@ -112,8 +129,14 @@
     }
 
     &--4 {
-      width: 330px;
-      margin-left: -330px;
+      width: 315px;
+      margin-left: -315px;
     }
+  }
+
+  .options__item-number {
+    top: 28px;
+    right: 31px;
+    font-size: 24px;
   }
 }

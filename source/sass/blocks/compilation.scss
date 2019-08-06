@@ -1,11 +1,11 @@
 .compilation {
-  padding-top: 24px;
+  padding-top: 23px;
 }
 
 .compilation__form {
   border-radius: 20px;
   background-color: #ffd74b;
-  padding: 25px;
+  padding: 25px 25px 23px;
 }
 
 .compilation__head {
@@ -15,6 +15,8 @@
   line-height: 1;
   text-align: left;
   color: #1d2e5b;
+  margin-top: 0;
+  margin-bottom: 33px;
 }
 
 .compilation__item {
@@ -22,7 +24,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 10px 0;
+  padding: 11px 0;
   border: none;
 
   &::before {
@@ -33,15 +35,20 @@
     height: 1px;
     background-color: rgba(0, 0, 0, 0.05);
   }
+
+  &--music {
+    padding-bottom: 23px;
+  }
 }
 
 .compilation__item--transport {
   margin-bottom: 20px;
+  padding-top: 15px;
 }
 
 .compilation__legend {
   margin: 0;
-  padding: 0;
+  padding-left: 2px;
   font-weight: bold;
   line-height: 1.13;
   text-transform: uppercase;
@@ -64,7 +71,7 @@
   padding: 0;
   border: none;
   right: 0;
-  top: 5px;
+  top: 8px;
   background: url("../../img/dropdown.svg") center no-repeat;
   cursor: pointer;
 
@@ -83,12 +90,14 @@
 
 .compilation__label {
   position: relative;
-  padding-left: 25px;
+  font-size: 15px;
+  padding-left: 27px;
+  margin: 4px 0;
 }
 
 .compilation__label input[type="checkbox"] + .compilation__checkbox-indicator {
   position: absolute;
-  top: -3px;
+  top: 0;
   left: 0;
   width: 18px;
   height: 18px;
@@ -126,7 +135,7 @@
 
   &--transport {
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
@@ -186,16 +195,18 @@
 }
 
 .range {
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .range__lvl {
   display: flex;
   justify-content: center;
+  margin-top: 3px;
+  margin-bottom: 24px;
 }
 
 .range__lvl-value {
-  width: 111px;
+  width: 110px;
   height: 35px;
   padding: 10px;
   border: solid 1px #cbced9;
@@ -253,7 +264,7 @@
 }
 
 .range__toggle--min {
-  left: 65px;
+  left: 67px;
 
   &:hover {
     left: 64px;
@@ -279,7 +290,9 @@
 .compilation__btn {
   width: 100%;
   border: none;
+  line-height: 1.76;
   background-color: #ffffff;
+  padding: 5px 0;
 
   &:hover {
     background-color: #ffffff;
@@ -294,15 +307,21 @@
 }
 
 @media (min-width: $tablet) and (max-width: $desktop) {
+  .compilation {
+    padding-top: 48px;
+  }
+
   .compilation__head {
+    width: 100%;
     font-size: 30px;
+    margin-bottom: 56px;
   }
 
   .compilation__form {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding: 35px;
+    padding: 33px 36px 39px 33px;
   }
 
   .compilation__item {
@@ -311,9 +330,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 20px 0;
+    padding: 20px 0 8px;
     border: none;
     margin: 0;
+
+    &--transport {
+      padding-top: 18px;
+    }
 
     &::before {
       display: none;
@@ -325,7 +348,7 @@
     font-size: 20px;
 
     &--range {
-      top: 35px;
+      top: 17px;
     }
 
     &--transport {
@@ -336,11 +359,12 @@
   .compilation__wrapper {
     display: flex;
     flex-direction: row;
-    padding-left: 160px;
+    padding-left: 127px;
     align-items: center;
 
     &--transport {
       justify-content: flex-start;
+      padding-left: 122px;
     }
 
     &--range {
@@ -350,7 +374,7 @@
         content: "";
         position: absolute;
         left: 0;
-        bottom: -10px;
+        bottom: -31px;
         width: 100%;
         height: 1px;
         background-color: rgba(0, 0, 0, 0.05);
@@ -362,7 +386,7 @@
         content: "";
         position: absolute;
         left: 0;
-        top: -10px;
+        top: -16px;
         width: 100%;
         height: 1px;
         background-color: rgba(0, 0, 0, 0.05);
@@ -371,7 +395,7 @@
   }
 
   .compilation__label {
-    width: 150px;
+    width: 170px;
     padding-left: 36px;
     font-size: 20px;
     margin: 0;
@@ -379,7 +403,7 @@
 
   .compilation__label input[type="checkbox"] + .compilation__checkbox-indicator {
     position: absolute;
-    top: -3px;
+    top: 0;
     left: 0;
     width: 24px;
     height: 24px;
@@ -394,7 +418,6 @@
   }
 
   .transport__label {
-    margin-right: 13px;
     width: 43px;
     height: 43px;
   }
@@ -418,7 +441,8 @@
   }
 
   .range {
-    margin-bottom: 53px;
+    padding-top: 3px;
+    margin-bottom: 66px;
   }
 
   .range__scale {
@@ -438,7 +462,7 @@
   }
 
   .range__toggle--min {
-    left: 65px;
+    left: 68px;
 
     &:hover {
       left: 62px;
@@ -449,7 +473,7 @@
   }
 
   .range__toggle--max {
-    right: 0;
+    right: -4px;
 
     &:hover {
       right: -3px;
@@ -474,16 +498,45 @@
   .compilation__turn-btn {
     display: none;
   }
+
+  .compilation__btn {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: normal;
+    padding: 10px 0;
+  }
 }
 
 @media (min-width: $desktop) {
   .compilation__form {
     width: 285px;
-    padding: 48px;
+    padding: 44px 42px 48px 47px;
   }
 
   .compilation__head {
     font-size: 30px;
+    margin-bottom: 36px;
+  }
+
+  .compilation__item {
+    padding-right: 5px;
+
+    &--hobby {
+      padding-bottom: 8px;
+    }
+
+    &--music {
+      padding-top: 13px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .compilation__wrapper--transport {
+    margin-top: 4px;
+    margin-left: -2px;
   }
 
   .compilation__legend {
@@ -493,11 +546,13 @@
   .compilation__turn-btn {
     width: 10px;
     height: 5px;
+    right: 5px;
   }
 
   .compilation__label {
     font-size: 20px;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
+    margin-top: 14px;
     padding-left: 37px;
   }
 
@@ -510,6 +565,10 @@
 
   .compilation__label input[type="checkbox"]:checked + .compilation__checkbox-indicator {
     background-size: 12px 12px;
+  }
+
+  .compilation__item--transport {
+    margin-bottom: 21px;
   }
 
   .transport__label {
@@ -535,6 +594,10 @@
     }
   }
 
+  .range__lvl {
+    margin-top: 8px;
+    margin-bottom: 36px;
+  }
 
   .range__bar {
     width: 122px;
@@ -544,6 +607,7 @@
   .range__lvl-value {
     width: 96px;
     font-size: 20px;
+    height: 46px;
   }
 
   .range__scale {
@@ -557,7 +621,7 @@
   }
 
   .range__toggle--min {
-    left: 65px;
+    left: 60px;
 
     &:hover {
       left: 62px;
@@ -576,5 +640,11 @@
       width: 19px;
       height: 19px;
     }
+  }
+
+  .compilation__btn {
+    padding: 6px 0;
+    margin-top: 20px;
+    font-size: 20px;
   }
 }
