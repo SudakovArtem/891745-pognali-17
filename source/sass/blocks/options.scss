@@ -121,11 +121,19 @@
     &--2 {
       width: 1005px;
       margin-left: -1005px;
+
+      .options__item-number {
+        left: 299px;
+      }
     }
 
     &--3 {
       width: 660px;
       margin-left: -660px;
+
+      .options__item-number {
+        left: 299px;
+      }
     }
 
     &--4 {
@@ -136,7 +144,7 @@
 
   .options__item-number {
     top: 28px;
-    right: 31px;
+    left: 269px;
     font-size: 24px;
   }
 }

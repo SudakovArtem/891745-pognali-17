@@ -473,6 +473,10 @@
     margin-left: (-1440px / 2);
     padding: 20px 60px 13px;
 
+    .header__wrapper::before {
+      background-color: #192144;
+    }
+
     .site-list__link {
       color: #192144;
     }
