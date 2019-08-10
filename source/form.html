@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Направления Погнали</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/bloggersans.woff" as="font">
+    <link rel="preload" href="fonts/bloggersans-bold.woff" as="font">
   </head>
   <body>
 
-    <header class="header inner-page container">
+    <header class="header inner-page container header--open header--no-js">
     <div class="header__wrapper">
       <a class="header__logo" href="index.html">
         <picture>
@@ -22,7 +24,7 @@
       </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--open">
       <ul class="main-nav__list user-list">
         <li class="user-list__item">
           <a class="user-list__button user-list__button--tel" href="tel:88005558628">
@@ -95,26 +97,18 @@
         <div class="profile__wrapper profile__wrapper--tags">
           <p class="profile__text profile__text">тэги</p>
           <textarea class="profile__hashtag" type="text" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea></div>
-        <div class="profile__wrapper profile__wrapper--transport">
+        <div class="profile__wrapper profile__wrapper--transport transport">
           <p class="profile__text profile__text--transport">транспорт</p>
-          <ul class="travelers__ways ways">
-            <li class="ways__item ways__item--air ways__item--active">
-              <img class="ways__image ways__image--air" src="img/plane.svg" width="16" height="16" alt="aircraft">
-              <span class="ways__tooltip ways__tooltip--air">Авиаперелет</span>
-            </li>
-            <li class="ways__item ways__item--bus ways__item--active">
-              <img class="ways__image ways__image--bus" src="img/bus.svg" width="16" height="16" alt="bus">
-              <span class="ways__tooltip ways__tooltip--bus">Автотранспорт</span>
-            </li>
-            <li class="ways__item ways__item--bicycle">
-              <img class="ways__image ways__image--bicycle" src="img/bike.svg" width="16" height="16" alt="bicycle">
-              <span class="ways__tooltip ways__tooltip--bicycle">Велосипед</span>
-            </li>
-            <li class="ways__item ways__item--foot ways__item--active">
-              <img class="ways__image ways__image--foot" src="img/run.svg" width="16" height="16" alt="foot">
-              <span class="ways__tooltip ways__tooltip--foot">Пешком</span>
-            </li>
-          </ul>
+          <div class="transport__wrapper">
+            <label class="transport__label">
+              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" checked=""> <span class="transport__checkbox-indicator transport__checkbox-indicator--air"></span></label>
+            <label class="transport__label">
+              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox"> <span class="transport__checkbox-indicator transport__checkbox-indicator--bus"></span></label>
+            <label
+            class="transport__label"><input class="transport__checkbox visually-hidden" name="transport" type="checkbox"> <span class="transport__checkbox-indicator transport__checkbox-indicator--bicycle"></span></label>
+            <label class="transport__label"><input class="transport__checkbox visually-hidden" name="transport" type="checkbox"> <span class="transport__checkbox-indicator transport__checkbox-indicator--foot"></span>
+            </label>
+          </div>
         </div>
       </section>
 
@@ -125,13 +119,13 @@
             <p class="plans__country"><span class="plans__country-number">1.</span> Франция, Италия</p>
             <p class="plans__quantity">3 попутчика</p>
             <p class="plans__period">26 мар — 29 мар</p>
-            <a class="plans__btn" href="#">изменить</a>
+            <a class="plans__btn" href="myplans.html">изменить</a>
           </li>
           <li class="plans__item">
             <p class="plans__country"><span class="plans__country-number">2.</span> Тайланд, Индонезия</p>
             <p class="plans__quantity">1 попутчик</p>
             <p class="plans__period">1 июл — 15 июл</p>
-            <a class="plans__btn" href="#">изменить</a>
+            <a class="plans__btn" href="myplans.html">изменить</a>
           </li>
         </ul>
       </section>
@@ -139,7 +133,7 @@
       <section class="plan-add container">
         <h2 class="plan-add__title">Добавить план</h2>
         <form class="plan-add__filter plan-filter" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="plan-filter__item plan-filter__item--date">
+          <fieldset class="plan-filter__item plan-filter__item--date" id="part1">
             <div class="plan-filter__wrapper">
               <h3 class="plan-filter__head">Шаг 1.<br class="tablet-wrap"> Даты пребывания</h3>
               <ul class="plan-filter__head-list">
@@ -251,11 +245,11 @@
                   <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">5</a></td>
                 </tr>
               </table>
-              <a class="plan-filter__btn button" href="#">Следующий шаг</a>
+              <a class="plan-filter__btn button" href="#part2">Следующий шаг</a>
             </div>
           </fieldset>
 
-          <fieldset class="plan-filter__item plan-filter__item--route">
+          <fieldset class="plan-filter__item plan-filter__item--route" id="part2">
             <div class="plan-filter__wrapper">
               <h3 class="plan-filter__head">Шаг 2.<br class="tablet-wrap"> Маршрут</h3>
               <ul class="plan-filter__head-list">
@@ -303,11 +297,11 @@
                   </button>
                 </div>
               </div>
-              <a class="plan-filter__btn button" href="#">Следующий шаг</a>
-              <a class="plan-filter__btn plan-filter__btn--back button" href="#">На шаг назад</a>
+              <a class="plan-filter__btn button" href="#part3">Следующий шаг</a>
+              <a class="plan-filter__btn plan-filter__btn--back button" href="#part1">На шаг назад</a>
             </div>
           </fieldset>
-          <fieldset class="plan-filter__item plan-filter__item--plan">
+          <fieldset class="plan-filter__item plan-filter__item--plan"  id="part3">
             <div class="plan-filter__wrapper">
               <h3 class="plan-filter__head">Шаг 3.<br class="tablet-wrap"> Развлечения</h3>
               <ul class="plan-filter__head-list">
@@ -327,8 +321,8 @@
                   Чехословакия</label>
                 <textarea class="plan-filter__comment plan-filter__comment--last" id="comment2" name="comment" rows="8" placeholder="Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все." readonly></textarea>
               </div>
-              <button class="plan-filter__btn button" type="submit">Следующий шаг</button>
-              <a class="plan-filter__btn plan-filter__btn--back button" href="#">На шаг назад</a>
+              <button class="plan-filter__btn button" type="submit">Отправить</button>
+              <a class="plan-filter__btn plan-filter__btn--back button" href="#part2">На шаг назад</a>
             </div>
           </fieldset>
         </form>
@@ -448,6 +442,6 @@
         </ul>
       </div>
     </section>
-    <script src="js/form.js"></script>
+    <script src="js/form.min.js"></script>
   </body>
 </html>

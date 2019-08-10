@@ -189,6 +189,7 @@
 
 .country-filter-popup__country-name {
   margin: 0;
+  color: #444444;
 }
 
 .country-filter-popup__close {
@@ -445,6 +446,10 @@
     font-size: 20px;
     line-height: 1.5;
     text-align: left;
+    color: #444444;
+  }
+
+  .letter__link {
     color: #444444;
   }
 

@@ -74,10 +74,7 @@
   top: 8px;
   background: url("../../img/dropdown.svg") center no-repeat;
   cursor: pointer;
-
-  &--up {
-    transform: rotate(180deg);
-  }
+  transform: rotate(180deg);
 
   &:hover {
     opacity: 0.6;
@@ -139,9 +136,12 @@
   }
 }
 
-.compilation__wrapper--hobby,
-.compilation__wrapper--food {
+.compilation__wrapper--closed {
   display: none;
+
+  & ~ .compilation__turn-btn {
+    transform: rotateY(180deg);
+  }
 }
 
 .transport__label {

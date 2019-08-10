@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Погнали Попутчики</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/bloggersans.woff" as="font">
+    <link rel="preload" href="fonts/bloggersans-bold.woff" as="font">
   </head>
   <body>
 
-    <header class="header inner-page container">
+    <header class="header inner-page container header--open header--no-js">
       <div class="header__wrapper">
         <a class="header__logo" href="index.html">
           <picture>
@@ -22,7 +24,7 @@
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--open">
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
             <a class="user-list__button user-list__button--tel" href="tel:88005558628">
@@ -77,7 +79,7 @@
         <h1 class="main__title">Попутчики</h1>
         <a href="index.html" class="main__link">На главную</a>
       </div>
-      <section class="country-filter country-filter--closed container">
+      <section class="country-filter container">
         <div class="country-filter__wrapper">
           <h3 class="country-filter-popup__head">
             <span class="country-filter-popup__mobile-head">Фильтрация по странам:</span>
@@ -105,97 +107,83 @@
           <div class="country-filter-table__cell letter country-filter-table__cell--active">
             <a class="country-filter-table__link" href="#">А</a>
             <ul class="letter__list">
-              <li class="letter__item">Австралия</li>
-              <li class="letter__item">Австрия</li>
-              <li class="letter__item">Азербайджан</li>
-              <li class="letter__item">Албания</li>
-              <li class="letter__item">Алжир</li>
-              <li class="letter__item">Ангола</li>
-              <li class="letter__item">Андорра</li>
-              <li class="letter__item">Антигуа и Барбуда</li>
-              <li class="letter__item">Аргентина</li>
-              <li class="letter__item">Армения</li>
-              <li class="letter__item">Афганистан</li>
+              <li class="letter__item"><a href="/country/australia" class="letter__link">Австралия</a></li>
+              <li class="letter__item"><a href="/country/austria" class="letter__link">Австрия</a></li>
+              <li class="letter__item"><a href="/country/azerbaijan" class="letter__link">Азербайджан</a></li>
+              <li class="letter__item"><a href="/country/albania" class="letter__link">Албания</a></li>
+              <li class="letter__item"><a href="/country/algeria" class="letter__link">Алжир</a></li>
+              <li class="letter__item"><a href="/country/angola" class="letter__link">Ангола</a></li>
+              <li class="letter__item"><a href="/country/andorra" class="letter__link">Андорра</a></li>
+              <li class="letter__item"><a href="/country/antigua-and-barbuda" class="letter__link">Антигуа и Барбуда</a></li>
+              <li class="letter__item"><a href="/country/argentina" class="letter__link">Аргентина</a></li>
+              <li class="letter__item"><a href="/country/armenia" class="letter__link">Армения</a></li>
+              <li class="letter__item"><a href="/country/afghanistan" class="letter__link">Афганистан</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Б</a>
             <ul class="letter__list">
-              <li class="letter__item">Багамские Острова</li>
-              <li class="letter__item">Бангладеш</li>
-              <li class="letter__item">Барбадос</li>
-              <li class="letter__item">
-              <li class="letter__item">Бахрейн</li>
-              <li class="letter__item">
-              <li class="letter__item">Белоруссия</li>
-              <li class="letter__item">
-              <li class="letter__item">Белиз</li>
-              <li class="letter__item">
-              <li class="letter__item">Бельгия</li>
-              <li class="letter__item">
-              <li class="letter__item">Бенин</li>
-              <li class="letter__item">
-              <li class="letter__item">Болгария</li>
-              <li class="letter__item">
-              <li class="letter__item">Боливия</li>
-              <li class="letter__item">
-              <li class="letter__item">Босния и Герцеговина</li>
-              <li class="letter__item">
-              <li class="letter__item">Ботсвана</li>
-              <li class="letter__item">
-              <li class="letter__item">Бразилия</li>
-              <li class="letter__item">
-              <li class="letter__item">Бруней</li>
-              <li class="letter__item">
-              <li class="letter__item">Буркина-Фасо</li>
-              <li class="letter__item">
-              <li class="letter__item">Бурунди</li>
-              <li class="letter__item">
-              <li class="letter__item">Бутан</li>
+              <li class="letter__item"><a href="/country/bahamas" class="letter__link">Багамские Острова</a></li>
+              <li class="letter__item"><a href="/country/bangladesh" class="letter__link">Бангладеш</a></li>
+              <li class="letter__item"><a href="/country/barbados" class="letter__link">Барбадос</a></li>
+              <li class="letter__item"><a href="/country/bahrain" class="letter__link">Бахрейн</a></li>
+              <li class="letter__item"><a href="/country/belarus" class="letter__link">Белоруссия</a></li>
+              <li class="letter__item"><a href="/country/belize" class="letter__link">Белиз</a></li>
+              <li class="letter__item"><a href="/country/belgium" class="letter__link">Бельгия</a></li>
+              <li class="letter__item"><a href="/country/benin" class="letter__link">Бенин</a></li>
+              <li class="letter__item"><a href="/country/bulgaria" class="letter__link">Болгария</a></li>
+              <li class="letter__item"><a href="/country/bolivia" class="letter__link">Боливия</a></li>
+              <li class="letter__item"><a href="/country/bosnia-and-herzegovina" class="letter__link">Босния и Герцеговина</a></li>
+              <li class="letter__item"><a href="/country/botswana" class="letter__link">Ботсвана</a></li>
+              <li class="letter__item"><a href="/country/brazil" class="letter__link">Бразилия</a></li>
+              <li class="letter__item"><a href="/country/brunei" class="letter__link">Бруней</a></li>
+              <li class="letter__item"><a href="/country/burkina-faso" class="letter__link">Буркина-Фасо</a></li>
+              <li class="letter__item"><a href="/country/burundi" class="letter__link">Бурунди</a></li>
+              <li class="letter__item"><a href="/country/butane" class="letter__link">Бутан</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">В</a>
             <ul class="letter__list">
-              <li class="letter__item">Вануату</li>
-              <li class="letter__item">Великобритания</li>
-              <li class="letter__item">Венгрия</li>
-              <li class="letter__item">Венесуэла</li>
-              <li class="letter__item">Восточный Тимор</li>
-              <li class="letter__item">Вьетнам</li>
+              <li class="letter__item"><a href="/country/vanuatu" class="letter__link">Вануату</a></li>
+              <li class="letter__item"><a href="/country/great-britain" class="letter__link">Великобритания</a></li>
+              <li class="letter__item"><a href="/country/hungary" class="letter__link">Венгрия</a></li>
+              <li class="letter__item"><a href="/country/venezuela" class="letter__link">Венесуэла</a></li>
+              <li class="letter__item"><a href="/country/east-timor" class="letter__link">Восточный Тимор</a></li>
+              <li class="letter__item"><a href="/country/vietnam" class="letter__link">Вьетнам</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Г</a>
             <ul class="letter__list">
-              <li class="letter__item">Габон</li>
-              <li class="letter__item">Гаити</li>
-              <li class="letter__item">Гайана</li>
-              <li class="letter__item">Гамбия</li>
-              <li class="letter__item">Гана</li>
-              <li class="letter__item">Гватемала</li>
-              <li class="letter__item">Гвинея</li>
-              <li class="letter__item">Гвинея-Бисау</li>
-              <li class="letter__item">Германия</li>
-              <li class="letter__item">Гондурас</li>
-              <li class="letter__item">Гренада</li>
-              <li class="letter__item">Греция</li>
-              <li class="letter__item">Грузия</li>
+              <li class="letter__item"><a href="/country/gabon" class="letter__link">Габон</a></li>
+              <li class="letter__item"><a href="/country/haiti" class="letter__link">Гаити</a></li>
+              <li class="letter__item"><a href="/country/guyana" class="letter__link">Гайана</a></li>
+              <li class="letter__item"><a href="/country/gambia" class="letter__link">Гамбия</a></li>
+              <li class="letter__item"><a href="/country/ghana" class="letter__link">Гана</a></li>
+              <li class="letter__item"><a href="/country/guatemala" class="letter__link">Гватемала</a></li>
+              <li class="letter__item"><a href="/country/guinea" class="letter__link">Гвинея</a></li>
+              <li class="letter__item"><a href="/country/guinea-bissau" class="letter__link">Гвинея-Бисау</a></li>
+              <li class="letter__item"><a href="/country/germany" class="letter__link">Германия</a></li>
+              <li class="letter__item"><a href="/country/honduras" class="letter__link">Гондурас</a></li>
+              <li class="letter__item"><a href="/country/grenada" class="letter__link">Гренада</a></li>
+              <li class="letter__item"><a href="/country/greece" class="letter__link">Греция</a></li>
+              <li class="letter__item"><a href="/country/georgia" class="letter__link">Грузия</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Д</a>
             <ul class="letter__list">
-              <li class="letter__item">Дания
-              <li class="letter__item">Джибути</li>
-              <li class="letter__item">Доминика</li>
-              <li class="letter__item">Доминикана</li>
+              <li class="letter__item"><a href="/country/denmark" class="letter__link">Дания</a>
+              <li class="letter__item"><a href="/country/djibouti" class="letter__link">Джибути</a></li>
+              <li class="letter__item"><a href="/country/dominica" class="letter__link">Доминика</a></li>
+              <li class="letter__item"><a href="/country/dominican-republic" class="letter__link">Доминикана</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Е</a>
             <ul class="letter__list">
-              <li class="letter__item">Египет</li>
+              <li class="letter__item"><a href="/country/egypt" class="letter__link">Египет</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell country-filter-table__cell--none"><a class="country-filter-table__link" href="#">Ё</a></div>
@@ -203,118 +191,118 @@
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">З</a>
             <ul class="letter__list">
-              <li class="letter__item">Замбия</li>
-              <li class="letter__item">Зимбабве</li>
+              <li class="letter__item"><a href="/country/Zambia" class="letter__link">Замбия</a></li>
+              <li class="letter__item"><a href="/country/Zimbabwe" class="letter__link">Зимбабве</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">И</a>
             <ul class="letter__list">
-              <li class="letter__item">Израиль</li>
-              <li class="letter__item">Индия</li>
-              <li class="letter__item">Индонезия</li>
-              <li class="letter__item">Иордания</li>
-              <li class="letter__item">Ирак</li>
-              <li class="letter__item">Иран</li>
-              <li class="letter__item">Ирландия</li>
-              <li class="letter__item">Исландия</li>
-              <li class="letter__item">Испания</li>
-              <li class="letter__item">Италия</li>
+              <li class="letter__item"><a href="/country/israel" class="letter__link">Израиль</a></li>
+              <li class="letter__item"><a href="/country/india" class="letter__link">Индия</a></li>
+              <li class="letter__item"><a href="/country/indonesia" class="letter__link">Индонезия</a></li>
+              <li class="letter__item"><a href="/country/jordan" class="letter__link">Иордания</a></li>
+              <li class="letter__item"><a href="/country/iraq" class="letter__link">Ирак</a></li>
+              <li class="letter__item"><a href="/country/iran" class="letter__link">Иран</a></li>
+              <li class="letter__item"><a href="/country/ireland" class="letter__link">Ирландия</a></li>
+              <li class="letter__item"><a href="/country/iceland" class="letter__link">Исландия</a></li>
+              <li class="letter__item"><a href="/country/spain" class="letter__link">Испания</a></li>
+              <li class="letter__item"><a href="/country/italy" class="letter__link">Италия</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell country-filter-table__cell--none"><a class="country-filter-table__link" href="#">Й</a></div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">К</a>
             <ul class="letter__list">
-              <li class="letter__item">Кабо-Верде</li>
-              <li class="letter__item">Казахстан</li>
-              <li class="letter__item">Камбоджа</li>
-              <li class="letter__item">Камерун</li>
-              <li class="letter__item">Канада</li>
-              <li class="letter__item">Катар</li>
-              <li class="letter__item">Кения</li>
-              <li class="letter__item">Кипр</li>
-              <li class="letter__item">Киргизия</li>
-              <li class="letter__item">Кирибати</li>
-              <li class="letter__item">Китай</li>
-              <li class="letter__item">Колумбия</li>
-              <li class="letter__item">Коморы</li>
-              <li class="letter__item">Конго</li>
-              <li class="letter__item">КНДР</li>
-              <li class="letter__item">Республика Корея</li>
-              <li class="letter__item">Коста-Рика</li>
-              <li class="letter__item">Кот-д’Ивуар</li>
-              <li class="letter__item">Куба</li>
-              <li class="letter__item">Кувейт</li>
+              <li class="letter__item"><a href="/country/cape-verde" class="letter__link">Кабо-Верде</a></li>
+              <li class="letter__item"><a href="/country/kazakhstan" class="letter__link">Казахстан</a></li>
+              <li class="letter__item"><a href="/country/cambodia" class="letter__link">Камбоджа</a></li>
+              <li class="letter__item"><a href="/country/cameroon" class="letter__link">Камерун</a></li>
+              <li class="letter__item"><a href="/country/canada" class="letter__link">Канада</a></li>
+              <li class="letter__item"><a href="/country/qatar" class="letter__link">Катар</a></li>
+              <li class="letter__item"><a href="/country/kenya" class="letter__link">Кения</a></li>
+              <li class="letter__item"><a href="/country/cyprus" class="letter__link">Кипр</a></li>
+              <li class="letter__item"><a href="/country/kyrgyzstan" class="letter__link">Киргизия</a></li>
+              <li class="letter__item"><a href="/country/kiribati" class="letter__link">Кирибати</a></li>
+              <li class="letter__item"><a href="/country/china" class="letter__link">Китай</a></li>
+              <li class="letter__item"><a href="/country/colombia" class="letter__link">Колумбия</a></li>
+              <li class="letter__item"><a href="/country/comoros" class="letter__link">Коморы</a></li>
+              <li class="letter__item"><a href="/country/congo" class="letter__link">Конго</a></li>
+              <li class="letter__item"><a href="/country/dprk" class="letter__link">КНДР</a></li>
+              <li class="letter__item"><a href="/country/the-republic-of-korea" class="letter__link">Республика Корея</a></li>
+              <li class="letter__item"><a href="/country/costa-rica" class="letter__link">Коста-Рика</a></li>
+              <li class="letter__item"><a href="/country/cote-d’ivoire" class="letter__link">Кот-д’Ивуар</a></li>
+              <li class="letter__item"><a href="/country/cuba" class="letter__link">Куба</a></li>
+              <li class="letter__item"><a href="/country/kuwait" class="letter__link">Кувейт</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Л</a>
             <ul class="letter__list">
-              <li class="letter__item">Лаос</li>
-              <li class="letter__item">Латвия</li>
-              <li class="letter__item">Лесото</li>
-              <li class="letter__item">Либерия</li>
-              <li class="letter__item">Ливан</li>
-              <li class="letter__item">Ливия</li>
-              <li class="letter__item">Литва</li>
-              <li class="letter__item">Лихтенштейн</li>
-              <li class="letter__item">Люксембург</li>
+              <li class="letter__item"><a href="/country/laos" class="letter__link">Лаос</a></li>
+              <li class="letter__item"><a href="/country/latvia" class="letter__link">Латвия</a></li>
+              <li class="letter__item"><a href="/country/lesotho" class="letter__link">Лесото</a></li>
+              <li class="letter__item"><a href="/country/liberia" class="letter__link">Либерия</a></li>
+              <li class="letter__item"><a href="/country/lebanon" class="letter__link">Ливан</a></li>
+              <li class="letter__item"><a href="/country/libya" class="letter__link">Ливия</a></li>
+              <li class="letter__item"><a href="/country/lithuania" class="letter__link">Литва</a></li>
+              <li class="letter__item"><a href="/country/liechtenstein" class="letter__link">Лихтенштейн</a></li>
+              <li class="letter__item"><a href="/country/luxembourg" class="letter__link">Люксембург</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">М</a>
             <ul class="letter__list">
-              <li class="letter__item">Маврикий</li>
-              <li class="letter__item">Мавритания</li>
-              <li class="letter__item">Мадагаскар</li>
-              <li class="letter__item">Малави</li>
-              <li class="letter__item">Малайзия</li>
-              <li class="letter__item">Мали</li>
-              <li class="letter__item">Мальдивы</li>
-              <li class="letter__item">Мальта</li>
-              <li class="letter__item">Марокко</li>
-              <li class="letter__item">Маршалловы Острова</li>
-              <li class="letter__item">Мексика</li>
-              <li class="letter__item">Мозамбик</li>
-              <li class="letter__item">Молдавия</li>
-              <li class="letter__item">Монако</li>
-              <li class="letter__item">Монголия</li>
-              <li class="letter__item">Мьянма</li>
+              <li class="letter__item"><a href="/country/mauritius" class="letter__link">Маврикий</a></li>
+              <li class="letter__item"><a href="/country/mauritania" class="letter__link">Мавритания</a></li>
+              <li class="letter__item"><a href="/country/madagascar" class="letter__link">Мадагаскар</a></li>
+              <li class="letter__item"><a href="/country/malawi" class="letter__link">Малави</a></li>
+              <li class="letter__item"><a href="/country/malaysia" class="letter__link">Малайзия</a></li>
+              <li class="letter__item"><a href="/country/mali" class="letter__link">Мали</a></li>
+              <li class="letter__item"><a href="/country/maldives" class="letter__link">Мальдивы</a></li>
+              <li class="letter__item"><a href="/country/malta" class="letter__link">Мальта</a></li>
+              <li class="letter__item"><a href="/country/morocco" class="letter__link">Марокко</a></li>
+              <li class="letter__item"><a href="/country/marshall-islands" class="letter__link">Маршалловы Острова</a></li>
+              <li class="letter__item"><a href="/country/mexico" class="letter__link">Мексика</a></li>
+              <li class="letter__item"><a href="/country/mozambique" class="letter__link">Мозамбик</a></li>
+              <li class="letter__item"><a href="/country/moldova" class="letter__link">Молдавия</a></li>
+              <li class="letter__item"><a href="/country/monaco" class="letter__link">Монако</a></li>
+              <li class="letter__item"><a href="/country/mongolia" class="letter__link">Монголия</a></li>
+              <li class="letter__item"><a href="/country/myanmar" class="letter__link">Мьянма</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Н</a>
             <ul class="letter__list">
-              <li class="letter__item">Намибия</li>
-              <li class="letter__item">Науру</li>
-              <li class="letter__item">Непал</li>
-              <li class="letter__item">Нигер</li>
-              <li class="letter__item">Нигерия</li>
-              <li class="letter__item">Нидерланды</li>
-              <li class="letter__item">Никарагуа</li>
-              <li class="letter__item">Новая Зеландия</li>
-              <li class="letter__item">Норвегия</li>
+              <li class="letter__item"><a href="/country/namibia" class="letter__link">Намибия</a></li>
+              <li class="letter__item"><a href="/country/nauru" class="letter__link">Науру</a></li>
+              <li class="letter__item"><a href="/country/nepal" class="letter__link">Непал</a></li>
+              <li class="letter__item"><a href="/country/niger" class="letter__link">Нигер</a></li>
+              <li class="letter__item"><a href="/country/nigeria" class="letter__link">Нигерия</a></li>
+              <li class="letter__item"><a href="/country/netherlands" class="letter__link">Нидерланды</a></li>
+              <li class="letter__item"><a href="/country/nicaragua" class="letter__link">Никарагуа</a></li>
+              <li class="letter__item"><a href="/country/new-zealand" class="letter__link">Новая Зеландия</a></li>
+              <li class="letter__item"><a href="/country/norway" class="letter__link">Норвегия</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">О</a>
             <ul class="letter__list">
-              <li class="letter__item">ОАЭ</li>
-              <li class="letter__item">Оман</li>
+              <li class="letter__item"><a href="/country/uae" class="letter__link">ОАЭ</a></li>
+              <li class="letter__item"><a href="/country/oman" class="letter__link">Оман</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">П</a>
             <ul class="letter__list">
-              <li class="letter__item">Пакистан</li>
-              <li class="letter__item">Палау</li>
-              <li class="letter__item">Панама</li>
-              <li class="letter__item">Папуа — Новая Гвинея</li>
-              <li class="letter__item">Парагвай</li>
-              <li class="letter__item">Перу</li>
-              <li class="letter__item">Польша</li>
-              <li class="letter__item">Португалия</li>
+              <li class="letter__item"><a href="/country/pakistan" class="letter__link">Пакистан</a></li>
+              <li class="letter__item"><a href="/country/palau" class="letter__link">Палау</a></li>
+              <li class="letter__item"><a href="/country/panama" class="letter__link">Панама</a></li>
+              <li class="letter__item"><a href="/country/papua-new-guinea" class="letter__link">Папуа — Новая Гвинея</a></li>
+              <li class="letter__item"><a href="/country/paraguay" class="letter__link">Парагвай</a></li>
+              <li class="letter__item"><a href="/country/peru" class="letter__link">Перу</a></li>
+              <li class="letter__item"><a href="/country/poland" class="letter__link">Польша</a></li>
+              <li class="letter__item"><a href="/country/portugal" class="letter__link">Португалия</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter country-filter-table__cell--desktop-none">
@@ -323,137 +311,137 @@
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">С</a>
             <ul class="letter__list">
-              <li class="letter__item">Сальвадор</li>
-              <li class="letter__item">Самоа</li>
-              <li class="letter__item">Сан-Марино</li>
-              <li class="letter__item">Сан-Томе и Принсипи</li>
-              <li class="letter__item">Саудовская Аравия</li>
-              <li class="letter__item">Северная Македония</li>
-              <li class="letter__item">Сейшелы</li>
-              <li class="letter__item">Сенегал</li>
-              <li class="letter__item">Сент-Люсия</li>
-              <li class="letter__item">Сербия</li>
-              <li class="letter__item">Сингапур</li>
-              <li class="letter__item">Сирия</li>
-              <li class="letter__item">Словакия</li>
-              <li class="letter__item">Словения</li>
-              <li class="letter__item">США</li>
-              <li class="letter__item">Сомали</li>
-              <li class="letter__item">Судан</li>
-              <li class="letter__item">Суринам</li>
-              <li class="letter__item">Сьерра-Леоне</li>
+              <li class="letter__item"><a href="/country/salvador" class="letter__link">Сальвадор</a></li>
+              <li class="letter__item"><a href="/country/samoa" class="letter__link">Самоа</a></li>
+              <li class="letter__item"><a href="/country/san-marino" class="letter__link">Сан-Марино</a></li>
+              <li class="letter__item"><a href="/country/sao-tome-and-principe" class="letter__link">Сан-Томе и Принсипи</a></li>
+              <li class="letter__item"><a href="/country/saudi-arabia" class="letter__link">Саудовская Аравия</a></li>
+              <li class="letter__item"><a href="/country/north-macedonia" class="letter__link">Северная Македония</a></li>
+              <li class="letter__item"><a href="/country/seychelles" class="letter__link">Сейшелы</a></li>
+              <li class="letter__item"><a href="/country/senegal" class="letter__link">Сенегал</a></li>
+              <li class="letter__item"><a href="/country/saint-lucia" class="letter__link">Сент-Люсия</a></li>
+              <li class="letter__item"><a href="/country/serbia" class="letter__link">Сербия</a></li>
+              <li class="letter__item"><a href="/country/singapore" class="letter__link">Сингапур</a></li>
+              <li class="letter__item"><a href="/country/syria" class="letter__link">Сирия</a></li>
+              <li class="letter__item"><a href="/country/slovakia" class="letter__link">Словакия</a></li>
+              <li class="letter__item"><a href="/country/slovenia" class="letter__link">Словения</a></li>
+              <li class="letter__item"><a href="/country/usa" class="letter__link">США</a></li>
+              <li class="letter__item"><a href="/country/somalia" class="letter__link">Сомали</a></li>
+              <li class="letter__item"><a href="/country/sudan" class="letter__link">Судан</a></li>
+              <li class="letter__item"><a href="/country/suriname" class="letter__link">Суринам</a></li>
+              <li class="letter__item"><a href="/country/sierra-leone" class="letter__link">Сьерра-Леоне</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Т</a>
             <ul class="letter__list">
-              <li class="letter__item">Таджикистан</li>
-              <li class="letter__item">Таиланд</li>
-              <li class="letter__item">Танзания</li>
-              <li class="letter__item">Того</li>
-              <li class="letter__item">Тонга</li>
-              <li class="letter__item">Тринидад и Тобаго</li>
-              <li class="letter__item">Тувалу</li>
-              <li class="letter__item">Тунис</li>
-              <li class="letter__item">Туркмения</li>
-              <li class="letter__item">Турция</li>
+              <li class="letter__item"><a href="/country/tajikistan" class="letter__link">Таджикистан</a></li>
+              <li class="letter__item"><a href="/country/thailand" class="letter__link">Таиланд</a></li>
+              <li class="letter__item"><a href="/country/tanzania" class="letter__link">Танзания</a></li>
+              <li class="letter__item"><a href="/country/togo" class="letter__link">Того</a></li>
+              <li class="letter__item"><a href="/country/tonga" class="letter__link">Тонга</a></li>
+              <li class="letter__item"><a href="/country/trinidad-and-tobago" class="letter__link">Тринидад и Тобаго</a></li>
+              <li class="letter__item"><a href="/country/tuvalu" class="letter__link">Тувалу</a></li>
+              <li class="letter__item"><a href="/country/tunisia" class="letter__link">Тунис</a></li>
+              <li class="letter__item"><a href="/country/turkmenistan" class="letter__link">Туркмения</a></li>
+              <li class="letter__item"><a href="/country/turkey" class="letter__link">Турция</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">У</a>
             <ul class="letter__list">
-              <li class="letter__item">Уганда</li>
-              <li class="letter__item">Узбекистан</li>
-              <li class="letter__item">Украина</li>
-              <li class="letter__item">Уругвай</li>
+              <li class="letter__item"><a href="/country/uganda" class="letter__link">Уганда</a></li>
+              <li class="letter__item"><a href="/country/uzbekistan" class="letter__link">Узбекистан</a></li>
+              <li class="letter__item"><a href="/country/ukraine" class="letter__link">Украина</a></li>
+              <li class="letter__item"><a href="/country/uruguay" class="letter__link">Уругвай</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Ф</a>
             <ul class="letter__list">
-              <li class="letter__item">Фиджи</li>
-              <li class="letter__item">Филиппины</li>
-              <li class="letter__item">Финляндия</li>
-              <li class="letter__item">Франция</li>
+              <li class="letter__item"><a href="/country/fiji" class="letter__link">Фиджи</a></li>
+              <li class="letter__item"><a href="/country/philippines" class="letter__link">Филиппины</a></li>
+              <li class="letter__item"><a href="/country/finland" class="letter__link">Финляндия</a></li>
+              <li class="letter__item"><a href="/country/france" class="letter__link">Франция</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Х</a>
             <ul class="letter__list">
-              <li class="letter__item">Хорватия</li>
+              <li class="letter__item"><a href="/country/croatia" class="letter__link">Хорватия</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell country-filter-table__cell--none"><a class="country-filter-table__link" href="#">Ц</a></div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Ч</a>
             <ul class="letter__list">
-              <li class="letter__item">Чад</li>
-              <li class="letter__item">Черногория</li>
-              <li class="letter__item">Чехия</li>
-              <li class="letter__item">Чили</li>
+              <li class="letter__item"><a href="/country/chad" class="letter__link">Чад</a></li>
+              <li class="letter__item"><a href="/country/montenegro" class="letter__link">Черногория</a></li>
+              <li class="letter__item"><a href="/country/czech" class="letter__link">Чехия</a></li>
+              <li class="letter__item"><a href="/country/chile" class="letter__link">Чили</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Ш</a>
             <ul class="letter__list">
-              <li class="letter__item">Швейцария</li>
-              <li class="letter__item">Швеция</li>
-              <li class="letter__item">Шри-Ланка</li>
+              <li class="letter__item"><a href="/country/switzerland" class="letter__link">Швейцария</a></li>
+              <li class="letter__item"><a href="/country/sweden" class="letter__link">Швеция</a></li>
+              <li class="letter__item"><a href="/country/sri-lanka" class="letter__link">Шри-Ланка</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell country-filter-table__cell--none"><a class="country-filter-table__link" href="#">Щ</a></div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Э</a>
             <ul class="letter__list">
-              <li class="letter__item">Эквадор</li>
-              <li class="letter__item">Эритрея</li>
-              <li class="letter__item">Эсватини</li>
-              <li class="letter__item">Эстония</li>
-              <li class="letter__item">Эфиопия</li>
+              <li class="letter__item"><a href="/country/ecuador" class="letter__link">Эквадор</a></li>
+              <li class="letter__item"><a href="/country/eritrea" class="letter__link">Эритрея</a></li>
+              <li class="letter__item"><a href="/country/esvatini" class="letter__link">Эсватини</a></li>
+              <li class="letter__item"><a href="/country/estonia" class="letter__link">Эстония</a></li>
+              <li class="letter__item"><a href="/country/ethiopia" class="letter__link">Эфиопия</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Ю</a>
             <ul class="letter__list">
-              <li class="letter__item">ЮАР</li>
-              <li class="letter__item">Южный Судан</li>
+              <li class="letter__item"><a href="/country/south-africa" class="letter__link">ЮАР</a></li>
+              <li class="letter__item"><a href="/country/south-sudan" class="letter__link">Южный Судан</a></li>
             </ul>
           </div>
           <div class="country-filter-table__cell letter">
             <a class="country-filter-table__link" href="#">Я</a>
             <ul class="letter__list">
-              <li class="letter__item">Ямайка</li>
-              <li class="letter__item">Япония</li>
+              <li class="letter__item"><a href="/country/jamaica" class="letter__link">Ямайка</a></li>
+              <li class="letter__item"><a href="/country/japan" class="letter__link">Япония</a></li>
             </ul>
           </div>
         </div>
         <ul class="country-filter-popup__country-list">
             <li class="country-filter-popup__country-item">
-              <p class="country-filter-popup__country-name">Афганистан</p>
+              <a href="/country/afghanistan" class="country-filter-popup__country-name">Афганистан</a>
             </li>
             <li class="country-filter-popup__country-item">
-              <p class="country-filter-popup__country-name">Албания</p>
+              <a href="/country/albania" class="country-filter-popup__country-name">Албания</a>
             </li>
             <li class="country-filter-popup__country-item">
-              <p class="country-filter-popup__country-name">Алгерия</p>
+              <a href="/country/algeria" class="country-filter-popup__country-name">Алгерия</a>
             </li>
             <li class="country-filter-popup__country-item">
-              <p class="country-filter-popup__country-name">Андорра</p>
+              <a href="/country/andorra" class="country-filter-popup__country-name">Андорра</a>
             </li>
             <li class="country-filter-popup__country-item">
-              <p class="country-filter-popup__country-name">Аргентина</p>
+              <a href="/country/argentina" class="country-filter-popup__country-name">Аргентина</a>
             </li>
             <li class="country-filter-popup__country-item">
-              <p class="country-filter-popup__country-name">Армения</p>
+              <a href="/country/armenia" class="country-filter-popup__country-name">Армения</a>
             </li>
             <li class="country-filter-popup__country-item">
-              <p class="country-filter-popup__country-name">Австралия</p>
+              <a href="/country/australia" class="country-filter-popup__country-name">Австралия</a>
             </li>
             <li class="country-filter-popup__country-item">
-              <p class="country-filter-popup__country-name">Австрия</p>
+              <a href="/country/austria" class="country-filter-popup__country-name">Австрия</a>
             </li>
             <li class="country-filter-popup__country-item">
-              <p class="country-filter-popup__country-name">Азербайджан</p>
+              <a href="/country/azerbaijan" class="country-filter-popup__country-name">Азербайджан</a>
             </li>
           </ul>
           <button type="button" class="country-filter-popup__close button"><span class="country-filter-popup__close-text">Свернуть</span></button>
@@ -482,14 +470,12 @@
                   Диван
                 </label>
               </div>
-              <button class="compilation__turn-btn compilation__turn-btn--down" type="button"><span
+              <button class="compilation__turn-btn compilation__turn-btn--hobby" type="button"><span
                 class="visually-hidden">развернуть</span></button>
             </fieldset>
             <fieldset class="compilation__item compilation__item--music">
               <legend class="compilation__legend">Музыка</legend>
-              <button class="compilation__turn-btn compilation__turn-btn--up" type="button"><span
-                class="visually-hidden">свернуть</span></button>
-              <div class="compilation__wrapper">
+              <div class="compilation__wrapper compilation__wrapper--music">
                 <label class="compilation__label">
                   <input class="compilation__checkbox visually-hidden" name="options" type="checkbox" checked>
                   <span class="compilation__checkbox-indicator"></span>
@@ -506,6 +492,7 @@
                   Евроденс
                 </label>
               </div>
+              <button class="compilation__turn-btn compilation__turn-btn--music" type="button"><span class="visually-hidden">свернуть</span></button>
             </fieldset>
             <fieldset class="compilation__item compilation__item--food">
               <legend class="compilation__legend">Еда</legend>
@@ -526,13 +513,11 @@
                   Веган-сыроед
                 </label>
               </div>
-              <button class="compilation__turn-btn compilation__turn-btn--down" type="button"><span
+              <button class="compilation__turn-btn compilation__turn-btn--food" type="button"><span
                 class="visually-hidden">развернуть</span></button>
             </fieldset>
             <fieldset class="compilation__item compilation__item--transport transport">
               <legend class="compilation__legend compilation__legend--transport">Транспорт</legend>
-              <button class="compilation__turn-btn compilation__turn-btn--up" type="button"><span
-                class="visually-hidden">свернуть</span></button>
               <div class="compilation__wrapper compilation__wrapper--transport">
                 <label class="transport__label">
                   <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" checked>
@@ -551,11 +536,10 @@
                   <span class="transport__checkbox-indicator transport__checkbox-indicator--foot"></span>
                 </label>
               </div>
+              <button class="compilation__turn-btn compilation__turn-btn--transport" type="button"><span class="visually-hidden">свернуть</span></button>
             </fieldset>
             <fieldset class="compilation__item range">
               <legend class="compilation__legend compilation__legend--range">Левел</legend>
-              <button class="compilation__turn-btn compilation__turn-btn--up" type="button"><span
-                class="visually-hidden">свернуть</span></button>
               <div class="compilation__wrapper compilation__wrapper--range">
                 <p class="range__lvl">
                   <input class="range__lvl-value range__lvl-value--min" value="30">
@@ -567,6 +551,7 @@
                   <div class="range__toggle range__toggle--max"></div>
                 </div>
               </div>
+              <button class="compilation__turn-btn compilation__turn-btn--range" type="button"><span class="visually-hidden">свернуть</span></button>
             </fieldset>
             <button class="compilation__btn button" type="submit">Показать</button>
           </form>
@@ -576,15 +561,21 @@
           <h2 class="visually-hidden">Список попутчиков</h2>
           <ul class="roster__list">
             <li class="roster__item companion">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-destop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-destop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
-                <img src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="foto" class="companion__image">
-              </picture>
-              <a class="companion__name" href="#">Таня Фирсова</a>
+              <a class="companion__image-link" href="profile-firsova.html">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                          srcset="img/firsova-desktop@1x.webp 1x, img/firsova-destop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                          srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)"
+                          srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-destop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                          srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                  <img src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="foto" class="companion__image">
+                </picture>
+              </a>
+              <a class="companion__name" href="profile-firsova.html">Таня Фирсова</a>
               <p class="companion__likes"><span class="companion__likes-box companion__likes-box--active"><img class="companion__likes-image" src="img/heart-active.svg" alt="like" width="16" height="16"></span>1,5 M</p>
               <p class="companion__hashtag">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
               <p class="companion__text companion__text--country">хочет посетить:</p>
@@ -635,18 +626,20 @@
                   </div>
                 </div>
               </div>
-              <button type="button" class="companion__btn button">Позвать!</button>
+              <a class="companion__btn button" href="profile-firsova.html">Позвать!</a>
             </li>
             <li class="roster__item companion">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg">
-                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-                <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="foto" class="companion__image">
-              </picture>
-              <a class="companion__name" href="#">Петя Демин</a>
+              <a class="companion__image-link" href="profile-demin.html">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                  <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="foto" class="companion__image">
+                </picture>
+              </a>
+              <a class="companion__name" href="profile-demin.html">Петя Демин</a>
               <p class="companion__likes"><span class="companion__likes-box"><img class="companion__likes-image" src="img/heart.svg" alt="like" width="16" height="16"></span>150</p>
               <p class="companion__hashtag">#бургер #бар #футбол #концерт #крафт</p>
               <p class="companion__text companion__text--country">хочет посетить:</p>
@@ -693,18 +686,20 @@
                   </div>
                 </div>
               </div>
-              <button type="button" class="companion__btn button">Позвать!</button>
+              <a class="companion__btn button" href="profile-demin.html">Позвать!</a>
             </li>
             <li class="roster__item companion">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
-                <img src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="foto" class="companion__image">
-              </picture>
-              <a class="companion__name" href="#">Марк Смолов</a>
+              <a class="companion__image-link" href="profile-smolov.html">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                  <img src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="foto" class="companion__image">
+                </picture>
+              </a>
+              <a class="companion__name" href="profile-smolov.html">Марк Смолов</a>
               <p class="companion__likes"><span class="companion__likes-box"><img class="companion__likes-image" src="img/heart.svg" alt="like" width="16" height="16"></span>1700</p>
               <p class="companion__hashtag">#рэп #тату #хайпбист #кроссовки #суприм</p>
               <p class="companion__text companion__text--country">хочет посетить:</p>
@@ -755,18 +750,20 @@
                   </div>
                 </div>
               </div>
-              <button type="button" class="companion__btn button">Позвать!</button>
+              <a class="companion__btn button" href="profile-smolov.html">Позвать!</a>
             </li>
             <li class="roster__item companion">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-back-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-back-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
-                <img src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="foto" class="companion__image">
-              </picture>
-              <a class="companion__name companion__name--online" href="#">Лариса Роговая</a>
+              <a class="companion__image-link" href="profile-rogovaya.html">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-back-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-back-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                  <img src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="foto" class="companion__image">
+                </picture>
+              </a>
+              <a class="companion__name companion__name--online" href="profile-rogovaya.html">Лариса Роговая</a>
               <p class="companion__likes"><span class="companion__likes-box"><img class="companion__likes-image" src="img/heart.svg" alt="like" width="16" height="16"></span>23</p>
               <p class="companion__hashtag">#образование #карьера #учеба #линкедин</p>
               <p class="companion__text companion__text--country">хочет посетить:</p>
@@ -813,10 +810,10 @@
                   </div>
                 </div>
               </div>
-              <button type="button" class="companion__btn button">Позвать!</button>
+              <a type="button" class="companion__btn button" href="profile-rogovaya.html">Позвать!</a>
             </li>
           </ul>
-          <button class="roster__btn button">Показать еще</button>
+          <a class="roster__btn button" href="travelers.html">Показать еще</a>
           <div class="roster__pagination pagination">
             <ul class="pagination__list">
               <li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
@@ -830,7 +827,7 @@
                   class="visually-hidden">назад</span></a>
               </li>
               <li class="pagination__button-item">
-                <a href="#" class="pagination__button pagination__button--forward"><span
+                <a href="second-page.html" class="pagination__button pagination__button--forward"><span
                   class="visually-hidden">вперед</span></a>
               </li>
             </ul>
@@ -883,6 +880,6 @@
       </a>
     </footer>
 
-    <script src="js/catalog.js"></script>
+    <script src="js/catalog.min.js"></script>
   </body>
 </html>

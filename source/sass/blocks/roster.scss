@@ -49,13 +49,13 @@
 .companion__name {
   position: relative;
   display: block;
-  width: 164px;
+  width: 77px;
   font-size: 20px;
   font-weight: bold;
   line-height: 1;
   text-align: left;
   color: #1d2e5b;
-  padding-left: 87px;
+  margin-left: 87px;
 
   &::before {
     content: "";
@@ -98,13 +98,13 @@
   color: #161c35;
   margin-top: 8px;
   margin-bottom: 16px;
-  padding-left: 87px;
+  margin-left: 87px;
 }
 
 .companion__likes-box {
   position: absolute;
   top: -6px;
-  left: 49px;
+  left: -40px;
   background-color: #edeff6;
   display: flex;
   justify-content: center;
@@ -441,7 +441,7 @@
     width: auto;
     order: 1;
     font-size: 30px;
-    padding-left: 229px;
+    margin-left: 229px;
     padding-right: 30px;
 
     &::before {
@@ -706,7 +706,7 @@
 
   .companion__name {
     order: 1;
-    padding-left: 0;
+    margin-left: 0;
 
     &::before {
       right: auto;

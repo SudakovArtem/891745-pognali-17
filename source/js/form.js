@@ -11,6 +11,9 @@ const headerLogoMobileWebp = document.querySelector(".header__logo-image-webp");
 const headerLogoTabletWebp = document.querySelector(".header__logo-image-tablet-webp");
 const headerLogoDesktopWebp = document.querySelector(".header__logo-image-desktop-webp");
 
+headerNav.classList.remove("main-nav--open");
+header.classList.remove("header--open");
+header.classList.remove("header--no-js");
 
 headerButton.addEventListener("click", function (evt) {
   evt.preventDefault();

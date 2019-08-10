@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/bloggersans.woff" as="font">
+  <link rel="preload" href="fonts/bloggersans-bold.woff" as="font">
 </head>
 <body>
 
-<header class="header container">
+<header class="header container header--open header--no-js">
   <div class="header__wrapper">
     <a class="header__logo">
       <picture>
@@ -22,7 +24,7 @@
     </a>
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
   </div>
-  <nav class="main-nav">
+  <nav class="main-nav main-nav--open">
     <ul class="main-nav__list user-list">
       <li class="user-list__item">
         <a class="user-list__button user-list__button--tel" href="tel:88005558628">
@@ -316,14 +318,7 @@
     </div>
     <div class="map-container">
         <a class="map__image-link" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323057%252C59.938633%26spn%3D0.001000%252C0.001000%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8%2520&z=17">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-            <source type="image/webp" class="map__image" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="map">
-          </picture>
+          <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002762!2d30.320858715590223!3d59.93871916905475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1565428132797!5m2!1sru!2sru" frameborder="0" allowfullscreen></iframe>
         </a>
       </div>
   </section>
@@ -374,6 +369,6 @@
 </footer>
 
 
-<script src="js/index.js"></script>
+<script src="js/index.min.js"></script>
 </body>
 </html>

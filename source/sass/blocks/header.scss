@@ -274,6 +274,10 @@
     background-color: #ffffff;
   }
 
+  .header--no-js .main-nav__toggle {
+    display: none;
+  }
+
   .header__logo-image {
     width: 166px;
     height: 42px;
