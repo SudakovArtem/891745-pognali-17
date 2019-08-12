@@ -7,9 +7,12 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/bloggersans.woff" as="font">
   <link rel="preload" href="fonts/bloggersans-bold.woff" as="font">
+  <script src="js/picturefill.min.js"></script>
 </head>
 <body>
-
+  <div style="display: none;">
+    <include src="source/img/sprite.svg"></include>
+  </div>
 <header class="header container header--open header--no-js">
   <div class="header__wrapper">
     <a class="header__logo">
@@ -22,7 +25,7 @@
         <img class="header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Погнали?">
       </picture>
     </a>
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <button class="header__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
   </div>
   <nav class="main-nav main-nav--open">
     <ul class="main-nav__list user-list">
@@ -89,7 +92,7 @@
         <img class="intro__button-image intro__button-image--email" src="img/topmenu-mail.svg" alt="email" width="16" height="16">
         <span class="visually-hidden">Почта</span>
       </a>
-      <a class="intro__login-button button intro__button--login">Авторизация</a>
+      <a class="intro__login-button button">Авторизация</a>
     </div>
     <blockquote class="intro__blockquote review">
       <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
@@ -108,8 +111,8 @@
 
   <section class="about-us container">
     <h3 class="about-us__title">О сервисе</h3>
-    <p class="about-us__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими
-      идеями путешествий и черпайте вдохновение в чужих.</p>
+    <p class="about-us__text">Любое путешествие веселее&nbsp;<br class="mobile-wrap">с попутчиками, которые на одной волне с тобой! Делитесь своими
+      идеями путешествий&nbsp;<br class="tablet-wrap">и черпайте вдохновение в чужих.</p>
     <p class="about-us__bold">А если найдете кого-то близкого по духу — скорее зовите его в совместный трип!</p>
     <a class="about-us__to-all button" href="#">Подробнее</a>
   </section>
@@ -147,7 +150,7 @@
       <li class="directions__item">
         <picture class="directions__picture">
           <source type="image/webp" class="directions__image-tablet" media="(min-width: 768px)" srcset="img/czech-desktop@1x.webp 1x, img/czech-desktop@2x.webp 2x">
-          <source type="image/webp" class="directions__image" srcset="img/czech-mobile@1x.webp 1x, img/czech-mobile@2x.webp">
+          <source type="image/webp" class="directions__image" srcset="img/czech-mobile@1x.webp 1x, img/czech-mobile@2x.webp 2x">
           <source class="directions__image-tablet" media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
           <img class="directions__image" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg" width="270" height="110" alt="czech">
         </picture>
@@ -162,13 +165,13 @@
 
   <section class="travelers container">
     <div class="travelers__text-wrapper"><h3 class="travelers__title">Попутчики</h3>
-      <p class="travelers__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,<br class="desktop-wrap"> а другому маршрут для хайкинга.</p>
-      <p class="travelers__bold">Теперь можно легко<br class="desktop-wrap"> найти единомышленников!</p></div>
+      <p class="travelers__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,&nbsp;<br class="desktop-wrap">а другому маршрут для хайкинга.</p>
+      <p class="travelers__bold">Теперь можно легко&nbsp;<br class="desktop-wrap">найти единомышленников!</p></div>
     <ul class="travelers__list">
       <li class="travelers__item">
         <div class="travelers__progressbar">
           <svg class="travelers__stroke" width="60" height="60">
-            <use xlink:href="img/sprite.svg#stroke-firsova"></use>
+            <use xlink:href="#stroke-firsova"></use>
           </svg>
           <span class="travelers__status-number">99</span>
           <span class="travelers__status-lvl">level</span>
@@ -214,7 +217,7 @@
       <li class="travelers__item">
         <div class="travelers__progressbar">
           <svg class="travelers__stroke" width="60" height="60">
-            <use xlink:href="img/sprite.svg#stroke-demin"></use>
+            <use xlink:href="#stroke-demin"></use>
           </svg>
           <span class="travelers__status-number">80</span>
           <span class="travelers__status-lvl">level</span>
@@ -306,7 +309,7 @@
         <input type="email" name="email" class="subscribe__email-input" placeholder="E-mail">
         <button type="submit" class="subscribe__btn"><span class="subscribe__btn-text">Регистрация</span></button>
       </form>
-      <p class="subscribe__text">Остались вопросы?<br class="mobile-wrap"><span class="subscribe__text-mobile">Мы с радостью на них ответим!</span><span class="subscribe__text-desktop">Свяжитесь с нами удобным для вас способом:</span></p>
+      <p class="subscribe__text">Остались вопросы?&nbsp;<br class="mobile-wrap"><span class="subscribe__text-mobile">Мы с радостью на них ответим!</span><span class="subscribe__text-desktop">Свяжитесь с нами удобным для вас способом:</span></p>
       <p class="subscribe__wrapper">
         <a class="subscribe__tel" href="tel:88005558628">8 800 555-86-28<span class="subscribe__tel-icon"></span></a>
         <a class="subscribe__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru<span class="subscribe__email-icon"></span></a>
@@ -317,9 +320,7 @@
         <a class="map-address__btn button" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.334289%2C59.939497&mode=routes&rtext=55.750074%2C37.541386~59.938631%2C30.323055&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D37.541%252C55.750%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%259C%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B0%252C%2520%25D0%25A4%25D0%25B8%25D0%25BB%25D1%2591%25D0%25B2%25D1%2581%25D0%25BA%25D0%25B0%25D1%258F%2520%25D0%25BB%25D0%25B8%25D0%25BD%25D0%25B8%25D1%258F%252C%2520%25D0%25BC%25D0%25B5%25D1%2582%25D1%2580%25D0%25BE%2520%25D0%2592%25D1%258B%25D1%2581%25D1%2582%25D0%25B0%25D0%25B2%25D0%25BE%25D1%2587%25D0%25BD%25D0%25B0%25D1%258F~ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323%252C59.939%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8&z=15.01">Проложить маршрут</a>
     </div>
     <div class="map-container">
-        <a class="map__image-link" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323057%252C59.938633%26spn%3D0.001000%252C0.001000%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8%2520&z=17">
-          <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002762!2d30.320858715590223!3d59.93871916905475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1565428132797!5m2!1sru!2sru" frameborder="0" allowfullscreen></iframe>
-        </a>
+          <iframe class="map-container__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002762!2d30.320858715590223!3d59.93871916905475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1565428132797!5m2!1sru!2sru" allowfullscreen></iframe>
       </div>
   </section>
 
@@ -339,16 +340,16 @@
       <li class="footer-social__item">
         <a class="footer-social__link footer-social__link--facebook" href="https://www.facebook.com/htmlacademy">
           <span class="visually-hidden">Мы в Фейсбуке</span>
-          <svg fill="#192144" class="footer-social__link-image footer-social__link-image--facebook" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 11 21"  xml:space="preserve" width="11" height="21">
-            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+          <svg fill="#192144" class="footer-social__link-image footer-social__link-image--facebook" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 11 21"  xml:space="preserve" width="11" height="21">
+            <use xlink:href="#icon-facebook"></use>
           </svg>
         </a>
       </li>
       <li class="footer-social__item">
         <a class="footer-social__link footer-social__link--vkontakte" href="https://vk.com/htmlacademy">
           <span class="visually-hidden">Мы в Вконтакте</span>
-          <svg fill="#192144" class="footer-social__link-image footer-social__link-image--vkontakte" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 15.8" xml:space="preserve" width="23" height="12">
-            <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+          <svg fill="#192144" class="footer-social__link-image footer-social__link-image--vkontakte" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 15.8" xml:space="preserve" width="23" height="12">
+            <use xlink:href="#icon-vkontakte"></use>
           </svg>
         </a>
       </li>
@@ -356,7 +357,7 @@
         <a class="footer-social__link footer-social__link--instagram" href="https://www.instagram.com/htmlacademy">
           <span class="visually-hidden">Мы в Инстаграме</span>
           <svg fill="#192144" class="footer-social__link-image footer-social__link-image--instagram" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 23 23"  xml:space="preserve" width="18" height="18">
-            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            <use xlink:href="#icon-instagram"></use>
           </svg>
         </a>
       </li>

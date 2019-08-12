@@ -205,6 +205,10 @@ input[type="radio"].visually-hidden {
   .tablet-wrap {
     display: inline;
   }
+
+  .desktop-wrap {
+    display: inline;
+  }
 }
 
 @media (min-width: $desktop) {

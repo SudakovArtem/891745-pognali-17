@@ -97,6 +97,8 @@
   width: 60px;
   height: 60px;
   position: absolute;
+  top: 0;
+  left: 0;
   transform: rotate(-90deg);
 }
 
@@ -187,6 +189,7 @@
 }
 
 .travelers__hashtag {
+  width: 190px;
   margin-top: 0;
   margin-bottom: 12px;
   text-align: center;
@@ -389,6 +392,7 @@
     font-size: 20px;
     line-height: 1.2;
     margin-bottom: 20px;
+    width: 245px;
   }
 
   .travelers__to-all {
@@ -421,7 +425,7 @@
   }
 
   .travelers__list {
-    width: 630px;
+    width: 631px;
     padding-top: 8px;
   }
 

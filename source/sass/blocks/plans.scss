@@ -85,9 +85,20 @@
   }
 
   .plans__item {
+    position: relative;
     padding: 26px 33px 18px;
     display: flex;
     flex-wrap: wrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.1);
+      bottom: 54px;
+      left: 0;
+    }
   }
 
   .plans__country {
@@ -144,6 +155,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .plans__country {

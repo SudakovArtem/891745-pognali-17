@@ -51,6 +51,10 @@
   padding: 24px 26px 17px 24px;
 }
 
+.plan-filter__head-list {
+  display: none;
+}
+
 .plan-filter__input {
   position: relative;
   font-weight: 500;
@@ -87,7 +91,7 @@
 
 @media (min-width: $tablet) {
   .plan-add {
-    padding: 53px 75px 46px;
+    padding: 53px 75px 82px;
   }
 
   .plan-add__title {
@@ -121,7 +125,7 @@
     }
 
     &--plan {
-      padding: 45px 42px 42px 46px;
+      padding: 45px 42px 42px 44px;
     }
   }
 
@@ -150,6 +154,7 @@
     &--back {
       background: none;
       margin-left: auto;
+      margin-right: 3px;
       text-align: right;
       width: 241px;
       padding: 29px 0;
@@ -170,7 +175,7 @@
 
 @media (min-width: $desktop) {
   .plan-add {
-    padding: 52px 60px;
+    padding: 52px 60px 61px;
     border-radius: 60px 60px 0 0;
     margin-top: -60px;
   }
@@ -194,11 +199,12 @@
   }
 
   .plan-filter__head-list {
+    display: block;
     position: absolute;
     padding: 0;
     margin: 0;
     list-style: none;
-    right: 47px;
+    right: 45px;
     top: 15px;
     font-size: 20px;
     font-weight: normal;

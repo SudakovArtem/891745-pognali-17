@@ -249,6 +249,7 @@
       order: 2;
       line-height: 1.2;
       margin-bottom: 39px;
+      width: 500px;
     }
 
     .plan-filter__btn {
@@ -441,11 +442,11 @@
   }
 
   .plan-filter__quantity-btn {
-    left: 380px;
+    left: 361px;
     top: 25px;
 
     &--minus {
-      left: 260px;
+      left: 240px;
     }
   }
 
@@ -459,9 +460,8 @@
 
   .plan-filter__label-checkbox {
     order: 4;
-    margin-bottom: 0;
-    margin-top: 24px;
-    margin-left: auto;
+    padding-left: 57px;
+    margin: 25px -2px 0 auto;
   }
 
   .month-list {

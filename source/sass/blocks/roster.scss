@@ -104,7 +104,7 @@
 .companion__likes-box {
   position: absolute;
   top: -6px;
-  left: -40px;
+  left: -38px;
   background-color: #edeff6;
   display: flex;
   justify-content: center;
@@ -248,6 +248,10 @@
   border-radius: 50%;
   background: #edeff6;
   display: flex;
+
+  &--active .ways__image {
+    opacity: 1;
+  }
 }
 
 .roster .ways__image {
@@ -280,6 +284,7 @@
 }
 
 .companion__progressbar {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -294,6 +299,8 @@
   transform: rotate(-90deg);
   width: 45px;
   height: 45px;
+  top: 0;
+  left: 0;
 }
 
 .companion__status-number {
@@ -351,7 +358,7 @@
 
 .roster__pagination {
   display: flex;
-  padding: 20px 59px;
+  padding: 20px 58px;
   list-style: none;
   margin-top: 10px;
   background-color: #ffffff;
@@ -434,14 +441,14 @@
     left: 35px;
     width: 190px;
     height: 190px;
-    border-radius: 10px;
+    border-radius: 20px;
   }
 
   .companion__name {
     width: auto;
     order: 1;
     font-size: 30px;
-    margin-left: 229px;
+    margin-left: 231px;
     padding-right: 30px;
 
     &::before {
@@ -542,7 +549,7 @@
     display: none;
 
     &--country {
-      padding-left: 54px;
+      padding-left: 56px;
       display: block;
       order: 5;
       margin-top: 20px;
@@ -604,7 +611,7 @@
   }
 
   .roster__btn {
-    padding-left: 48px;
+    padding-left: 43px;
     padding-top: 7px;
     font-size: 20px;
     margin-top: 34px;
@@ -662,7 +669,7 @@
 @media (min-width: $desktop) {
   .wrapper {
     display: flex;
-    padding: 77px 64px 55px 57px;
+    padding: 77px 62px 55px 59px;
     justify-content: space-between;
   }
 
@@ -678,7 +685,7 @@
   }
 
   .roster__item {
-    padding: 44px 44px 42px 342px;
+    padding: 45px 44px 41px 343px;
     margin-bottom: 30px;
   }
 
@@ -710,7 +717,7 @@
 
     &::before {
       right: auto;
-      left: -25px;
+      left: -23px;
     }
   }
 
@@ -751,6 +758,10 @@
     flex-direction: row;
   }
 
+  .roster .ways__item {
+    margin-right: 2px;
+  }
+
   .companion__btn {
     width: 145px;
     height: 50px;
@@ -772,14 +783,15 @@
     font-size: 20px;
     padding-right: 23px;
     margin-top: 53px;
+    padding-top: 9px;
 
     &::before {
       content: "";
       position: absolute;
       width: 27px;
       height: 27px;
-      top: 10px;
-      left: 344px;
+      top: 12px;
+      left: 345px;
       background: url("../../img/show-more-plus.svg") no-repeat center center;
       background-size: 27px 27px;
     }

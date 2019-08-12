@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/bloggersans.woff" as="font">
     <link rel="preload" href="fonts/bloggersans-bold.woff" as="font">
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
-
+  <div style="display: none;">
+    <include src="source/img/sprite.svg"></include>
+  </div>
     <header class="header inner-page container header--open header--no-js">
       <div class="header__wrapper">
         <a class="header__logo" href="index.html">
@@ -22,7 +25,7 @@
             <img class="header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Погнали?">
           </picture>
         </a>
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <button class="header__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
       </div>
       <nav class="main-nav main-nav--open">
         <ul class="main-nav__list user-list">
@@ -79,8 +82,8 @@
         <h1 class="main__title">Попутчики</h1>
         <a href="index.html" class="main__link">На главную</a>
       </div>
-      <section class="country-filter container">
-        <div class="country-filter__wrapper">
+      <section class="country-filter country-filter-popup container">
+        <div class="country-filter-popup__wrapper">
           <h3 class="country-filter-popup__head">
             <span class="country-filter-popup__mobile-head">Фильтрация по странам:</span>
           </h3>
@@ -619,7 +622,7 @@
                   <p class="companion__text companion__text--level">левел:</p>
                   <div class="companion__progressbar">
                     <svg class="companion__stroke">
-                      <use xlink:href="img/sprite.svg#stroke-firsova"></use>
+                      <use xlink:href="#stroke-firsova"></use>
                     </svg>
                     <span class="companion__status-number">99</span>
                     <span class="companion__status-lvl">level</span>
@@ -631,10 +634,10 @@
             <li class="roster__item companion">
               <a class="companion__image-link" href="profile-demin.html">
                 <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp">
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
-                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg">
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
                   <img src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="foto" class="companion__image">
                 </picture>
@@ -679,7 +682,7 @@
                   <p class="companion__text companion__text--level">левел:</p>
                   <div class="companion__progressbar">
                     <svg class="companion__stroke" width="45" height="45">
-                      <use xlink:href="img/sprite.svg#stroke-demin"></use>
+                      <use xlink:href="#stroke-demin"></use>
                     </svg>
                     <span class="companion__status-number">80</span>
                     <span class="companion__status-lvl">level</span>
@@ -700,7 +703,7 @@
                 </picture>
               </a>
               <a class="companion__name" href="profile-smolov.html">Марк Смолов</a>
-              <p class="companion__likes"><span class="companion__likes-box"><img class="companion__likes-image" src="img/heart.svg" alt="like" width="16" height="16"></span>1700</p>
+              <p class="companion__likes"><span class="companion__likes-box"><img class="companion__likes-image" src="img/heart.svg" alt="like" width="16" height="16"></span>150</p>
               <p class="companion__hashtag">#рэп #тату #хайпбист #кроссовки #суприм</p>
               <p class="companion__text companion__text--country">хочет посетить:</p>
               <ul class="companion__country country country--smolov">
@@ -743,7 +746,7 @@
                   <p class="companion__text companion__text--level">левел:</p>
                   <div class="companion__progressbar">
                     <svg class="companion__stroke" width="45" height="45">
-                      <use xlink:href="img/sprite.svg#stroke-smolov"></use>
+                      <use xlink:href="#stroke-smolov"></use>
                     </svg>
                     <span class="companion__status-number">25</span>
                     <span class="companion__status-lvl">level</span>
@@ -803,14 +806,14 @@
                   <p class="companion__text companion__text--level">левел:</p>
                   <div class="companion__progressbar">
                     <svg class="companion__stroke" width="45" height="45" viewBox="0 0 120 120">
-                      <use xlink:href="img/sprite.svg#stroke-rogovaya"></use>
+                      <use xlink:href="#stroke-rogovaya"></use>
                     </svg>
                     <span class="companion__status-number">50</span>
                     <span class="companion__status-lvl">level</span>
                   </div>
                 </div>
               </div>
-              <a type="button" class="companion__btn button" href="profile-rogovaya.html">Позвать!</a>
+              <a class="companion__btn button" href="profile-rogovaya.html">Позвать!</a>
             </li>
           </ul>
           <a class="roster__btn button" href="travelers.html">Показать еще</a>
@@ -851,16 +854,16 @@
           <li class="footer-social__item">
             <a class="footer-social__link footer-social__link--facebook" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Мы в Фейсбуке</span>
-              <svg fill="#192144" class="footer-social__link-image footer-social__link-image--facebook" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 11 21"  xml:space="preserve" width="11" height="21">
-                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              <svg fill="#192144" class="footer-social__link-image footer-social__link-image--facebook" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 11 21"  xml:space="preserve" width="11" height="21">
+                <use xlink:href="#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="footer-social__item">
             <a class="footer-social__link footer-social__link--vkontakte" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Мы в Вконтакте</span>
-              <svg fill="#192144" class="footer-social__link-image footer-social__link-image--vkontakte" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 15.8" xml:space="preserve" width="23" height="12">
-                <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+              <svg fill="#192144" class="footer-social__link-image footer-social__link-image--vkontakte" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 15.8" xml:space="preserve" width="23" height="12">
+                <use xlink:href="#icon-vkontakte"></use>
               </svg>
             </a>
           </li>
@@ -868,7 +871,7 @@
             <a class="footer-social__link footer-social__link--instagram" href="https://www.instagram.com/htmlacademy">
               <span class="visually-hidden">Мы в Инстаграме</span>
               <svg fill="#192144" class="footer-social__link-image footer-social__link-image--instagram" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 23 23"  xml:space="preserve" width="18" height="18">
-                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                <use xlink:href="#icon-instagram"></use>
               </svg>
             </a>
           </li>

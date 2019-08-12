@@ -1,6 +1,6 @@
 const headerNav = document.querySelector(".main-nav");
 const header = document.querySelector(".header");
-const headerButton = document.querySelector(".main-nav__toggle");
+const headerButton = document.querySelector(".header__toggle");
 const headerLogoMobile = document.querySelector(".header__logo-image");
 const headerLogoTablet = document.querySelector(".header__logo-image-tablet");
 const headerLogoDesktop = document.querySelector(".header__logo-image-desktop");

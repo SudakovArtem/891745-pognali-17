@@ -1,6 +1,6 @@
 const headerNav = document.querySelector(".main-nav");
 const header = document.querySelector(".header");
-const headerButton = document.querySelector(".main-nav__toggle");
+const headerButton = document.querySelector(".header__toggle");
 const link = document.querySelector(".advantages__link");
 const advantage = document.querySelector(".advantages-popup");
 const close = advantage.querySelector(".advantages-popup__close");

@@ -5,6 +5,7 @@
 }
 
 .profile__progressbar {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,6 +23,8 @@
   transform: rotate(-90deg);
   width: 100px;
   height: 100px;
+  top: 0;
+  left: 0;
 }
 
 .profile__status-number {
@@ -74,6 +77,7 @@
   padding: 21px 25px 16px;
   margin: 0;
   resize: none;
+  overflow: hidden;
 
   &:hover {
     border: solid 1px #aeb4cb;
@@ -204,10 +208,14 @@
   .profile__wrapper {
     height: 94px;
 
+    .transport__wrapper {
+      justify-content: space-between;
+    }
+
     &--transport {
       order: 2;
       width: 308px;
-      padding: 25px;
+      padding: 25px 53px;
     }
 
     &--tags {
@@ -277,6 +285,10 @@
 
   .profile__btn-desktop {
     display: block;
+  }
+
+  .profile__wrapper .transport__wrapper {
+    justify-content: center;
   }
 
   .profile__wrapper--transport {

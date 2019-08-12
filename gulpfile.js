@@ -12,6 +12,7 @@ const server = require("browser-sync").create();
 const imagemin = require ("gulp-imagemin");
 const del = require("del");
 const posthtml = require ("gulp-posthtml");
+const include = require("posthtml-include");
 const htmlmin = require ("gulp-htmlmin");
 const jsmin = require('gulp-jsmin');
 
@@ -45,7 +46,9 @@ gulp.task("copy", () => gulp.src([
   .pipe(gulp.dest("build")));
 
 gulp.task ("html", () => gulp.src("source/*.html")
-  .pipe(posthtml())
+  .pipe(posthtml([
+    include()
+  ]))
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest("build")));
 

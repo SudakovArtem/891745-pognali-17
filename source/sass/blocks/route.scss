@@ -160,6 +160,10 @@
   box-sizing: border-box;
   padding: 12px;
 
+  &--bosnia {
+    padding: 12px 31px 12px 12px;
+  }
+
   &--choice {
     border-right: none;
     border-radius: 4px 0 0 4px;
@@ -192,6 +196,8 @@
 
 .plan-filter__value {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .plan-filter__button {
@@ -220,6 +226,10 @@
       display: flex;
       flex-wrap: wrap;
     }
+  }
+
+  .plan-filter__item--route .plan-filter__text {
+    width: 410px;
   }
 
   .plan-filter__select-wrapper {
@@ -373,11 +383,11 @@
 
   .plan-filter__select-flag {
     width: 144px;
-    background-position: 38px 27px;
+    background-position: 40px 27px;
 
     &--bosnia {
       padding-top: 62px;
-      background-position: 38px 73px;
+      background-position: 40px 74px;
 
       .plan-filter__select-btn {
         top: 86px;
@@ -407,6 +417,7 @@
 
   .plan-filter__select {
     width: 730px;
+    padding: 22px 24px;
   }
 
   .plan-filter__button {

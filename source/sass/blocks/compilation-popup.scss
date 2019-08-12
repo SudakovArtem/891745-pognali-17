@@ -39,7 +39,7 @@
   }
 }
 
-.country-filter__wrapper {
+.country-filter-popup__wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -239,7 +239,7 @@
     display: block;
   }
 
-  .country-filter__wrapper {
+  .country-filter-popup__wrapper {
     width: 100%;
     align-items: center;
   }
@@ -383,7 +383,7 @@
     }
   }
 
-  .country-filter__wrapper {
+  .country-filter-popup__wrapper {
     padding: 0 60px 0 21px;
   }
 
@@ -454,7 +454,7 @@
   }
 
   .country-filter-popup__close {
-    margin-top: 16px;
+    margin-top: 19px;
   }
 
   .country-filter-popup__close-text {
