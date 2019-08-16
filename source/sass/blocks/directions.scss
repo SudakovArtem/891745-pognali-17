@@ -84,6 +84,7 @@
   letter-spacing: normal;
   text-align: left;
   color: #161c35;
+  margin-right: auto;
 }
 
 .directions__tagline {
@@ -149,6 +150,18 @@
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
     margin-top: -50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+      background-color: #e2e5f2;
+      top: 457px;
+      left: 40px;
+      z-index: -1;
+    }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/flags-back@2x.png");
@@ -263,6 +276,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     background-position: 1091px 138px;
+
+    &::before {
+      top: 140px;
+      left: 59px;
+    }
   }
 
   .directions__list {

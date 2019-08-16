@@ -11,6 +11,19 @@
   border-bottom-left-radius: 30px;
   margin-top: -30px;
   z-index: 4;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 132px;
+    height: 132px;
+    border-radius: 20px;
+    background-color: #141b3b;
+    top: 71px;
+    left: -16px;
+    z-index: -1;
+  }
 }
 
 .travelers__item {
@@ -314,6 +327,13 @@
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
     margin-top: -50px;
+
+    &::before {
+      width: 213px;
+      height: 213px;
+      top: 128px;
+      left: 40px;
+    }
   }
 
   .travelers__text-wrapper {
@@ -418,6 +438,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 175px 58px 133px 132px;
+
+    &::before {
+      top: 118px;
+      left: 62px;
+    }
   }
 
   .travelers__title {

@@ -15,7 +15,7 @@ headerNav.classList.remove("main-nav--open");
 header.classList.remove("header--open");
 header.classList.remove("header--no-js");
 
-headerButton.addEventListener("click", function (evt) {
+headerButton.addEventListener("click", evt => {
   evt.preventDefault();
   headerNav.classList.toggle("main-nav--open");
   header.classList.toggle("header--open");
@@ -34,17 +34,17 @@ headerButton.addEventListener("click", function (evt) {
   }
 });
 
-link.addEventListener("click", function (evt) {
+link.addEventListener("click", evt => {
   evt.preventDefault();
   advantage.classList.remove("visually-hidden");
 });
 
-close.addEventListener("click", function (evt) {
+close.addEventListener("click", evt => {
   evt.preventDefault();
   advantage.classList.add("visually-hidden");
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", evt => {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (advantage.classList.contains("visually-hidden") === false) {
@@ -53,7 +53,7 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-window.onscroll = function showHeader() {
+window.onscroll = () => {
   if(window.pageYOffset > 200){
     header.classList.add('header--scroll');
     headerLogoMobile.src='img/logo-mobile-blue@1x.png';

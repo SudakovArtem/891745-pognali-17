@@ -15,6 +15,7 @@ const posthtml = require ("gulp-posthtml");
 const include = require("posthtml-include");
 const htmlmin = require ("gulp-htmlmin");
 const jsmin = require('gulp-jsmin');
+const babel = require('gulp-babel');
 
 gulp.task("images", () => gulp.src("source/img/**/*.{png,jpg,svg}")
   .pipe(imagemin([
@@ -53,9 +54,12 @@ gulp.task ("html", () => gulp.src("source/*.html")
   .pipe(gulp.dest("build")));
 
 gulp.task("compress", () => gulp.src("source/js/*.js")
-    .pipe(jsmin())
-    .pipe(rename({suffix: ".min"}))
-    .pipe(gulp.dest("build/js")));
+  .pipe(babel({
+    presets: ["@babel/env"]
+  }))
+  .pipe(jsmin())
+  .pipe(rename({suffix: ".min"}))
+  .pipe(gulp.dest("build/js")));
 
 gulp.task("clean", () => del("build"));
 

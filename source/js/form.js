@@ -15,7 +15,7 @@ headerNav.classList.remove("main-nav--open");
 header.classList.remove("header--open");
 header.classList.remove("header--no-js");
 
-headerButton.addEventListener("click", function (evt) {
+headerButton.addEventListener("click", evt => {
   evt.preventDefault();
   headerNav.classList.toggle("main-nav--open");
   header.classList.toggle("header--open");
@@ -34,7 +34,7 @@ headerButton.addEventListener("click", function (evt) {
   }
 });
 
-window.onscroll = function showHeader() {
+window.onscroll = () => {
   if(window.pageYOffset > 200){
     header.classList.add('header--scroll');
     headerLogoMobile.src='img/logo-mobile-blue@1x.png';
@@ -56,17 +56,17 @@ window.onscroll = function showHeader() {
   }
 };
 
-countryButton.addEventListener("click", function (evt) {
+countryButton.addEventListener("click", evt => {
   evt.preventDefault();
   countryPopup.classList.toggle("plan-add-popup--open");
 });
 
-close.addEventListener("click", function (evt) {
+close.addEventListener("click", evt => {
   evt.preventDefault();
   countryPopup.classList.remove("plan-add-popup--open");
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", evt => {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (countryPopup.classList.contains("plan-add-popup--open") === true) {

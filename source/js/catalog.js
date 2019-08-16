@@ -1,3 +1,5 @@
+import "lodash.debounce";
+
 const headerNav = document.querySelector(".main-nav");
 const header = document.querySelector(".header");
 const headerButton = document.querySelector(".header__toggle");
@@ -22,6 +24,7 @@ const rangeButton = document.querySelector(".compilation__turn-btn--range");
 const rangeWrapper = document.querySelector(".compilation__wrapper--range");
 const travelersButton = document.querySelectorAll(".companion__btn");
 const rosterButton = document.querySelector(".roster__btn");
+var _debounce = require('lodash.debounce');
 
 
 headerNav.classList.remove("main-nav--open");
@@ -86,39 +89,43 @@ headerButton.addEventListener("click", evt => {
   }
 });
 
-window.onscroll = function showHeader() {
-  if(window.pageYOffset > 200){
+const showHeader = function () {
+  if (window.pageYOffset > 200) {
     header.classList.add('header--scroll');
-    headerLogoMobile.src='img/logo-mobile-blue@1x.png';
-    headerLogoMobile.srcset='img/logo-mobile-blue@2x.png 2x';
-    headerLogoTablet.srcset='img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x';
-    headerLogoDesktop.srcset='img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x';
-    headerLogoMobileWebp.srcset='img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x';
-    headerLogoTabletWebp.srcset='img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x';
-    headerLogoDesktopWebp.srcset='img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x';
-  } else{
+    headerLogoMobile.src = 'img/logo-mobile-blue@1x.png';
+    headerLogoMobile.srcset = 'img/logo-mobile-blue@2x.png 2x';
+    headerLogoTablet.srcset = 'img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x';
+    headerLogoDesktop.srcset = 'img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x';
+    headerLogoMobileWebp.srcset = 'img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x';
+    headerLogoTabletWebp.srcset = 'img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x';
+    headerLogoDesktopWebp.srcset = 'img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x';
+  } else {
     header.classList.remove('header--scroll');
-    headerLogoMobile.src='img/logo-mobile-white@1x.png';
-    headerLogoMobile.srcset='img/logo-mobile-white@2x.png 2x';
-    headerLogoTablet.srcset='img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x';
-    headerLogoDesktop.srcset='img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x';
-    headerLogoMobileWebp.srcset='img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x';
-    headerLogoTabletWebp.srcset='img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x';
-    headerLogoDesktopWebp.srcset='img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x';
+    headerLogoMobile.src = 'img/logo-mobile-white@1x.png';
+    headerLogoMobile.srcset = 'img/logo-mobile-white@2x.png 2x';
+    headerLogoTablet.srcset = 'img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x';
+    headerLogoDesktop.srcset = 'img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x';
+    headerLogoMobileWebp.srcset = 'img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x';
+    headerLogoTabletWebp.srcset = 'img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x';
+    headerLogoDesktopWebp.srcset = 'img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x';
   }
 };
 
-filterButton.addEventListener("click", function (evt) {
+window.addEventListener('scroll', function () {
+  _.debounce(showHeader, 150)
+});
+
+filterButton.addEventListener("click", evt => {
   evt.preventDefault();
   filter.classList.toggle("country-filter--closed");
 });
 
-close.addEventListener("click", function (evt) {
+close.addEventListener("click", evt => {
   evt.preventDefault();
   filter.classList.add("country-filter--closed");
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", evt => {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (filter.classList.contains("country-filter--closed") === false) {
