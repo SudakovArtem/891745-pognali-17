@@ -213,6 +213,7 @@
 
     .country-filter-popup__list {
       display: flex;
+      flex-wrap: wrap;
     }
 
     .country-filter__toggle {

@@ -110,6 +110,10 @@
   }
 }
 
+.plan-filter__label-checkbox input[type="checkbox"]:focus + .plan-filter__checkbox-indicator {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .month-list {
   list-style: none;
   padding: 10px 0 9px;

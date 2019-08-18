@@ -238,6 +238,7 @@
   padding: 0 0 0 5px;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .roster .ways__item {
@@ -660,6 +661,11 @@
     }
 
     &:active {
+      color: #161c35;
+      background-color: #ffd74b;
+    }
+
+    &--active {
       color: #161c35;
       background-color: #ffd74b;
     }
