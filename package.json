@@ -21,8 +21,6 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
-    "lodash.debounce": "^4.0.8",
-    "lodash.throttle": "^4.1.1",
     "normalize-scss": "^7.0.1",
     "posthtml-include": "^1.2.0",
     "stylelint": "10.1.x",

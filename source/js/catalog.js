@@ -1,5 +1,3 @@
-import "lodash.debounce";
-
 const headerNav = document.querySelector(".main-nav");
 const header = document.querySelector(".header");
 const headerButton = document.querySelector(".header__toggle");
@@ -24,7 +22,6 @@ const rangeButton = document.querySelector(".compilation__turn-btn--range");
 const rangeWrapper = document.querySelector(".compilation__wrapper--range");
 const travelersButton = document.querySelectorAll(".companion__btn");
 const rosterButton = document.querySelector(".roster__btn");
-var _debounce = require('lodash.debounce');
 
 
 headerNav.classList.remove("main-nav--open");
@@ -89,7 +86,28 @@ headerButton.addEventListener("click", evt => {
   }
 });
 
-const showHeader = function () {
+const throttle = (func, limit) => {
+  let lastFunc;
+  let lastRan;
+  return function() {
+    const context = this;
+    const args = arguments;
+    if (!lastRan) {
+      func.apply(context, args);
+      lastRan = Date.now()
+    } else {
+      clearTimeout(lastFunc);
+      lastFunc = setTimeout(function() {
+        if ((Date.now() - lastRan) >= limit) {
+          func.apply(context, args);
+          lastRan = Date.now()
+        }
+      }, limit - (Date.now() - lastRan))
+    }
+  }
+};
+
+const showHeader = () => {
   if (window.pageYOffset > 200) {
     header.classList.add('header--scroll');
     headerLogoMobile.src = 'img/logo-mobile-blue@1x.png';
@@ -111,9 +129,9 @@ const showHeader = function () {
   }
 };
 
-window.addEventListener('scroll', function () {
-  _.debounce(showHeader, 150)
-});
+window.addEventListener("scroll", throttle(function() {
+  showHeader();
+}, 500));
 
 filterButton.addEventListener("click", evt => {
   evt.preventDefault();
