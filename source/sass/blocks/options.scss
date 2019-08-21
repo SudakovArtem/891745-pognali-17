@@ -24,7 +24,7 @@
 
 .options__item {
   position: relative;
-  height: 160px;
+  min-height: 160px;
   background-color: #ff8d30;
   margin-top: -80px;
   border-radius: 10px;
@@ -43,7 +43,7 @@
 
   &--4 {
     background-color: #ffd74b;
-    height: 80px;
+    min-height: 80px;
   }
 }
 
@@ -67,16 +67,16 @@
 
   .options__item {
     width: 688px;
-    height: 140px;
+    min-height: 140px;
     margin-top: 0;
-    padding: 29px 344px 20px 33px;
+    padding: 29px 410px 20px 33px;
     border-radius: 20px;
 
     &--2,
     &--4 {
       width: 344px;
       margin-left: -344px;
-      padding-right: 0;
+      padding-right: 70px;
     }
 
     &--1,
@@ -110,17 +110,19 @@
 
   .options__item {
     border-radius: 20px;
-    height: 107px;
+    min-height: 107px;
     padding-top: 27px;
     padding-left: 32px;
 
     &--1 {
       width: 1320px;
+      padding-right: 1065px;
     }
 
     &--2 {
       width: 1005px;
       margin-left: -1005px;
+      padding-right: 700px;
 
       .options__item-number {
         left: 299px;
@@ -130,6 +132,7 @@
     &--3 {
       width: 660px;
       margin-left: -660px;
+      padding-right: 375px;
 
       .options__item-number {
         left: 299px;
@@ -139,6 +142,7 @@
     &--4 {
       width: 315px;
       margin-left: -315px;
+      padding-right: 60px;
     }
   }
 

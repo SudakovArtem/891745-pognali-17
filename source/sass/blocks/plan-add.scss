@@ -30,6 +30,7 @@
 }
 
 .plan-filter__head {
+  width: 144px;
   font-size: 20px;
   font-weight: bold;
   line-height: 1;
@@ -108,6 +109,7 @@
   .plan-filter__head {
     font-size: 36px;
     margin-bottom: 36px;
+    width: 255px;
   }
 
   .plan-filter__text {
@@ -146,7 +148,7 @@
       position: absolute;
       top: 35px;
       right: 38px;
-      background: url("../../img/triangle-arrow-right.svg") center no-repeat;
+      background: url("../img/triangle-arrow-right.svg") center no-repeat;
       width: 10px;
       height: 14px;
     }
@@ -165,7 +167,7 @@
         top: 34px;
         right: auto;
         left: 64px;
-        background: url("../../img/triangle-arrow-left.svg") center no-repeat;
+        background: url("../img/triangle-arrow-left.svg") center no-repeat;
         width: 10px;
         height: 14px;
       }
@@ -196,6 +198,10 @@
     &--plan {
       margin-bottom: 71px;
     }
+  }
+
+  .plan-filter__head {
+    width: 500px;
   }
 
   .plan-filter__head-list {

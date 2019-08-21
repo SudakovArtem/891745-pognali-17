@@ -36,14 +36,14 @@
   top: 40px;
   width: 14px;
   height: 14px;
-  background: url("../../img/qty-plus-mobile.svg") center no-repeat;
+  background: url("../img/qty-plus-mobile.svg") center no-repeat;
   background-size: 14px;
   opacity: 0.2;
   cursor: pointer;
 
   &--minus {
     left: 16px;
-    background-image: url("../../img/qty-minus-mobile.svg");
+    background-image: url("../img/qty-minus-mobile.svg");
   }
 
   &:hover {
@@ -87,7 +87,7 @@
 }
 
 .plan-filter__label-checkbox input[type="checkbox"]:checked + .plan-filter__checkbox-indicator {
-  background-image: url("../../img/tick.svg");
+  background-image: url("../img/tick.svg");
   background-size: 9px 9px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -136,7 +136,7 @@
 .month-list__btn {
   width: 9px;
   height: 18px;
-  background: url("../../img/month-arrow-left.svg") center no-repeat;
+  background: url("../img/month-arrow-left.svg") center no-repeat;
   background-size: 9px 18px;
   border: none;
   opacity: 0.3;
@@ -208,6 +208,10 @@
   }
 
   &--active {
+    .plan-table__link {
+      background-color: #edeff6;
+    }
+
     &:hover {
       .plan-table__link {
         border: solid 1px #ff5c23;
@@ -242,6 +246,7 @@
     .plan-filter__head {
       order: 1;
       margin-bottom: 36px;
+      width: 400px;
     }
 
     .plan-filter__wrapper {
@@ -286,12 +291,12 @@
     top: 92px;
     width: 20px;
     height: 20px;
-    background: url("../../img/qty-plus-mobile.svg") center no-repeat;
+    background: url("../img/qty-plus-mobile.svg") center no-repeat;
     background-size: 20px;
 
     &--minus {
       left: 23px;
-      background-image: url("../../img/qty-minus-mobile.svg");
+      background-image: url("../img/qty-minus-mobile.svg");
       background-size: 20px;
     }
   }
@@ -411,6 +416,10 @@
 
 @media (min-width: $desktop) {
   .plan-filter__item--date {
+    .plan-filter__head {
+      width: 500px;
+    }
+
     .plan-filter__wrapper {
       flex-direction: row;
       flex-wrap: wrap;

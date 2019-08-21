@@ -62,16 +62,16 @@
     position: absolute;
     width: 35px;
     height: 24px;
-    background-image: url("../../img/thailand50.png");
+    background-image: url("../img/thailand50.png");
     top: -12px;
   }
 
   &--france::before {
-    background-image: url("../../img/france50.png");
+    background-image: url("../img/france50.png");
   }
 
   &--czech::before {
-    background-image: url("../../img/czech50.png");
+    background-image: url("../img/czech50.png");
   }
 }
 
@@ -118,7 +118,7 @@
     width: 11px;
     height: 11px;
     opacity: 0.1;
-    background: url("../../img/user.svg") center no-repeat;
+    background: url("../img/user.svg") center no-repeat;
     background-size: 11px 11px;
   }
 }
@@ -137,7 +137,7 @@
     position: absolute;
     top: 24px;
     right: 23px;
-    background: url("../../img/triangle-arrow-right.svg") center no-repeat;
+    background: url("../img/triangle-arrow-right.svg") center no-repeat;
     width: 10px;
     height: 14px;
   }
@@ -146,7 +146,8 @@
 @media (min-width: $tablet) {
   .directions {
     padding: 70px 75px 80px;
-    background: #e8eaf2 url("../../img/flags-back@1x.png") 439px 130px no-repeat;
+    background: #e8eaf2 url("../img/flags-back@1x.png") 439px 130px no-repeat;
+    background-size: 289px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
     margin-top: -50px;
@@ -164,7 +165,7 @@
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/flags-back@2x.png");
+      background-image: url("../img/flags-back@2x.png");
     }
   }
 
@@ -213,17 +214,17 @@
     &::before {
       width: 70px;
       height: 47px;
-      background-image: url("../../img/thailand.png");
+      background-image: url("../img/thailand.png");
       top: 15px;
       right: -37px;
     }
 
     &--france::before {
-      background-image: url("../../img/france.png");
+      background-image: url("../img/france.png");
     }
 
     &--czech::before {
-      background-image: url("../../img/czech.png");
+      background-image: url("../img/czech.png");
     }
   }
 
@@ -271,7 +272,7 @@
 @media (min-width: $desktop) {
   .directions {
     position: relative;
-    padding: 211px 130px 150px;
+    padding: 211px 130px 140px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -285,6 +286,7 @@
 
   .directions__list {
     width: 560px;
+    order: -1;
   }
 
   .directions__item-wrapper {
@@ -301,21 +303,20 @@
   }
 
   .directions__text-wrapper {
-    width: 448px;
+    width: 447px;
     position: relative;
-    order: 2;
     padding: 0;
   }
 
   .directions__title {
-    margin-top: 0;
+    margin-top: 3px;
   }
 
   .directions__to-all {
-    position: absolute;
     width: 274px;
     height: 81px;
-    right: 303px;
-    bottom: 140px;
+    margin-left: auto;
+    margin-right: 171px;
+    margin-top: -70px;
   }
 }

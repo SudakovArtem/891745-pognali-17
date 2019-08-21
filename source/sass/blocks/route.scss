@@ -39,7 +39,7 @@
     position: absolute;
     width: 5px;
     height: 10px;
-    background: url("../../img/small-arrow.svg");
+    background: url("../img/small-arrow.svg");
     opacity: 0.3;
     background-size: 5px 10px;
     top: -15px;
@@ -59,11 +59,11 @@
   border-radius: 4px;
   border: solid 1px #cbced9;
   box-sizing: border-box;
-  background: url("../../img/bosnia-and-herzegovina.png") no-repeat center;
+  background: url("../img/bosnia-and-herzegovina.png") no-repeat center;
   background-size: 35px 24px;
 
   &--czech {
-    background-image: url("../../img/czech.png");
+    background-image: url("../img/czech.png");
   }
 
   &::before {
@@ -96,7 +96,7 @@
     opacity: 0.1;
     width: 21px;
     height: 21px;
-    background: url("../../img/small-cross.svg") no-repeat center;
+    background: url("../img/small-cross.svg") no-repeat center;
     background-size: 9px 9px;
     top: 0;
     right: 0;
@@ -138,7 +138,7 @@
   }
 
   .plan-filter__button {
-    background-image: url("../../img/qty-plus.svg");
+    background-image: url("../img/qty-plus.svg");
     background-size: 14px 14px;
   }
 }
@@ -209,7 +209,7 @@
   border-radius: 50%;
   border: none;
   background-color: transparent;
-  background-image: url("../../img/dropdown-form.svg");
+  background-image: url("../img/dropdown-form.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 12px 7px;
@@ -225,6 +225,10 @@
     .plan-filter__wrapper {
       display: flex;
       flex-wrap: wrap;
+    }
+
+    .plan-filter__text {
+      width: 490px;
     }
   }
 
@@ -360,6 +364,7 @@
     .plan-filter__text {
       border: none;
       width: 100%;
+      padding-right: 505px;
       margin-bottom: 2px;
     }
   }

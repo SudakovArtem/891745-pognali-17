@@ -1,0 +1,71 @@
+.user-list {
+  display: none;
+  order: 2;
+  list-style: none;
+  padding: 0;
+  margin: 50px 0 0 0;
+}
+
+@media (min-width: $tablet) {
+  .user-list {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    margin-top: 0;
+  }
+
+  .user-list__button {
+    display: none;
+  }
+
+  .user-list__login {
+    width: 188px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .user-list {
+    display: flex;
+    right: 60px;
+    top: 49px;
+  }
+
+  .user-list__item {
+    min-width: 40px;
+  }
+
+  .user-list__button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff8d30;
+    background-size: 18px;
+    border-radius: 50%;
+
+    &--tel {
+      &:hover {
+        background-color: #f26926;
+      }
+    }
+
+    &:active {
+      .user-list__button-image {
+        opacity: 0.2;
+      }
+    }
+
+    &--email {
+      background-color: #ffbd30;
+      background-size: 18px 14px;
+
+      &:hover {
+        background-color: #ff8d30;
+      }
+    }
+  }
+}

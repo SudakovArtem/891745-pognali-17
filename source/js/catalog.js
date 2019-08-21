@@ -27,13 +27,18 @@ const rosterButton = document.querySelector(".roster__btn");
 headerNav.classList.remove("main-nav--open");
 header.classList.remove("header--open");
 header.classList.remove("header--no-js");
+headerLogoMobile.src = "img/logo-mobile-white@1x.png";
+headerLogoMobile.srcset = "img/logo-mobile-white@2x.png 2x";
+headerLogoTablet.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
+headerLogoMobileWebp.srcset = "img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x";
+headerLogoTabletWebp.srcset = "img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x";
 filter.classList.add("country-filter--closed");
 hobbyWrapper.classList.add("compilation__wrapper--closed");
 foodWrapper.classList.add("compilation__wrapper--closed");
 
 for (let i = 0; i < travelersButton.length; i++) {
   const button = travelersButton[i];
-  button.addEventListener('click', evt => {
+  button.addEventListener("click", evt => {
     evt.preventDefault();
   });
 }
@@ -72,17 +77,17 @@ headerButton.addEventListener("click", evt => {
   headerNav.classList.toggle("main-nav--open");
   header.classList.toggle("header--open");
   if (header.classList.contains("header--open") === true) {
-    headerLogoMobile.src = 'img/logo-mobile-blue@1x.png';
-    headerLogoMobile.srcset = 'img/logo-mobile-blue@2x.png 2x';
-    headerLogoTablet.srcset = 'img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x';
-    headerLogoMobileWebp.srcset = 'img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x';
-    headerLogoTabletWebp.srcset = 'img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x';
+    headerLogoMobile.src = "img/logo-mobile-blue@1x.png";
+    headerLogoMobile.srcset = "img/logo-mobile-blue@2x.png 2x";
+    headerLogoTablet.srcset = "img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x";
+    headerLogoMobileWebp.srcset = "img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x";
+    headerLogoTabletWebp.srcset = "img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x";
   } else {
-    headerLogoMobile.src = 'img/logo-mobile-white@1x.png';
-    headerLogoMobile.srcset = 'img/logo-mobile-white@2x.png 2x';
-    headerLogoTablet.srcset = 'img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x';
-    headerLogoMobileWebp.srcset = 'img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x';
-    headerLogoTabletWebp.srcset = 'img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x';
+    headerLogoMobile.src = "img/logo-mobile-white@1x.png";
+    headerLogoMobile.srcset = "img/logo-mobile-white@2x.png 2x";
+    headerLogoTablet.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
+    headerLogoMobileWebp.srcset = "img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x";
+    headerLogoTabletWebp.srcset = "img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x";
   }
 });
 
@@ -109,23 +114,23 @@ const throttle = (func, limit) => {
 
 const showHeader = () => {
   if (window.pageYOffset > 200) {
-    header.classList.add('header--scroll');
-    headerLogoMobile.src = 'img/logo-mobile-blue@1x.png';
-    headerLogoMobile.srcset = 'img/logo-mobile-blue@2x.png 2x';
-    headerLogoTablet.srcset = 'img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x';
-    headerLogoDesktop.srcset = 'img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x';
-    headerLogoMobileWebp.srcset = 'img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x';
-    headerLogoTabletWebp.srcset = 'img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x';
-    headerLogoDesktopWebp.srcset = 'img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x';
+    header.classList.add("header--scroll");
+    headerLogoMobile.src = "img/logo-mobile-blue@1x.png";
+    headerLogoMobile.srcset = "img/logo-mobile-blue@2x.png 2x";
+    headerLogoTablet.srcset = "img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x";
+    headerLogoDesktop.srcset = "img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x";
+    headerLogoMobileWebp.srcset = "img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x";
+    headerLogoTabletWebp.srcset = "img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x";
+    headerLogoDesktopWebp.srcset = "img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x";
   } else {
-    header.classList.remove('header--scroll');
-    headerLogoMobile.src = 'img/logo-mobile-white@1x.png';
-    headerLogoMobile.srcset = 'img/logo-mobile-white@2x.png 2x';
-    headerLogoTablet.srcset = 'img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x';
-    headerLogoDesktop.srcset = 'img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x';
-    headerLogoMobileWebp.srcset = 'img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x';
-    headerLogoTabletWebp.srcset = 'img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x';
-    headerLogoDesktopWebp.srcset = 'img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x';
+    header.classList.remove("header--scroll");
+    headerLogoMobile.src = "img/logo-mobile-white@1x.png";
+    headerLogoMobile.srcset = "img/logo-mobile-white@2x.png 2x";
+    headerLogoTablet.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
+    headerLogoDesktop.srcset = "img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x";
+    headerLogoMobileWebp.srcset = "img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x";
+    headerLogoTabletWebp.srcset = "img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x";
+    headerLogoDesktopWebp.srcset = "img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x";
   }
 };
 

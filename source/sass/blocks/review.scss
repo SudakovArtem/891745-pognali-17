@@ -1,0 +1,43 @@
+.review__text {
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.review__author-name {
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media (min-width: $tablet) {
+  .review__text {
+    line-height: 1.18;
+    margin-bottom: 44px;
+    font-size: 28px;
+  }
+
+  .intro__wrapper {
+    display: none;
+  }
+
+  .review__author-name {
+    font-size: 21px;
+    line-height: 1.19;
+  }
+}
+
+@media (min-width: $desktop) {
+  .review__text {
+    margin-top: 13px;
+  }
+}

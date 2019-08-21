@@ -1,6 +1,6 @@
 .travelers {
   background-color: #192144;
-  background-image: url("../../img/smolov-back-desktop@1x.png"), url("../../img/rogovaya-back-mobile@1x.png");
+  background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
   background-position: 152px 68px, -10px 340px;
   background-repeat: no-repeat, no-repeat;
   background-size: auto, auto;
@@ -313,7 +313,7 @@
     position: absolute;
     top: 24px;
     right: 23px;
-    background: url("../../img/triangle-arrow-right.svg") center no-repeat;
+    background: url("../img/triangle-arrow-right.svg") center no-repeat;
     width: 10px;
     height: 14px;
   }
@@ -321,7 +321,7 @@
 
 @media (min-width: $tablet) {
   .travelers {
-    background-image: url("../../img/rogovaya-back-desktop@1x.png"), url("../../img/smolov-back-desktop@1x.png");
+    background-image: url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
     background-position: 409px 130px, 40px 476px;
     padding: 142px 75px 88px;
     border-bottom-right-radius: 60px;
@@ -468,10 +468,8 @@
   }
 
   .travelers__to-all {
-    position: absolute;
     width: 280px;
     height: 81px;
-    left: 130px;
-    bottom: 134px;
+    margin-top: -81px;
   }
 }

@@ -1,0 +1,137 @@
+.main-nav--open {
+  display: flex;
+  flex-direction: column;
+
+  .site-list,
+  .main-nav__tel,
+  .main-nav__email,
+  .header__social {
+    display: block;
+  }
+}
+
+.main-nav__tel,
+.main-nav__email {
+  order: 1;
+  position: relative;
+  display: block;
+  margin-left: 86px;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #192144;
+}
+
+.main-nav__tel {
+  margin-top: 60px;
+}
+
+.main-nav__tel-icon,
+.main-nav__email-icon {
+  position: absolute;
+  top: -12px;
+  left: -50px;
+  width: 45px;
+  height: 45px;
+  background-color: #121936;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav__tel-icon::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url("../img/contacts-phone.svg") center no-repeat;
+}
+
+.main-nav__email-icon::before {
+  content: "";
+  width: 18px;
+  height: 13px;
+  background: url("../img/contacts-mail.svg") center no-repeat;
+}
+
+.main-nav__email {
+  margin-top: 25px;
+}
+
+.main-nav__tel:active {
+  color: rgba(25, 33, 68, 0.3);
+
+  .main-nav__tel-icon::before {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__email:active {
+  color: rgba(25, 33, 68, 0.3);
+
+  .main-nav__email-icon::before {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet) {
+  .main-nav__tel,
+  .main-nav__email {
+    font-size: 28px;
+    margin-left: 101px;
+  }
+
+  .main-nav__tel-icon,
+  .main-nav__email-icon {
+    width: 67px;
+    height: 67px;
+    left: -80px;
+  }
+
+  .main-nav__tel-icon::before {
+    width: 27px;
+    height: 27px;
+  }
+
+  .main-nav__email-icon::before {
+    width: 27px;
+    height: 19px;
+  }
+
+  .main-nav__email {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .main-nav,
+  .main-nav--open {
+    display: flex;
+    align-items: center;
+
+    .site-list,
+    .main-nav__tel,
+    .main-nav__email,
+    .header__social {
+      display: none;
+    }
+
+    .site-list {
+      display: flex;
+      font-size: 20px;
+      margin-top: 0;
+    }
+
+    .site-list__item {
+      margin-right: 24px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
