@@ -14,8 +14,8 @@ const del = require("del");
 const posthtml = require ("gulp-posthtml");
 const include = require("posthtml-include");
 const htmlmin = require ("gulp-htmlmin");
-const jsmin = require('gulp-jsmin');
-const babel = require('gulp-babel');
+const jsmin = require("gulp-jsmin");
+const babel = require("gulp-babel");
 
 gulp.task("images", () => gulp.src("source/img/**/*.{png,jpg,svg}")
   .pipe(imagemin([
