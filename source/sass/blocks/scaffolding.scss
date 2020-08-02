@@ -95,11 +95,15 @@ input[type="radio"].visually-hidden {
 
 .main__head {
   position: relative;
-  display: flex;
   background-color: #161c35;
   border-radius: 0 0 20px 20px;
-  padding: 18px 0 14px 25px;
   z-index: 2;
+
+  .container {
+    position: relative;
+    display: flex;
+    padding: 18px 0 14px 25px;
+  }
 }
 
 .main__title {
@@ -147,10 +151,13 @@ input[type="radio"].visually-hidden {
   .main__head {
     background-color: #161c35;
     border-radius: 0 0 60px 60px;
-    padding: 94px 74px 68px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    .container {
+      padding: 94px 74px 68px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .main__title {
@@ -223,7 +230,9 @@ input[type="radio"].visually-hidden {
   }
 
   .main__head {
-    padding: 82px 124px 67px;
+    .container {
+      padding: 82px 124px 67px;
+    }
   }
 
   .tablet-wrap {

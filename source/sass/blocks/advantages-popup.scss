@@ -1,17 +1,20 @@
 .advantages-popup {
   position: absolute;
   width: 270px;
-  left: 25px;
-  bottom: 50px;
-  border-radius: 30px;
+  //height: 444px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 16px;
+  border-radius: 20px;
+  overflow: hidden;
   box-sizing: border-box;
   background-color: #ffffff;
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
 }
 
 .advantages-popup__title {
-  margin-bottom: 20px;
-  padding: 25px 0;
+  margin: 0;
+  padding: 32px 0;
   text-align: center;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
@@ -25,7 +28,7 @@
 }
 
 .advantages-popup__item {
-  padding: 15px 50px 15px 0;
+  padding: 11px 50px 10px 0;
   box-sizing: border-box;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 
@@ -44,8 +47,7 @@
 
 .advantages-popup__close {
   width: 100%;
-  margin: 0;
-  padding: 25px 0;
+  padding: 18px 0;
   background-color: #f3f4f8;
   border: none;
   font-family: "BloggerSans", "Arial", sans-serif;
@@ -55,9 +57,8 @@
   text-align: center;
   color: #1d2e5b;
   text-transform: uppercase;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
   cursor: pointer;
+  margin-top: 34px;
 
   &:active {
     color: rgba(19, 37, 118, 0.3);
@@ -67,18 +68,20 @@
 @media (min-width: $tablet) {
   .advantages-popup {
     width: 688px;
-    left: 40px;
-    bottom: -590px;
+    border-radius: 30px;
+    left: 50%;
+    bottom: -592px;
   }
 
   .advantages-popup__title {
     margin-bottom: 0;
     font-size: 45px;
-    padding-top: 50px;
+    padding-top: 61px;
+    padding-bottom: 30px;
   }
 
   .advantages-popup__list {
-    padding: 50px 90px 40px;
+    padding: 31px 90px 16px;
     font-size: 22px;
   }
 
@@ -86,18 +89,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 14px 0 19px 0;
   }
 
   .advantages-popup__close {
     font-size: 24px;
     text-transform: none;
-    padding-bottom: 40px;
+    padding: 34px 0 38px;
   }
 }
 
 @media (min-width: $desktop) {
   .advantages-popup {
-    bottom: 60px;
-    left: ((1440px / 2) - 344px);
+    width: 750px;
+    height: 527px;
+    bottom: 117px;
+  }
+  .advantages-popup__list {
+    padding: 31px 59px 16px;
   }
 }

@@ -1,16 +1,21 @@
 .advantages {
-  background: #edeff6 url("../img/rates@1x.png") 195px 40px no-repeat;
   position: relative;
-  background-size: 99px auto;
-  padding-top: 27px;
-  padding-bottom: 40px;
+  background: #edeff6;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
-  margin-top: 0;
   z-index: 5;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/rates@2x.png");
+  .container {
+    background: url("../img/rates@1x.png") 195px 40px no-repeat;
+    position: relative;
+    background-size: 99px auto;
+    padding-top: 27px;
+    padding-bottom: 40px;
+    margin-top: 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rates@2x.png");
+    }
   }
 }
 
@@ -108,13 +113,16 @@
 
 @media (min-width: $tablet) {
   .advantages {
-    padding-bottom: 90px;
-    padding-top: 75px;
-    background-position: 613px 620px;
-    margin-top: -50px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
     z-index: 3;
+
+    .container {
+      padding-bottom: 90px;
+      padding-top: 75px;
+      background-position: 613px 620px;
+      margin-top: -50px;
+    }
   }
 
   .advantages__title {
@@ -182,9 +190,11 @@
 
 @media (min-width: $desktop) {
   .advantages {
-    padding: 153px 230px 190px 130px;
-    background-size: 198px 198px;
-    background-position: 1108px 336px;
+    .container {
+      padding: 153px 230px 190px 130px;
+      background-size: 198px 198px;
+      background-position: 1108px 336px;
+    }
   }
 
   .advantages__title {

@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Направления Погнали</title>
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/bloggersans.woff" as="font">
-    <link rel="preload" href="fonts/bloggersans-bold.woff" as="font">
-    <script src="js/picturefill.min.js"></script>
-  </head>
-  <body>
-  <div style="display: none;">
-    <include src="source/img/sprite.svg"></include>
-  </div>
-    <header class="header inner-page container header--open header--no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Направления Погнали</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/bloggersans.woff" as="font">
+  <link rel="preload" href="fonts/bloggersans-bold.woff" as="font">
+  <script src="js/picturefill.min.js"></script>
+</head>
+<body>
+<div style="display: none;">
+  <include src="source/img/sprite.svg"></include>
+</div>
+<header class="header inner-page header--open header--no-js">
+  <div class="container">
     <div class="header__wrapper">
       <a class="header__logo" href="index.html">
         <picture>
-          <source type="image/webp" class="header__logo-image-desktop-webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
-          <source type="image/webp" class="header__logo-image-tablet-webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
-          <source type="image/webp" class="header__logo-image-webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.png 2x">
-          <source class="header__logo-image-desktop" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-          <source class="header__logo-image-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-          <img class="header__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали?">
+          <source type="image/webp" class="header__logo-image-desktop-webp" media="(min-width: 1440px)"
+                  srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+          <source type="image/webp" class="header__logo-image-tablet-webp" media="(min-width: 768px)"
+                  srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+          <source type="image/webp" class="header__logo-image-webp"
+                  srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.png 2x">
+          <source class="header__logo-image-desktop" media="(min-width: 1440px)"
+                  srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <source class="header__logo-image-tablet" media="(min-width: 768px)"
+                  srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img class="header__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+               width="100" height="19" alt="Погнали?">
         </picture>
       </a>
       <button class="header__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
@@ -31,13 +38,15 @@
       <ul class="main-nav__list user-list">
         <li class="user-list__item">
           <a class="user-list__button user-list__button--tel" href="tel:88005558628">
-            <img class="user-list__button-image user-list__button-image--tel" src="img/topmenu-phone.svg" alt="telephone" width="16" height="16">
+            <img class="user-list__button-image user-list__button-image--tel" src="img/topmenu-phone.svg"
+                 alt="telephone" width="16" height="16">
             <span class="visually-hidden">Телефон</span>
           </a>
         </li>
         <li class="user-list__item">
           <a class="user-list__button user-list__button--email" href="mailto:mail@htmlacademy.ru">
-            <img class="user-list__button-image user-list__button-image--email" src="img/topmenu-mail.svg" alt="email" width="16" height="16">
+            <img class="user-list__button-image user-list__button-image--email" src="img/topmenu-mail.svg" alt="email"
+                 width="16" height="16">
             <span class="visually-hidden">Почта</span>
           </a>
         </li>
@@ -47,21 +56,25 @@
       </ul>
       <ul class="main-nav__list site-list">
         <li class="site-list__item site-list__item--active">
-          <a class="site-list__link" href="#"><span class="site-list__link-text" data-hover="О&nbsp;сервисе">О сервисе</span></a>
+          <a class="site-list__link" href="#"><span class="site-list__link-text"
+                                                    data-hover="О&nbsp;сервисе">О сервисе</span></a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link" href="#"><span class="site-list__link-text" data-hover="Направления">Направления</span></a>
+          <a class="site-list__link" href="#"><span class="site-list__link-text"
+                                                    data-hover="Направления">Направления</span></a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link" href="catalog.html"><span class="site-list__link-text" data-hover="Попутчики">Попутчики</span></a>
         </li>
       </ul>
       <a class="main-nav__tel" href="tel:88005558628">8 800 555-86-28<span class="main-nav__tel-icon"></span></a>
-      <a class="main-nav__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru<span class="main-nav__email-icon"></span></a>
+      <a class="main-nav__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru<span
+        class="main-nav__email-icon"></span></a>
       <div class="header__social header-social">
         <ul class="header-social__list">
           <li class="header-social__item">
-            <a class="header-social__link header-social__link--facebook" href="https://www.facebook.com/htmlacademy"><span
+            <a class="header-social__link header-social__link--facebook"
+               href="https://www.facebook.com/htmlacademy"><span
               class="visually-hidden">Мы в
                     Фейсбуке</span></a>
           </li>
@@ -70,382 +83,430 @@
               class="visually-hidden">Мы в Вконтакте</span></a>
           </li>
           <li class="header-social__item">
-            <a class="header-social__link header-social__link--instagram" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Мы в Инстаграме</span></a>
+            <a class="header-social__link header-social__link--instagram"
+               href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Мы в Инстаграме</span></a>
           </li>
         </ul>
       </div>
     </nav>
-  </header>
+  </div>
+</header>
 
-    <main class="main">
-      <div class="main__head container">
-        <h1 class="main__title">Направления</h1>
+<main class="main">
+  <div class="main__head">
+    <div class="container">
+      <h1 class="main__title">Направления</h1>
+    </div>
+  </div>
+
+  <section class="profile">
+    <div class="container">
+      <div class="profile__progressbar">
+        <svg class="profile__stroke" width="60" height="60">
+          <use xlink:href="#stroke-demin"></use>
+        </svg>
+        <span class="profile__status-number">80</span>
+        <span class="profile__status-lvl">level</span>
       </div>
-
-      <section class="profile container">
-        <div class="profile__progressbar">
-          <svg class="profile__stroke" width="60" height="60">
-            <use xlink:href="#stroke-demin"></use>
-          </svg>
-          <span class="profile__status-number">80</span>
-          <span class="profile__status-lvl">level</span>
-        </div>
-        <picture class="profile__picture">
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
-          <source type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
-          <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-          <img class="profile__image" src="img/demin-tablet@1x.jpg" srcset="img/demin-tablet@2x.jpg 2x" width="190" height="190" alt="foto">
-        </picture>
-        <a class="profile__btn button" href="#"><span class="profile__btn-mobile">сменить фото</span><span class="profile__btn-desktop">фото</span></a>
-        <div class="profile__wrapper profile__wrapper--tags">
-          <p class="profile__text profile__text">тэги</p>
-          <textarea class="profile__hashtag" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea></div>
-        <div class="profile__wrapper profile__wrapper--transport transport">
-          <p class="profile__text profile__text--transport">транспорт</p>
-          <div class="transport__wrapper">
-            <label class="transport__label">
-              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" checked> <span class="transport__checkbox-indicator transport__checkbox-indicator--air"></span></label>
-            <label class="transport__label">
-              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" checked> <span class="transport__checkbox-indicator transport__checkbox-indicator--bus"></span></label>
-            <label class="transport__label">
-              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox"> <span class="transport__checkbox-indicator transport__checkbox-indicator--bicycle"></span></label>
-            <label class="transport__label">
-              <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" checked> <span class="transport__checkbox-indicator transport__checkbox-indicator--foot"></span>
-            </label>
-          </div>
-        </div>
-      </section>
-
-      <section class="plans container">
-        <h2 class="plans__title">Мои планы:</h2>
-        <ul class="plans__list">
-          <li class="plans__item">
-            <p class="plans__country"><span class="plans__country-number">1.</span> Франция, Италия</p>
-            <p class="plans__quantity">3 попутчика</p>
-            <p class="plans__period">26 мар — 29 мар</p>
-            <a class="plans__btn" href="myplans.html">изменить</a>
-          </li>
-          <li class="plans__item">
-            <p class="plans__country"><span class="plans__country-number">2.</span> Тайланд, Индонезия</p>
-            <p class="plans__quantity">1 попутчик</p>
-            <p class="plans__period">1 июл — 15 июл</p>
-            <a class="plans__btn" href="myplans.html">изменить</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="plan-add container">
-        <h2 class="plan-add__title">Добавить план:</h2>
-        <form class="plan-add__filter plan-filter" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="plan-filter__item plan-filter__item--date" id="part1">
-            <div class="plan-filter__wrapper">
-              <h3 class="plan-filter__head">Шаг 1. Даты&nbsp;пребывания</h3>
-              <ul class="plan-filter__head-list">
-                <li class="plan-filter__head-item plan-filter__head-item--active">Даты</li>
-                <li class="plan-filter__head-item">Маршрут</li>
-                <li class="plan-filter__head-item">Развлечения</li>
-              </ul>
-              <p class="plan-filter__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать
-                в поездку и ее предполагаемую длительность.</p>
-              <div class="plan-filter__input plan-filter__input--quantity">
-                <label class="plan-filter__label" for="quantity1">ищу попутчиков:</label>
-                <button type="button" class="plan-filter__quantity-btn plan-filter__quantity-btn--minus"><span
-                  class="visually-hidden">-</span></button>
-                <input class="plan-filter__quantity" name="quantity" id="quantity1" type="text" value="2">
-                <button type="button" class="plan-filter__quantity-btn plan-filter__quantity-btn--plus"><span
-                  class="visually-hidden">+</span></button>
-                <p class="plan-filter__units">Чел.</p>
-              </div>
-              <div class="plan-filter__input plan-filter__input--duration">
-                <label class="plan-filter__label" for="quantity2">длительность:</label>
-                <button type="button" class="plan-filter__quantity-btn plan-filter__quantity-btn--minus"><span
-                  class="visually-hidden">-</span></button>
-                <input class="plan-filter__quantity" name="quantity" id="quantity2" type="text" value="2">
-                <button type="button" class="plan-filter__quantity-btn plan-filter__quantity-btn--plus"><span
-                  class="visually-hidden">+</span></button>
-                <p class="plan-filter__units">дн.</p>
-              </div>
-              <label class="plan-filter__label-checkbox">
-                <input class="plan-filter__checkbox visually-hidden" name="options" type="checkbox" checked>
-                <span class="plan-filter__checkbox-indicator"></span>
-                Можно с детьми
-              </label>
-              <ul class="plan-add__month-list month-list">
-                <li class="month-list__item">
-                  <button type="button" class="month-list__btn month-list__btn--back"><span class="visually-hidden">назад</span>
-                  </button>
-                </li>
-                <li class="month-list__item">
-                  <b class="month-list__name">Март 2019</b>
-                </li>
-                <li class="month-list__item">
-                  <button type="button" class="month-list__btn month-list__btn--forward"><span class="visually-hidden">вперед</span>
-                  </button>
-                </li>
-              </ul>
-              <table class="plan-filter__table plan-table">
-                <tr class="plan-table__row">
-                  <th class="plan-table__head"><a class="plan-table__day" href="#"><span class="plan-table__head-mobile">П</span><span class="plan-table__head-desktop">Пн</span></a></th>
-                  <th class="plan-table__head"><a class="plan-table__day" href="#"><span class="plan-table__head-mobile">В</span><span class="plan-table__head-desktop">Вт</span></a></th>
-                  <th class="plan-table__head"><a class="plan-table__day" href="#"><span class="plan-table__head-mobile">С</span><span class="plan-table__head-desktop">Ср</span></a></th>
-                  <th class="plan-table__head"><a class="plan-table__day" href="#"><span class="plan-table__head-mobile">Ч</span><span class="plan-table__head-desktop">Чт</span></a></th>
-                  <th class="plan-table__head"><a class="plan-table__day" href="#"><span class="plan-table__head-mobile">П</span><span class="plan-table__head-desktop">Пт</span></a></th>
-                  <th class="plan-table__head plan-table__head--weekend"><a class="plan-table__day" href="#"><span class="plan-table__head-mobile">С</span><span class="plan-table__head-desktop">Сб</span></a></th>
-                  <th class="plan-table__head plan-table__head--weekend"><a class="plan-table__day" href="#"><span class="plan-table__head-mobile">В</span><span class="plan-table__head-desktop">Вс</span></a></th>
-                </tr>
-                <tr class="plan-table__row">
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">23</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">24</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">25</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">26</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">27</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">28</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">1 <span class="plan-table__cell-desktop">&nbsp;мар</span></a></td>
-                </tr>
-                <tr class="plan-table__row">
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">2</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">3</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">4</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">5</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">6</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">7</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">8</a></td>
-                </tr>
-                <tr class="plan-table__row">
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">9</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">10</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">11</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">12</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">13</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">14</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">15</a></td>
-                </tr>
-                <tr class="plan-table__row">
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">16</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">17</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">18</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">19</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">20</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">21</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">22</a></td>
-                </tr>
-                <tr class="plan-table__row">
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">23</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">24</a></td>
-                  <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">25</a></td>
-                  <td class="plan-table__cell plan-table__cell--mark plan-table__cell--current"><a
-                    class="plan-table__link" href="#">26<span class="plan-table__cell-desktop plan-table__cell-desktop--period">Заезд</span></a></td>
-                  <td class="plan-table__cell plan-table__cell--mark"><a class="plan-table__link" href="#">27</a></td>
-                  <td class="plan-table__cell plan-table__cell--mark"><a class="plan-table__link" href="#">28<span class="plan-table__cell-desktop plan-table__cell-desktop--period">Выезд</span></a></td>
-                  <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">29</a></td>
-                </tr>
-                <tr class="plan-table__row">
-                  <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">30</a></td>
-                  <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">31</a></td>
-                  <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">1<span class="plan-table__cell-desktop">&nbsp;апр</span></a></td>
-                  <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">2</a></td>
-                  <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">3</a></td>
-                  <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">4</a></td>
-                  <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">5</a></td>
-                </tr>
-              </table>
-              <a class="plan-filter__btn button" href="#part2">Следующий шаг</a>
-            </div>
-          </fieldset>
-
-          <fieldset class="plan-filter__item plan-filter__item--route" id="part2">
-            <div class="plan-filter__wrapper">
-              <h3 class="plan-filter__head">Шаг 2. Маршрут</h3>
-              <ul class="plan-filter__head-list">
-                <li class="plan-filter__head-item">Даты</li>
-                <li class="plan-filter__head-item plan-filter__head-item--active">Маршрут</li>
-                <li class="plan-filter__head-item">Развлечения</li>
-              </ul>
-              <p class="plan-filter__text">Укажите страны, которые вы хотели по посетить. Это&nbsp;может быть одна или
-                сразу несколько</p>
-              <div class="plan-filter__select-wrapper plan-filter__select-wrapper--border">
-                <div class="plan-filter__select plan-filter__select--bosnia">
-                  <p class="plan-filter__value">Босния и герцеговина</p>
-                  <button type="button" class="plan-filter__button"><span class="visually-hidden">выбрать</span>
-                  </button>
-                </div>
-                <div class="plan-filter__select-flag plan-filter__select-flag--bosnia">
-                  <button type="button" class="plan-filter__select-btn"></button>
-                </div>
-              </div>
-              <div class="plan-filter__select-wrapper">
-                <div class="plan-filter__select">
-                  <p class="plan-filter__value">Чехословакия</p>
-                  <button type="button" class="plan-filter__button"><span class="visually-hidden">выбрать</span>
-                  </button>
-                </div>
-                <div class="plan-filter__select-flag plan-filter__select-flag--czech">
-                  <button type="button" class="plan-filter__select-btn"></button>
-                </div>
-              </div>
-              <div class="plan-filter__select-wrapper plan-filter__select-wrapper--choice">
-                <div class="plan-filter__select plan-filter__select--choice">
-                  <p class="plan-filter__value">Выберите страну</p>
-                </div>
-                <div class="plan-filter__select-flag plan-filter__select-flag--choice">
-                  <button type="button" class="plan-filter__button plan-filter__button--choice"><span class="visually-hidden">выбрать</span> </button>
-                  <button type="button" class="plan-filter__select-btn"></button>
-                </div>
-              </div>
-              <div class="plan-filter__select-wrapper">
-                <div class="plan-filter__select plan-filter__select--add">
-                  <p class="plan-filter__value plan-filter__value--add">Добавить страну</p>
-                </div>
-                <div class="plan-filter__select-flag plan-filter__select-flag--add">
-                  <button type="button" class="plan-filter__button"><span class="visually-hidden">выбрать</span>
-                  </button>
-                </div>
-              </div>
-              <a class="plan-filter__btn button" href="#part3">Следующий шаг</a>
-              <a class="plan-filter__btn plan-filter__btn--back button" href="#part1">На шаг назад</a>
-            </div>
-          </fieldset>
-          <fieldset class="plan-filter__item plan-filter__item--plan"  id="part3">
-            <div class="plan-filter__wrapper">
-              <h3 class="plan-filter__head">Шаг 3. Развлечения</h3>
-              <ul class="plan-filter__head-list">
-                <li class="plan-filter__head-item">Даты</li>
-                <li class="plan-filter__head-item">Маршрут</li>
-                <li class="plan-filter__head-item plan-filter__head-item--active">Развлечения</li>
-              </ul>
-              <p class="plan-filter__text">Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать в свободной
-                форме и ставить тэги.</p>
-              <div class="plan-filter__comment-wrapper plan-filter__comment-wrapper--current">
-                <label class="plan-filter__comment-label" for="comment1">
-                  Босния и герцеговина</label>
-                <textarea class="plan-filter__comment" id="comment1" name="comment" rows="8" placeholder="План действий"></textarea>
-              </div>
-              <div class="plan-filter__comment-wrapper">
-                <label class="plan-filter__comment-label plan-filter__comment-label--czech" for="comment2">
-                  Чехословакия</label>
-                <textarea class="plan-filter__comment plan-filter__comment--last" id="comment2" name="comment" rows="8" placeholder="Пить пиво и лазить по&nbsp;старым замкам, наслаждаться аритектурой и вот это все." readonly></textarea>
-              </div>
-              <button class="plan-filter__btn button" type="submit">Отправить</button>
-              <a class="plan-filter__btn plan-filter__btn--back button" href="#part2">На шаг назад</a>
-            </div>
-          </fieldset>
-        </form>
-      </section>
-
-    </main>
-
-    <footer class="footer container">
-      <picture>
-        <source type="image/webp" media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
-        <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-        <source media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-        <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали?">
+      <picture class="profile__picture">
+        <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+        <source type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+        <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+        <img class="profile__image" src="img/demin-tablet@1x.jpg" srcset="img/demin-tablet@2x.jpg 2x" width="190"
+             height="190" alt="foto">
       </picture>
-      <div class="footer__social footer-social">
-        <ul class="footer-social__list">
-          <li class="footer-social__item">
-            <a class="footer-social__link footer-social__link--facebook" href="https://www.facebook.com/htmlacademy">
-              <span class="visually-hidden">Мы в Фейсбуке</span>
-              <svg fill="#192144" class="footer-social__link-image footer-social__link-image--facebook" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 11 21"  xml:space="preserve" width="11" height="21">
+      <a class="profile__btn button" href="#"><span class="profile__btn-mobile">сменить фото</span><span
+        class="profile__btn-desktop">фото</span></a>
+      <div class="profile__wrapper profile__wrapper--tags">
+        <p class="profile__text profile__text">тэги</p>
+        <textarea class="profile__hashtag" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+      </div>
+      <div class="profile__wrapper profile__wrapper--transport transport">
+        <p class="profile__text profile__text--transport">транспорт</p>
+        <div class="transport__wrapper">
+          <label class="transport__label">
+            <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" checked> <span
+            class="transport__checkbox-indicator transport__checkbox-indicator--air"></span></label>
+          <label class="transport__label">
+            <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" checked> <span
+            class="transport__checkbox-indicator transport__checkbox-indicator--bus"></span></label>
+          <label class="transport__label">
+            <input class="transport__checkbox visually-hidden" name="transport" type="checkbox"> <span
+            class="transport__checkbox-indicator transport__checkbox-indicator--bicycle"></span></label>
+          <label class="transport__label">
+            <input class="transport__checkbox visually-hidden" name="transport" type="checkbox" checked> <span
+            class="transport__checkbox-indicator transport__checkbox-indicator--foot"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans">
+    <div class="container">
+      <h2 class="plans__title">Мои планы:</h2>
+      <ul class="plans__list">
+        <li class="plans__item">
+          <p class="plans__country"><span class="plans__country-number">1.</span> Франция, Италия</p>
+          <p class="plans__quantity">3 попутчика</p>
+          <p class="plans__period">26 мар — 29 мар</p>
+          <a class="plans__btn" href="myplans.html">изменить</a>
+        </li>
+        <li class="plans__item">
+          <p class="plans__country"><span class="plans__country-number">2.</span> Тайланд, Индонезия</p>
+          <p class="plans__quantity">1 попутчик</p>
+          <p class="plans__period">1 июл — 15 июл</p>
+          <a class="plans__btn" href="myplans.html">изменить</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="plan-add">
+    <div class="container">
+      <h2 class="plan-add__title">Добавить план:</h2>
+      <form class="plan-add__filter plan-filter" method="post" action="https://echo.htmlacademy.ru">
+        <fieldset class="plan-filter__item plan-filter__item--date" id="part1">
+          <div class="plan-filter__wrapper">
+            <h3 class="plan-filter__head">Шаг 1. Даты&nbsp;пребывания</h3>
+            <ul class="plan-filter__head-list">
+              <li class="plan-filter__head-item plan-filter__head-item--active">Даты</li>
+              <li class="plan-filter__head-item">Маршрут</li>
+              <li class="plan-filter__head-item">Развлечения</li>
+            </ul>
+            <p class="plan-filter__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы
+              позвать
+              в поездку и ее предполагаемую длительность.</p>
+            <div class="plan-filter__input plan-filter__input--quantity">
+              <label class="plan-filter__label" for="quantity1">ищу попутчиков:</label>
+              <button type="button" class="plan-filter__quantity-btn plan-filter__quantity-btn--minus"><span
+                class="visually-hidden">-</span></button>
+              <input class="plan-filter__quantity" name="quantity" id="quantity1" type="text" value="2">
+              <button type="button" class="plan-filter__quantity-btn plan-filter__quantity-btn--plus"><span
+                class="visually-hidden">+</span></button>
+              <p class="plan-filter__units">Чел.</p>
+            </div>
+            <div class="plan-filter__input plan-filter__input--duration">
+              <label class="plan-filter__label" for="quantity2">длительность:</label>
+              <button type="button" class="plan-filter__quantity-btn plan-filter__quantity-btn--minus"><span
+                class="visually-hidden">-</span></button>
+              <input class="plan-filter__quantity" name="quantity" id="quantity2" type="text" value="2">
+              <button type="button" class="plan-filter__quantity-btn plan-filter__quantity-btn--plus"><span
+                class="visually-hidden">+</span></button>
+              <p class="plan-filter__units">дн.</p>
+            </div>
+            <label class="plan-filter__label-checkbox">
+              <input class="plan-filter__checkbox visually-hidden" name="options" type="checkbox" checked>
+              <span class="plan-filter__checkbox-indicator"></span>
+              Можно с детьми
+            </label>
+            <ul class="plan-add__month-list month-list">
+              <li class="month-list__item">
+                <button type="button" class="month-list__btn month-list__btn--back"><span
+                  class="visually-hidden">назад</span>
+                </button>
+              </li>
+              <li class="month-list__item">
+                <b class="month-list__name">Март 2019</b>
+              </li>
+              <li class="month-list__item">
+                <button type="button" class="month-list__btn month-list__btn--forward"><span class="visually-hidden">вперед</span>
+                </button>
+              </li>
+            </ul>
+            <table class="plan-filter__table plan-table">
+              <tr class="plan-table__row">
+                <th class="plan-table__head"><a class="plan-table__day" href="#"><span
+                  class="plan-table__head-mobile">П</span><span class="plan-table__head-desktop">Пн</span></a></th>
+                <th class="plan-table__head"><a class="plan-table__day" href="#"><span
+                  class="plan-table__head-mobile">В</span><span class="plan-table__head-desktop">Вт</span></a></th>
+                <th class="plan-table__head"><a class="plan-table__day" href="#"><span
+                  class="plan-table__head-mobile">С</span><span class="plan-table__head-desktop">Ср</span></a></th>
+                <th class="plan-table__head"><a class="plan-table__day" href="#"><span
+                  class="plan-table__head-mobile">Ч</span><span class="plan-table__head-desktop">Чт</span></a></th>
+                <th class="plan-table__head"><a class="plan-table__day" href="#"><span
+                  class="plan-table__head-mobile">П</span><span class="plan-table__head-desktop">Пт</span></a></th>
+                <th class="plan-table__head plan-table__head--weekend"><a class="plan-table__day" href="#"><span
+                  class="plan-table__head-mobile">С</span><span class="plan-table__head-desktop">Сб</span></a></th>
+                <th class="plan-table__head plan-table__head--weekend"><a class="plan-table__day" href="#"><span
+                  class="plan-table__head-mobile">В</span><span class="plan-table__head-desktop">Вс</span></a></th>
+              </tr>
+              <tr class="plan-table__row">
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">23</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">24</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">25</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">26</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">27</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">28</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">1 <span
+                  class="plan-table__cell-desktop">&nbsp;мар</span></a></td>
+              </tr>
+              <tr class="plan-table__row">
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">2</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">3</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">4</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">5</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">6</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">7</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">8</a></td>
+              </tr>
+              <tr class="plan-table__row">
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">9</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">10</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">11</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">12</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">13</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">14</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">15</a></td>
+              </tr>
+              <tr class="plan-table__row">
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">16</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">17</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">18</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">19</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">20</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">21</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">22</a></td>
+              </tr>
+              <tr class="plan-table__row">
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">23</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">24</a></td>
+                <td class="plan-table__cell plan-table__cell--disabled"><a class="plan-table__link" href="#">25</a></td>
+                <td class="plan-table__cell plan-table__cell--mark plan-table__cell--current"><a
+                  class="plan-table__link" href="#">26<span
+                  class="plan-table__cell-desktop plan-table__cell-desktop--period">Заезд</span></a></td>
+                <td class="plan-table__cell plan-table__cell--mark"><a class="plan-table__link" href="#">27</a></td>
+                <td class="plan-table__cell plan-table__cell--mark"><a class="plan-table__link" href="#">28<span
+                  class="plan-table__cell-desktop plan-table__cell-desktop--period">Выезд</span></a></td>
+                <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">29</a></td>
+              </tr>
+              <tr class="plan-table__row">
+                <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">30</a></td>
+                <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">31</a></td>
+                <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">1<span
+                  class="plan-table__cell-desktop">&nbsp;апр</span></a></td>
+                <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">2</a></td>
+                <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">3</a></td>
+                <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">4</a></td>
+                <td class="plan-table__cell plan-table__cell--active"><a class="plan-table__link" href="#">5</a></td>
+              </tr>
+            </table>
+            <a class="plan-filter__btn button" href="#part2">Следующий шаг</a>
+          </div>
+        </fieldset>
+
+        <fieldset class="plan-filter__item plan-filter__item--route" id="part2">
+          <div class="plan-filter__wrapper">
+            <h3 class="plan-filter__head">Шаг 2. Маршрут</h3>
+            <ul class="plan-filter__head-list">
+              <li class="plan-filter__head-item">Даты</li>
+              <li class="plan-filter__head-item plan-filter__head-item--active">Маршрут</li>
+              <li class="plan-filter__head-item">Развлечения</li>
+            </ul>
+            <p class="plan-filter__text">Укажите страны, которые вы хотели по посетить. Это&nbsp;может быть одна или
+              сразу несколько</p>
+            <div class="plan-filter__select-wrapper plan-filter__select-wrapper--border">
+              <div class="plan-filter__select plan-filter__select--bosnia">
+                <p class="plan-filter__value">Босния и герцеговина</p>
+                <button type="button" class="plan-filter__button"><span class="visually-hidden">выбрать</span>
+                </button>
+              </div>
+              <div class="plan-filter__select-flag plan-filter__select-flag--bosnia">
+                <button type="button" class="plan-filter__select-btn"></button>
+              </div>
+            </div>
+            <div class="plan-filter__select-wrapper">
+              <div class="plan-filter__select">
+                <p class="plan-filter__value">Чехословакия</p>
+                <button type="button" class="plan-filter__button"><span class="visually-hidden">выбрать</span>
+                </button>
+              </div>
+              <div class="plan-filter__select-flag plan-filter__select-flag--czech">
+                <button type="button" class="plan-filter__select-btn"></button>
+              </div>
+            </div>
+            <div class="plan-filter__select-wrapper plan-filter__select-wrapper--choice">
+              <div class="plan-filter__select plan-filter__select--choice">
+                <p class="plan-filter__value">Выберите страну</p>
+              </div>
+              <div class="plan-filter__select-flag plan-filter__select-flag--choice">
+                <button type="button" class="plan-filter__button plan-filter__button--choice"><span
+                  class="visually-hidden">выбрать</span></button>
+                <button type="button" class="plan-filter__select-btn"></button>
+              </div>
+            </div>
+            <div class="plan-filter__select-wrapper">
+              <div class="plan-filter__select plan-filter__select--add">
+                <p class="plan-filter__value plan-filter__value--add">Добавить страну</p>
+              </div>
+              <div class="plan-filter__select-flag plan-filter__select-flag--add">
+                <button type="button" class="plan-filter__button"><span class="visually-hidden">выбрать</span>
+                </button>
+              </div>
+            </div>
+            <a class="plan-filter__btn button" href="#part3">Следующий шаг</a>
+            <a class="plan-filter__btn plan-filter__btn--back button" href="#part1">На шаг назад</a>
+          </div>
+        </fieldset>
+        <fieldset class="plan-filter__item plan-filter__item--plan" id="part3">
+          <div class="plan-filter__wrapper">
+            <h3 class="plan-filter__head">Шаг 3. Развлечения</h3>
+            <ul class="plan-filter__head-list">
+              <li class="plan-filter__head-item">Даты</li>
+              <li class="plan-filter__head-item">Маршрут</li>
+              <li class="plan-filter__head-item plan-filter__head-item--active">Развлечения</li>
+            </ul>
+            <p class="plan-filter__text">Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать в
+              свободной
+              форме и ставить тэги.</p>
+            <div class="plan-filter__comment-wrapper plan-filter__comment-wrapper--current">
+              <label class="plan-filter__comment-label" for="comment1">
+                Босния и герцеговина</label>
+              <textarea class="plan-filter__comment" id="comment1" name="comment" rows="8"
+                        placeholder="План действий"></textarea>
+            </div>
+            <div class="plan-filter__comment-wrapper">
+              <label class="plan-filter__comment-label plan-filter__comment-label--czech" for="comment2">
+                Чехословакия</label>
+              <textarea class="plan-filter__comment plan-filter__comment--last" id="comment2" name="comment" rows="8"
+                        placeholder="Пить пиво и лазить по&nbsp;старым замкам, наслаждаться аритектурой и вот это все."
+                        readonly></textarea>
+            </div>
+            <button class="plan-filter__btn button" type="submit">Отправить</button>
+            <a class="plan-filter__btn plan-filter__btn--back button" href="#part2">На шаг назад</a>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <picture>
+      <source type="image/webp" media="(min-width: 1200px)"
+              srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+      <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+      <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+      <source media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+      <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+      <img class="footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+           width="100" height="19" alt="Погнали?">
+    </picture>
+    <div class="footer__social footer-social">
+      <ul class="footer-social__list">
+        <li class="footer-social__item">
+          <a class="footer-social__link footer-social__link--facebook" href="https://www.facebook.com/htmlacademy">
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+            <svg fill="#192144" class="footer-social__link-image footer-social__link-image--facebook" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 11 21" xml:space="preserve" width="11"
+                 height="21">
                 <use xlink:href="#icon-facebook"></use>
               </svg>
-            </a>
-          </li>
-          <li class="footer-social__item">
-            <a class="footer-social__link footer-social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы в Вконтакте</span>
-              <svg fill="#192144" class="footer-social__link-image footer-social__link-image--vkontakte" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 15.8" xml:space="preserve" width="23" height="12">
+          </a>
+        </li>
+        <li class="footer-social__item">
+          <a class="footer-social__link footer-social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы в Вконтакте</span>
+            <svg fill="#192144" class="footer-social__link-image footer-social__link-image--vkontakte" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 15.8" xml:space="preserve"
+                 width="23"
+                 height="12">
                 <use xlink:href="#icon-vkontakte"></use>
               </svg>
-            </a>
-          </li>
-          <li class="footer-social__item">
-            <a class="footer-social__link footer-social__link--instagram" href="https://www.instagram.com/htmlacademy">
-              <span class="visually-hidden">Мы в Инстаграме</span>
-              <svg fill="#192144" class="footer-social__link-image footer-social__link-image--instagram" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 23 23"  xml:space="preserve" width="18" height="18">
+          </a>
+        </li>
+        <li class="footer-social__item">
+          <a class="footer-social__link footer-social__link--instagram" href="https://www.instagram.com/htmlacademy">
+            <span class="visually-hidden">Мы в Инстаграме</span>
+            <svg fill="#192144" class="footer-social__link-image footer-social__link-image--instagram" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 23 23" xml:space="preserve" width="18"
+                 height="18">
                 <use xlink:href="#icon-instagram"></use>
               </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <b class="footer__copyright-text">Разработано:</b>
-        <img class="footer__copyright-image" src="img/htmlacademy.svg" width="16" height="16" alt="html academy">
-      </a>
-    </footer>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+      <b class="footer__copyright-text">Разработано:</b>
+      <img class="footer__copyright-image" src="img/htmlacademy.svg" width="16" height="16" alt="html academy">
+    </a>
+  </div>
+</footer>
 
-    <section class="plan-add-popup">
-      <div class="plan-add-popup__wrapper">
-        <h2 class="plan-add-popup__title">Выберите страну</h2>
-        <button class="plan-add-popup__close" type="button"><span class="visually-hidden">закрыть</span></button>
-      </div>
-      <div class="plan-add-popup__table-wrap">
-        <div class="plan-add-popup__table filter-table">
-            <div class="filter-table__cell filter-table__cell--active"><a class="filter-table__link" href="#">А</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Б</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">В</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Г</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Д</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Е</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Ё</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Ж</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">З</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">И</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Й</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">К</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Л</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">М</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Н</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">О</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">П</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Р</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">С</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Т</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">У</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Ф</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Х</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Ц</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Ч</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Ш</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Щ</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Э</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Ю</a></div>
-            <div class="filter-table__cell"><a class="filter-table__link" href="#">Я</a></div>
-        </div>
-        <ul class="plan-add-popup__country-list">
-          <li class="plan-add-popup__country-item">
-            <a href="#" class="plan-add-popup__country-name">Афганистан</a>
-          </li>
-          <li class="plan-add-popup__country-item">
-            <a href="#" class="plan-add-popup__country-name">Албания</a>
-          </li>
-          <li class="plan-add-popup__country-item">
-            <a href="#" class="plan-add-popup__country-name">Алгерия</a>
-          </li>
-          <li class="plan-add-popup__country-item">
-            <a href="#" class="plan-add-popup__country-name">Андорра</a>
-          </li>
-          <li class="plan-add-popup__country-item">
-            <a href="#" class="plan-add-popup__country-name">Аргентина</a>
-          </li>
-          <li class="plan-add-popup__country-item">
-            <a href="#" class="plan-add-popup__country-name">Армения</a>
-          </li>
-          <li class="plan-add-popup__country-item">
-            <a href="#" class="plan-add-popup__country-name">Австралия</a>
-          </li>
-          <li class="plan-add-popup__country-item">
-            <a href="#" class="plan-add-popup__country-name">Австрия</a>
-          </li>
-          <li class="plan-add-popup__country-item">
-            <a href="#" class="plan-add-popup__country-name">Азербайджан</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <script src="js/form.min.js"></script>
-  </body>
+<section class="plan-add-popup">
+  <div class="plan-add-popup__wrapper">
+    <h2 class="plan-add-popup__title">Выберите страну</h2>
+    <button class="plan-add-popup__close" type="button"><span class="visually-hidden">закрыть</span></button>
+  </div>
+  <div class="plan-add-popup__table-wrap">
+    <div class="plan-add-popup__table filter-table">
+      <div class="filter-table__cell filter-table__cell--active"><a class="filter-table__link" href="#">А</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Б</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">В</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Г</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Д</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Е</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Ё</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Ж</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">З</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">И</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Й</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">К</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Л</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">М</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Н</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">О</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">П</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Р</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">С</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Т</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">У</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Ф</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Х</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Ц</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Ч</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Ш</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Щ</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Э</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Ю</a></div>
+      <div class="filter-table__cell"><a class="filter-table__link" href="#">Я</a></div>
+    </div>
+    <ul class="plan-add-popup__country-list">
+      <li class="plan-add-popup__country-item">
+        <a href="#" class="plan-add-popup__country-name">Афганистан</a>
+      </li>
+      <li class="plan-add-popup__country-item">
+        <a href="#" class="plan-add-popup__country-name">Албания</a>
+      </li>
+      <li class="plan-add-popup__country-item">
+        <a href="#" class="plan-add-popup__country-name">Алгерия</a>
+      </li>
+      <li class="plan-add-popup__country-item">
+        <a href="#" class="plan-add-popup__country-name">Андорра</a>
+      </li>
+      <li class="plan-add-popup__country-item">
+        <a href="#" class="plan-add-popup__country-name">Аргентина</a>
+      </li>
+      <li class="plan-add-popup__country-item">
+        <a href="#" class="plan-add-popup__country-name">Армения</a>
+      </li>
+      <li class="plan-add-popup__country-item">
+        <a href="#" class="plan-add-popup__country-name">Австралия</a>
+      </li>
+      <li class="plan-add-popup__country-item">
+        <a href="#" class="plan-add-popup__country-name">Австрия</a>
+      </li>
+      <li class="plan-add-popup__country-item">
+        <a href="#" class="plan-add-popup__country-name">Азербайджан</a>
+      </li>
+    </ul>
+  </div>
+</section>
+<script src="js/form.min.js"></script>
+</body>
 </html>

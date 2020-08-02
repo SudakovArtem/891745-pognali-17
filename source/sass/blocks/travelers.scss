@@ -1,28 +1,32 @@
 .travelers {
-  background-color: #192144;
-  background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
-  background-position: 152px 68px, -10px 340px;
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto, auto;
   position: relative;
-  padding-top: 75px;
-  padding-bottom: 30px;
+  background-color: #192144;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   margin-top: -30px;
   z-index: 4;
-  overflow: hidden;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 132px;
-    height: 132px;
-    border-radius: 20px;
-    background-color: #141b3b;
-    top: 71px;
-    left: -16px;
-    z-index: -1;
+  .container {
+    background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
+    background-position: 152px 68px, -10px 340px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, auto;
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 30px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 132px;
+      height: 132px;
+      border-radius: 20px;
+      background-color: #141b3b;
+      top: 71px;
+      left: -16px;
+      z-index: -1;
+    }
   }
 }
 
@@ -321,18 +325,21 @@
 
 @media (min-width: $tablet) {
   .travelers {
-    background-image: url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
-    background-position: 409px 130px, 40px 476px;
-    padding: 142px 75px 88px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
     margin-top: -50px;
 
-    &::before {
-      width: 213px;
-      height: 213px;
-      top: 128px;
-      left: 40px;
+    .container {
+      background-image: url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
+      background-position: 409px 130px, 40px 476px;
+      padding: 142px 75px 88px;
+
+      &::before {
+        width: 213px;
+        height: 213px;
+        top: 128px;
+        left: 40px;
+      }
     }
   }
 
@@ -432,16 +439,18 @@
 
 @media (min-width: $desktop) {
   .travelers {
-    background-position: 191px 435px, 547px 183px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 175px 58px 133px 132px;
+    .container {
+      background-position: 191px 435px, 547px 183px;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 175px 58px 133px 132px;
 
-    &::before {
-      top: 118px;
-      left: 62px;
+      &::before {
+        top: 118px;
+        left: 62px;
+      }
     }
   }
 

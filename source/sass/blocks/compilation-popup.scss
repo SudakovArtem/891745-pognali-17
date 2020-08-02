@@ -1,40 +1,54 @@
 .country-filter {
-  padding-top: 36px;
-  padding-bottom: 27px;
   background-color: #e2e5f2;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   z-index: 1;
   margin-top: -20px;
+  height: 793px;
+  transition: height 0.3s ease-out;
+
+  .container {
+    padding-top: 36px;
+    padding-bottom: 27px;
+  }
 }
 
 .country-filter--closed {
-  padding-bottom: 15px;
+  height: 73px;
+  overflow: hidden;
 
-  .country-filter-table {
-    display: none;
-  }
+  .container {
+    padding-bottom: 15px;
 
-  .country-filter-popup__country-list {
-    display: none;
-  }
+    .country-filter-table {
+      opacity: 0;
+      //display: none;
+    }
 
-  .country-filter-popup__list {
-    display: none;
-  }
+    .country-filter-popup__country-list {
+      opacity: 0;
+      //display: none;
+    }
 
-  .country-filter-popup__close {
-    display: none;
-  }
+    .country-filter-popup__list {
+      opacity: 0;
+      //display: none;
+    }
 
-  .country-filter__toggle {
-    &::before {
-      top: 0;
-      left: 0;
-      width: 17px;
-      height: 12px;
-      background: url("../img/dots.svg") no-repeat 50% 90%;
-      background-size: 17px 3px;
+    .country-filter-popup__close {
+      opacity: 0;
+      //display: none;
+    }
+
+    .country-filter__toggle {
+      &::before {
+        top: 0;
+        left: 0;
+        width: 17px;
+        height: 12px;
+        background: url("../img/dots.svg") no-repeat 50% 90%;
+        background-size: 17px 3px;
+      }
     }
   }
 }
@@ -109,6 +123,9 @@
   padding: 0;
   margin-left: 0;
   margin-top: 30px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+  transition-delay: 0.3s;
 }
 
 .country-filter-popup__link {
@@ -137,6 +154,9 @@
   display: flex;
   flex-wrap: wrap;
   width: 225px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+  transition-delay: 0.3s;
 }
 
 .country-filter-table__cell {
@@ -185,6 +205,9 @@
   line-height: 1.38;
   text-align: left;
   color: #444444;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+  transition-delay: 0.3s;
 }
 
 .country-filter-popup__country-name {
@@ -193,46 +216,58 @@
 }
 
 .country-filter-popup__close {
+  opacity: 1;
   width: 100%;
   background-color: #d6daed;
   margin-top: 25px;
+  transition: opacity 0.3s ease-in;
+  transition-delay: 0.3s;
 }
 
 @media (min-width: $tablet) {
   .country-filter {
-    padding: 115px 75px 75px 73px;
+    height: 847px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
-    display: flex;
-    flex-wrap: wrap;
     margin-top: -60px;
-  }
 
-  .country-filter--closed {
-    padding-bottom: 52px;
-
-    .country-filter-popup__list {
+    .container {
+      padding: 115px 75px 75px 73px;
       display: flex;
       flex-wrap: wrap;
     }
+  }
 
-    .country-filter__toggle {
-      &::before {
-        width: 27px;
-        height: 19px;
-        left: auto;
-        right: 0;
-        background-size: 27px 5px;
-        background-position: 50% 50%;
+  .country-filter--closed {
+    height: 194px;
+
+    .container {
+      padding-bottom: 52px;
+
+      .country-filter-popup__list {
+        opacity: 1;
+        display: flex;
+        flex-wrap: wrap;
       }
-    }
 
-    .country-filter-popup__toggle-open {
-      display: block;
-    }
+      .country-filter__toggle {
+        &::before {
+          width: 27px;
+          height: 19px;
+          left: auto;
+          right: 0;
+          background-size: 27px 5px;
+          background-position: 50% 50%;
+        }
+      }
 
-    .country-filter-popup__toggle-close {
-      display: none;
+      .country-filter-popup__toggle-open {
+        display: block;
+      }
+
+      .country-filter-popup__toggle-close {
+        display: none;
+      }
     }
   }
 
@@ -370,17 +405,23 @@
 
 @media (min-width: $desktop) {
   .country-filter {
-    padding: 116px 63px 74px 57px;
+    height: 2794px;
+    .container {
+      padding: 116px 63px 74px 57px;
+    }
   }
 
   .country-filter--closed {
-    padding-bottom: 54px;
+    height: 197px;
+    .container {
+      padding-bottom: 54px;
 
-    .country-filter__toggle {
-      margin-left: 0;
-      padding-right: 10px;
-      width: 176px;
-      text-align: left;
+      .country-filter__toggle {
+        margin-left: 0;
+        padding-right: 10px;
+        width: 176px;
+        text-align: left;
+      }
     }
   }
 

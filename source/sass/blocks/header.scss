@@ -1,7 +1,10 @@
 .header {
   background-color: #161c36;
-  padding-top: 27px;
-  padding-bottom: 27px;
+
+  .container {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
 
   .site-list,
   .main-nav__tel,
@@ -27,6 +30,7 @@
   border: none;
   opacity: 1;
   background: none;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -92,13 +96,17 @@
 
 .header--scroll {
   position: fixed;
-  left: 50%;
   top: 0;
-  margin-left: -160px;
+  width: 100%;
   background-color: #ffffff;
   animation: showElement;
   animation-duration: 1s;
   z-index: 10;
+
+  .container {
+    //  left: 50%;
+    //margin-left: -160px;
+  }
 
   .header__toggle {
     &::before {
@@ -130,9 +138,12 @@
 
 @media (min-width: $tablet) {
   .header {
-    position: relative;
     background-color: #182044;
-    padding-top: 45px;
+
+    .container {
+      position: relative;
+      padding-top: 45px;
+    }
   }
 
   .inner-page {
@@ -178,8 +189,10 @@
   .header--scroll {
     position: fixed;
     background-color: #ffffff;
-    margin-left: (-768px / 2);
-    padding-bottom: 39px;
+    //margin-left: (-768px / 2);
+    .container {
+      padding-bottom: 39px;
+    }
 
     & ~ .main .intro {
       margin-top: 120px;
@@ -194,10 +207,13 @@
 @media (min-width: $desktop) {
   .header {
     background: #161c34;
-    display: flex;
-    min-height: 90px;
-    align-items: center;
-    padding-top: 48px;
+
+    .container {
+      display: flex;
+      min-height: 90px;
+      align-items: center;
+      padding-top: 48px;
+    }
   }
 
   .header__wrapper {
@@ -227,8 +243,10 @@
 
   .header--scroll {
     background-color: #ffffff;
-    margin-left: (-1440px / 2);
-    padding: 20px 60px 13px;
+    //margin-left: (-1440px / 2);
+    .container {
+      padding: 20px 60px 13px;
+    }
 
     .header__wrapper::before {
       background-color: #192144;

@@ -1,12 +1,16 @@
 .directions {
   position: relative;
-  padding-top: 71px;
-  padding-bottom: 32px;
   background-color: #e8eaf2;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   margin-top: -30px;
   z-index: 5;
+
+  .container {
+    position: relative;
+    padding-top: 71px;
+    padding-bottom: 32px;
+  }
 }
 
 .directions__text-wrapper {
@@ -145,27 +149,31 @@
 
 @media (min-width: $tablet) {
   .directions {
-    padding: 70px 75px 80px;
-    background: #e8eaf2 url("../img/flags-back@1x.png") 439px 130px no-repeat;
-    background-size: 289px;
+    background: #e8eaf2;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
     margin-top: -50px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 141px;
-      height: 141px;
-      border-radius: 20px;
-      background-color: #e2e5f2;
-      top: 457px;
-      left: 40px;
-      z-index: -1;
-    }
+    .container {
+      padding: 70px 75px 80px;
+      background: url("../img/flags-back@1x.png") 439px 130px no-repeat;
+      background-size: 289px;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/flags-back@2x.png");
+      &::before {
+        content: "";
+        position: absolute;
+        width: 141px;
+        height: 141px;
+        border-radius: 20px;
+        background-color: #e2e5f2;
+        top: 457px;
+        left: 40px;
+        z-index: -1;
+      }
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/flags-back@2x.png");
+      }
     }
   }
 
@@ -271,16 +279,18 @@
 
 @media (min-width: $desktop) {
   .directions {
-    position: relative;
-    padding: 211px 130px 140px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-position: 1091px 138px;
+    .container {
+      position: relative;
+      padding: 211px 130px 140px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-position: 1091px 138px;
 
-    &::before {
-      top: 140px;
-      left: 59px;
+      &::before {
+        top: 140px;
+        left: 59px;
+      }
     }
   }
 

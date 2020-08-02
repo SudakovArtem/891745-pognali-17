@@ -1,8 +1,12 @@
 .options {
   background-color: #192144;
-  height: auto;
   position: relative;
   z-index: 7;
+
+  .container {
+    position: relative;
+    height: auto;
+  }
 }
 
 .options__list {
@@ -101,7 +105,9 @@
 
 @media (min-width: $desktop) {
   .options {
-    margin-bottom: 25px;
+    .container {
+      margin-bottom: 25px;
+    }
   }
 
   .options__list {

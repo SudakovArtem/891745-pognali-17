@@ -168,9 +168,12 @@
 
 @media (min-width: $tablet) {
   .subscribe {
-    padding: 75px 75px 60px;
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 60px;
+
+    .container {
+      padding: 75px 75px 60px;
+    }
   }
 
   .subscribe__text {
@@ -249,7 +252,9 @@
 
 @media (min-width: $desktop) {
   .subscribe {
-    padding: 152px 134px 113px 132px;
+    .container {
+      padding: 152px 134px 113px 132px;
+    }
   }
 
   .subscribe__text {

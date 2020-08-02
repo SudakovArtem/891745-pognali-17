@@ -1,11 +1,15 @@
 .footer {
   position: relative;
-  padding: 38px 26px 14px;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   background-color: #ffffff;
   margin-top: -27px;
   z-index: 5;
+
+  .container {
+    position: relative;
+    padding: 38px 26px 14px;
+  }
 }
 
 .footer__logo-image {
@@ -52,13 +56,16 @@
 
 @media (min-width: $tablet) {
   .footer {
-    padding: 46px 41px 50px 39px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: -60px;
     border-top-right-radius: 60px;
     border-top-left-radius: 60px;
+
+    .container {
+      padding: 46px 41px 50px 39px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .footer__logo-image {
@@ -88,8 +95,11 @@
 
 @media (min-width: $desktop) {
   .footer {
-    padding: 46px 59px 46px 61px;
     margin-top: -60px;
+
+    .container {
+      padding: 46px 59px 46px 61px;
+    }
   }
 
   .footer__logo-image {
